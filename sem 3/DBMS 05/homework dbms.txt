@@ -1,0 +1,604 @@
+DAY 1
+
+C:\Users\ashish>e:
+
+E:\>cd xampp\mysql\bin
+
+E:\xampp\mysql\bin>mysql -u root -p -h 127.0.0.1
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 57
+Server version: 10.4.13-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use ashish;
+Database changed
+MariaDB [ashish]> show tables;
++------------------+
+| Tables_in_ashish |
++------------------+
+| department       |
+| faculty          |
+| student          |
++------------------+
+3 rows in set (0.001 sec)
+
+MariaDB [ashish]> show department in ashish;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds
+to your MariaDB server version for the right syntax to use near 'department in ashish' at li
+ne 1
+MariaDB [ashish]> select * from department;
++--------+-------+
+| deptid | dname |
++--------+-------+
+|      1 | IT    |
+|      2 | CSE   |
+|      3 | ECE   |
++--------+-------+
+3 rows in set (0.001 sec)
+
+MariaDB [ashish]> select * from faculty;
++------+--------+---------------+--------+
+| fid  | fname  | qualification | deptid |
++------+--------+---------------+--------+
+|    1 | Aman   | B.Tech        |      1 |
+|    2 | Mohan  | M.Tech        |      1 |
+|    3 | Vishal | M.Tech        |      1 |
+|    4 | Priya  | Ph.D          |      2 |
+|    5 | Ravi   | Ph.D          |      3 |
+|    6 | Aarti  | M.Tech        |      2 |
++------+--------+---------------+--------+
+6 rows in set (0.001 sec)
+
+MariaDB [ashish]> select * from student;
++------+--------+--------+-------+
+| sid  | sname  | Branch | marks |
++------+--------+--------+-------+
+|    1 | Lalit  | IT     |    75 |
+|    2 | Mahesh | IT     |    90 |
+|    3 | Sagar  | CSE    |    92 |
+|    4 | Arun   | CSE    |    45 |
+|    5 | Shikha | ECE    |    56 |
+|    6 | Anand  | ECE    |    78 |
+|    7 | Parul  | IT     |    62 |
++------+--------+--------+-------+
+7 rows in set (0.002 sec)
+
+MariaDB [ashish]> select Branch from student;
++--------+
+| Branch |
++--------+
+| IT     |
+| IT     |
+| CSE    |
+| CSE    |
+| ECE    |
+| ECE    |
+| IT     |
++--------+
+7 rows in set (0.001 sec)
+
+MariaDB [ashish]> select sname from student where marks=62;
++-------+
+| sname |
++-------+
+| Parul |
++-------+
+1 row in set (0.001 sec)
+
+MariaDB [ashish]> select sname ,marks from student where marks=62;
++-------+-------+
+| sname | marks |
++-------+-------+
+| Parul |    62 |
++-------+-------+
+1 row in set (0.001 sec)
+
+MariaDB [ashish]> select distinct Branch from student;
++--------+
+| Branch |
++--------+
+| IT     |
+| CSE    |
+| ECE    |
++--------+
+3 rows in set (0.002 sec)
+
+MariaDB [ashish]> select qualification , deptid from faculty;
++---------------+--------+
+| qualification | deptid |
++---------------+--------+
+| B.Tech        |      1 |
+| M.Tech        |      1 |
+| M.Tech        |      1 |
+| Ph.D          |      2 |
+| Ph.D          |      3 |
+| M.Tech        |      2 |
++---------------+--------+
+6 rows in set (0.001 sec)
+
+MariaDB [ashish]> select qualification , deptid from faculty where deptid =1;
++---------------+--------+
+| qualification | deptid |
++---------------+--------+
+| B.Tech        |      1 |
+| M.Tech        |      1 |
+| M.Tech        |      1 |
++---------------+--------+
+3 rows in set (0.001 sec)
+
+MariaDB [ashish]> select distinct qualification , deptid from faculty where deptid =1;
++---------------+--------+
+| qualification | deptid |
++---------------+--------+
+| B.Tech        |      1 |
+| M.Tech        |      1 |
++---------------+--------+
+2 rows in set (0.001 sec)
+
+MariaDB [ashish]> select * from faculty;
++------+--------+---------------+--------+
+| fid  | fname  | qualification | deptid |
++------+--------+---------------+--------+
+|    1 | Aman   | B.Tech        |      1 |
+|    2 | Mohan  | M.Tech        |      1 |
+|    3 | Vishal | M.Tech        |      1 |
+|    4 | Priya  | Ph.D          |      2 |
+|    5 | Ravi   | Ph.D          |      3 |
+|    6 | Aarti  | M.Tech        |      2 |
++------+--------+---------------+--------+
+6 rows in set (0.001 sec)
+
+MariaDB [ashish]> update deptid=2 where fid=2 and fid=3;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds
+to your MariaDB server version for the right syntax to use near '2 where fid=2 and fid=3' at
+ line 1
+MariaDB [ashish]> update faculty set deptid=2 where fid=2 and fid=3;
+Query OK, 0 rows affected (0.002 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+MariaDB [ashish]> update faculty set deptid=2 where fid=2;
+Query OK, 1 row affected (0.049 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [ashish]> update faculty set deptid=2 where fid=3;
+Query OK, 1 row affected (0.004 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [ashish]> select * from faculty;
++------+--------+---------------+--------+
+| fid  | fname  | qualification | deptid |
++------+--------+---------------+--------+
+|    1 | Aman   | B.Tech        |      1 |
+|    2 | Mohan  | M.Tech        |      2 |
+|    3 | Vishal | M.Tech        |      2 |
+|    4 | Priya  | Ph.D          |      2 |
+|    5 | Ravi   | Ph.D          |      3 |
+|    6 | Aarti  | M.Tech        |      2 |
++------+--------+---------------+--------+
+6 rows in set (0.001 sec)
+
+MariaDB [ashish]> update faculty set deptid=3 where qualification='Ph.D';
+Query OK, 1 row affected (0.056 sec)
+Rows matched: 2  Changed: 1  Warnings: 0
+
+MariaDB [ashish]> select * from faculty;
++------+--------+---------------+--------+
+| fid  | fname  | qualification | deptid |
++------+--------+---------------+--------+
+|    1 | Aman   | B.Tech        |      1 |
+|    2 | Mohan  | M.Tech        |      2 |
+|    3 | Vishal | M.Tech        |      2 |
+|    4 | Priya  | Ph.D          |      3 |
+|    5 | Ravi   | Ph.D          |      3 |
+|    6 | Aarti  | M.Tech        |      2 |
++------+--------+---------------+--------+
+6 rows in set (0.001 sec)
+
+MariaDB [ashish]> select fid, deptid,dname from faculty,department;
+ERROR 1052 (23000): Column 'deptid' in field list is ambiguous
+MariaDB [ashish]> select fid,dname from faculty,department;
++------+-------+
+| fid  | dname |
++------+-------+
+|    1 | IT    |
+|    1 | CSE   |
+|    1 | ECE   |
+|    2 | IT    |
+|    2 | CSE   |
+|    2 | ECE   |
+|    3 | IT    |
+|    3 | CSE   |
+|    3 | ECE   |
+|    4 | IT    |
+|    4 | CSE   |
+|    4 | ECE   |
+|    5 | IT    |
+|    5 | CSE   |
+|    5 | ECE   |
+|    6 | IT    |
+|    6 | CSE   |
+|    6 | ECE   |
++------+-------+
+18 rows in set (0.001 sec)
+
+MariaDB [ashish]> select fid,dname from faculty,department where deptid=1;
+ERROR 1052 (23000): Column 'deptid' in where clause is ambiguous
+MariaDB [ashish]> select fid,dname from faculty,department where qualification='IT';
+Empty set (0.002 sec)
+
+MariaDB [ashish]>
+MariaDB [ashish]> select * from faculty where qualification !='Ph.D';
++------+--------+---------------+--------+
+| fid  | fname  | qualification | deptid |
++------+--------+---------------+--------+
+|    1 | Aman   | B.Tech        |      1 |
+|    2 | Mohan  | M.Tech        |      2 |
+|    3 | Vishal | M.Tech        |      2 |
+|    6 | Aarti  | M.Tech        |      2 |
++------+--------+---------------+--------+
+4 rows in set (0.002 sec)
+
+MariaDB [ashish]> select * from faculty where qualification <> 'Ph.D';
++------+--------+---------------+--------+
+| fid  | fname  | qualification | deptid |
++------+--------+---------------+--------+
+|    1 | Aman   | B.Tech        |      1 |
+|    2 | Mohan  | M.Tech        |      2 |
+|    3 | Vishal | M.Tech        |      2 |
+|    6 | Aarti  | M.Tech        |      2 |
++------+--------+---------------+--------+
+4 rows in set (0.001 sec)
+
+MariaDB [ashish]>
+MariaDB [ashish]>
+MariaDB [ashish]> select sname, marks from student where marks >50 AND marks <80 and branch
+='IT'
+    -> ;
++-------+-------+
+| sname | marks |
++-------+-------+
+| Lalit |    75 |
+| Parul |    62 |
++-------+-------+
+2 rows in set (0.001 sec)
+
+MariaDB [ashish]> select * from students
+    -> ;
+ERROR 1146 (42S02): Table 'ashish.students' doesn't exist
+MariaDB [ashish]> select * from student;
++------+--------+--------+-------+
+| sid  | sname  | Branch | marks |
++------+--------+--------+-------+
+|    1 | Lalit  | IT     |    75 |
+|    2 | Mahesh | IT     |    90 |
+|    3 | Sagar  | CSE    |    92 |
+|    4 | Arun   | CSE    |    45 |
+|    5 | Shikha | ECE    |    56 |
+|    6 | Anand  | ECE    |    78 |
+|    7 | Parul  | IT     |    62 |
++------+--------+--------+-------+
+7 rows in set (0.001 sec)
+
+MariaDB [ashish]>
+-----------------------------------------------------------------------------------------------------------------------
+|    7 | Parul  | IT     |    62 |
+|    3 | Sagar  | CSE    |    92 |
+|    5 | Shikha | ECE    |    56 |
++------+--------+--------+-------+
+7 rows in set (0.001 sec)
+
+MariaDB [ashish]> select * from student , department;
++------+--------+--------+-------+--------+-------+
+| sid  | sname  | Branch | marks | deptid | dname |
++------+--------+--------+-------+--------+-------+
+|    1 | Lalit  | IT     |    75 |      1 | IT    |
+|    1 | Lalit  | IT     |    75 |      2 | CSE   |
+|    1 | Lalit  | IT     |    75 |      3 | ECE   |
+|    2 | Mahesh | IT     |    90 |      1 | IT    |
+|    2 | Mahesh | IT     |    90 |      2 | CSE   |
+|    2 | Mahesh | IT     |    90 |      3 | ECE   |
+|    3 | Sagar  | CSE    |    92 |      1 | IT    |
+|    3 | Sagar  | CSE    |    92 |      2 | CSE   |
+|    3 | Sagar  | CSE    |    92 |      3 | ECE   |
+|    4 | Arun   | CSE    |    45 |      1 | IT    |
+|    4 | Arun   | CSE    |    45 |      2 | CSE   |
+|    4 | Arun   | CSE    |    45 |      3 | ECE   |
+|    5 | Shikha | ECE    |    56 |      1 | IT    |
+|    5 | Shikha | ECE    |    56 |      2 | CSE   |
+|    5 | Shikha | ECE    |    56 |      3 | ECE   |
+|    6 | Anand  | ECE    |    78 |      1 | IT    |
+|    6 | Anand  | ECE    |    78 |      2 | CSE   |
+|    6 | Anand  | ECE    |    78 |      3 | ECE   |
+|    7 | Parul  | IT     |    62 |      1 | IT    |
+|    7 | Parul  | IT     |    62 |      2 | CSE   |
+|    7 | Parul  | IT     |    62 |      3 | ECE   |
++------+--------+--------+-------+--------+-------+
+21 rows in set (0.063 sec)
+
+MariaDB [ashish]> select * from faculty , department;
++------+--------+---------------+--------+--------+-------+
+| fid  | fname  | qualification | deptid | deptid | dname |
++------+--------+---------------+--------+--------+-------+
+|    1 | Aman   | B.Tech        |      1 |      1 | IT    |
+|    1 | Aman   | B.Tech        |      1 |      2 | CSE   |
+|    1 | Aman   | B.Tech        |      1 |      3 | ECE   |
+|    2 | Mohan  | M.Tech        |      2 |      1 | IT    |
+|    2 | Mohan  | M.Tech        |      2 |      2 | CSE   |
+|    2 | Mohan  | M.Tech        |      2 |      3 | ECE   |
+|    3 | Vishal | M.Tech        |      2 |      1 | IT    |
+|    3 | Vishal | M.Tech        |      2 |      2 | CSE   |
+|    3 | Vishal | M.Tech        |      2 |      3 | ECE   |
+|    4 | Priya  | Ph.D          |      3 |      1 | IT    |
+|    4 | Priya  | Ph.D          |      3 |      2 | CSE   |
+|    4 | Priya  | Ph.D          |      3 |      3 | ECE   |
+|    5 | Ravi   | Ph.D          |      3 |      1 | IT    |
+|    5 | Ravi   | Ph.D          |      3 |      2 | CSE   |
+|    5 | Ravi   | Ph.D          |      3 |      3 | ECE   |
+|    6 | Aarti  | M.Tech        |      2 |      1 | IT    |
+|    6 | Aarti  | M.Tech        |      2 |      2 | CSE   |
+|    6 | Aarti  | M.Tech        |      2 |      3 | ECE   |
+|    7 | ashish | NULL          |   NULL |      1 | IT    |
+|    7 | ashish | NULL          |   NULL |      2 | CSE   |
+|    7 | ashish | NULL          |   NULL |      3 | ECE   |
++------+--------+---------------+--------+--------+-------+
+21 rows in set (0.001 sec)
+
+MariaDB [ashish]> select * from faculty cross join department;
++------+--------+---------------+--------+--------+-------+
+| fid  | fname  | qualification | deptid | deptid | dname |
++------+--------+---------------+--------+--------+-------+
+|    1 | Aman   | B.Tech        |      1 |      1 | IT    |
+|    1 | Aman   | B.Tech        |      1 |      2 | CSE   |
+|    1 | Aman   | B.Tech        |      1 |      3 | ECE   |
+|    2 | Mohan  | M.Tech        |      2 |      1 | IT    |
+|    2 | Mohan  | M.Tech        |      2 |      2 | CSE   |
+|    2 | Mohan  | M.Tech        |      2 |      3 | ECE   |
+|    3 | Vishal | M.Tech        |      2 |      1 | IT    |
+|    3 | Vishal | M.Tech        |      2 |      2 | CSE   |
+|    3 | Vishal | M.Tech        |      2 |      3 | ECE   |
+|    4 | Priya  | Ph.D          |      3 |      1 | IT    |
+|    4 | Priya  | Ph.D          |      3 |      2 | CSE   |
+|    4 | Priya  | Ph.D          |      3 |      3 | ECE   |
+|    5 | Ravi   | Ph.D          |      3 |      1 | IT    |
+|    5 | Ravi   | Ph.D          |      3 |      2 | CSE   |
+|    5 | Ravi   | Ph.D          |      3 |      3 | ECE   |
+|    6 | Aarti  | M.Tech        |      2 |      1 | IT    |
+|    6 | Aarti  | M.Tech        |      2 |      2 | CSE   |
+|    6 | Aarti  | M.Tech        |      2 |      3 | ECE   |
+|    7 | ashish | NULL          |   NULL |      1 | IT    |
+|    7 | ashish | NULL          |   NULL |      2 | CSE   |
+|    7 | ashish | NULL          |   NULL |      3 | ECE   |
++------+--------+---------------+--------+--------+-------+
+21 rows in set (0.001 sec)
+
+MariaDB [ashish]> select * from faculty join department where faculty.deptid=dep
+artment.deptid;
++------+--------+---------------+--------+--------+-------+
+| fid  | fname  | qualification | deptid | deptid | dname |
++------+--------+---------------+--------+--------+-------+
+|    1 | Aman   | B.Tech        |      1 |      1 | IT    |
+|    2 | Mohan  | M.Tech        |      2 |      2 | CSE   |
+|    3 | Vishal | M.Tech        |      2 |      2 | CSE   |
+|    4 | Priya  | Ph.D          |      3 |      3 | ECE   |
+|    5 | Ravi   | Ph.D          |      3 |      3 | ECE   |
+|    6 | Aarti  | M.Tech        |      2 |      2 | CSE   |
++------+--------+---------------+--------+--------+-------+
+6 rows in set (0.360 sec)
+
+MariaDB [ashish]> select * from faculty join department ;
++------+--------+---------------+--------+--------+-------+
+| fid  | fname  | qualification | deptid | deptid | dname |
++------+--------+---------------+--------+--------+-------+
+|    1 | Aman   | B.Tech        |      1 |      1 | IT    |
+|    1 | Aman   | B.Tech        |      1 |      2 | CSE   |
+|    1 | Aman   | B.Tech        |      1 |      3 | ECE   |
+|    2 | Mohan  | M.Tech        |      2 |      1 | IT    |
+|    2 | Mohan  | M.Tech        |      2 |      2 | CSE   |
+|    2 | Mohan  | M.Tech        |      2 |      3 | ECE   |
+|    3 | Vishal | M.Tech        |      2 |      1 | IT    |
+|    3 | Vishal | M.Tech        |      2 |      2 | CSE   |
+|    3 | Vishal | M.Tech        |      2 |      3 | ECE   |
+|    4 | Priya  | Ph.D          |      3 |      1 | IT    |
+|    4 | Priya  | Ph.D          |      3 |      2 | CSE   |
+|    4 | Priya  | Ph.D          |      3 |      3 | ECE   |
+|    5 | Ravi   | Ph.D          |      3 |      1 | IT    |
+|    5 | Ravi   | Ph.D          |      3 |      2 | CSE   |
+|    5 | Ravi   | Ph.D          |      3 |      3 | ECE   |
+|    6 | Aarti  | M.Tech        |      2 |      1 | IT    |
+|    6 | Aarti  | M.Tech        |      2 |      2 | CSE   |
+|    6 | Aarti  | M.Tech        |      2 |      3 | ECE   |
+|    7 | ashish | NULL          |   NULL |      1 | IT    |
+|    7 | ashish | NULL          |   NULL |      2 | CSE   |
+|    7 | ashish | NULL          |   NULL |      3 | ECE   |
++------+--------+---------------+--------+--------+-------+
+21 rows in set (0.001 sec)
+
+MariaDB [ashish]> select * from faculty natural join department ;
++--------+------+--------+---------------+-------+
+| deptid | fid  | fname  | qualification | dname |
++--------+------+--------+---------------+-------+
+|      1 |    1 | Aman   | B.Tech        | IT    |
+|      2 |    2 | Mohan  | M.Tech        | CSE   |
+|      2 |    3 | Vishal | M.Tech        | CSE   |
+|      3 |    4 | Priya  | Ph.D          | ECE   |
+|      3 |    5 | Ravi   | Ph.D          | ECE   |
+|      2 |    6 | Aarti  | M.Tech        | CSE   |
++--------+------+--------+---------------+-------+
+6 rows in set (0.001 sec)
+
+MariaDB [ashish]> select * from faculty join department using deptid ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that
+corresponds to your MariaDB server version for the right syntax to use near 'dep
+tid' at line 1
+MariaDB [ashish]> select * from faculty join department using(deptid) ;
++--------+------+--------+---------------+-------+
+| deptid | fid  | fname  | qualification | dname |
++--------+------+--------+---------------+-------+
+|      1 |    1 | Aman   | B.Tech        | IT    |
+|      2 |    2 | Mohan  | M.Tech        | CSE   |
+|      2 |    3 | Vishal | M.Tech        | CSE   |
+|      3 |    4 | Priya  | Ph.D          | ECE   |
+|      3 |    5 | Ravi   | Ph.D          | ECE   |
+|      2 |    6 | Aarti  | M.Tech        | CSE   |
++--------+------+--------+---------------+-------+
+6 rows in set (0.001 sec)
+
+MariaDB [ashish]> select * from faculty join department on faculty.deptid=depart
+ment.deptid;
++------+--------+---------------+--------+--------+-------+
+| fid  | fname  | qualification | deptid | deptid | dname |
++------+--------+---------------+--------+--------+-------+
+|    1 | Aman   | B.Tech        |      1 |      1 | IT    |
+|    2 | Mohan  | M.Tech        |      2 |      2 | CSE   |
+|    3 | Vishal | M.Tech        |      2 |      2 | CSE   |
+|    4 | Priya  | Ph.D          |      3 |      3 | ECE   |
+|    5 | Ravi   | Ph.D          |      3 |      3 | ECE   |
+|    6 | Aarti  | M.Tech        |      2 |      2 | CSE   |
++------+--------+---------------+--------+--------+-------+
+6 rows in set (0.001 sec)
+
+MariaDB [ashish]> select count(*) from student ;
++----------+
+| count(*) |
++----------+
+|        7 |
++----------+
+1 row in set (0.038 sec)
+
+MariaDB [ashish]> select count(*) from student group by branch;
++----------+
+| count(*) |
++----------+
+|        2 |
+|        2 |
+|        3 |
++----------+
+3 rows in set (0.001 sec)
+
+MariaDB [ashish]> select branch,count(*) from student group by branch;
++--------+----------+
+| branch | count(*) |
++--------+----------+
+| CSE    |        2 |
+| ECE    |        2 |
+| IT     |        3 |
++--------+----------+
+3 rows in set (0.001 sec)
+
+MariaDB [ashish]> select name,count(*) from student group by branch;
+ERROR 1054 (42S22): Unknown column 'name' in 'field list'
+MariaDB [ashish]> select sname,count(*) from student group by branch;
++--------+----------+
+| sname  | count(*) |
++--------+----------+
+| Sagar  |        2 |
+| Shikha |        2 |
+| Lalit  |        3 |
++--------+----------+
+3 rows in set (0.001 sec)
+
+MariaDB [ashish]> select  * from student ;
++------+--------+--------+-------+
+| sid  | sname  | Branch | marks |
++------+--------+--------+-------+
+|    1 | Lalit  | IT     |    75 |
+|    2 | Mahesh | IT     |    90 |
+|    3 | Sagar  | CSE    |    92 |
+|    4 | Arun   | CSE    |    45 |
+|    5 | Shikha | ECE    |    56 |
+|    6 | Anand  | ECE    |    78 |
+|    7 | Parul  | IT     |    62 |
++------+--------+--------+-------+
+7 rows in set (0.001 sec)
+
+MariaDB [ashish]> select  branch,count(*) from student ;
++--------+----------+
+| branch | count(*) |
++--------+----------+
+| IT     |        7 |
++--------+----------+
+1 row in set (0.001 sec)
+
+MariaDB [ashish]> select  branch,count(*) from student group by branch ;
++--------+----------+
+| branch | count(*) |
++--------+----------+
+| CSE    |        2 |
+| ECE    |        2 |
+| IT     |        3 |
++--------+----------+
+3 rows in set (0.001 sec)
+
+MariaDB [ashish]> select  branch,count(*), sum(marks) from student group by bran
+ch ;
++--------+----------+------------+
+| branch | count(*) | sum(marks) |
++--------+----------+------------+
+| CSE    |        2 |        137 |
+| ECE    |        2 |        134 |
+| IT     |        3 |        227 |
++--------+----------+------------+
+3 rows in set (0.002 sec)
+
+MariaDB [ashish]> select  branch,count(*), sum(marks)/count(*) from student grou
+p by branch ;
++--------+----------+---------------------+
+| branch | count(*) | sum(marks)/count(*) |
++--------+----------+---------------------+
+| CSE    |        2 |             68.5000 |
+| ECE    |        2 |             67.0000 |
+| IT     |        3 |             75.6667 |
++--------+----------+---------------------+
+3 rows in set (0.075 sec)
+
+MariaDB [ashish]> select  branch,(count(*)) as no of students, (sum(marks)/count
+(*)) as average from student group by branch ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that
+corresponds to your MariaDB server version for the right syntax to use near 'of
+students, (sum(marks)/count(*)) as average from student group by branch' at line
+ 1
+MariaDB [ashish]> select  branch,count(*), (sum(marks)/count(*)) as average from
+ student group by branch ;
++--------+----------+---------+
+| branch | count(*) | average |
++--------+----------+---------+
+| CSE    |        2 | 68.5000 |
+| ECE    |        2 | 67.0000 |
+| IT     |        3 | 75.6667 |
++--------+----------+---------+
+3 rows in set (0.001 sec)
+
+MariaDB [ashish]> select  branch,count(*), avg(marks) as average from student gr
+oup by branch ;
++--------+----------+---------+
+| branch | count(*) | average |
++--------+----------+---------+
+| CSE    |        2 | 68.5000 |
+| ECE    |        2 | 67.0000 |
+| IT     |        3 | 75.6667 |
++--------+----------+---------+
+3 rows in set (0.002 sec)
+
+MariaDB [ashish]> select  branch,count(*), avg(marks) as average from student gr
+oup by branch ;
+--------------------------------------------------------------------------------------------------------------------
+Assume we wish to select all records from 1 - 30 (inclusive) from a table called "Orders". The SQL query would then look like this:
+
+$sql = "SELECT * FROM Orders LIMIT 30";
+When the SQL query above is run, it will return the first 30 records.
+
+What if we want to select records 16 - 25 (inclusive)?
+
+Mysql also provides a way to handle this: by using OFFSET.
+
+The SQL query below says "return only 10 records, start on record 16 (OFFSET 15)":
+
+$sql = "SELECT * FROM Orders LIMIT 10 OFFSET 15";
+You could also use a shorter syntax to achieve the same result:
+
+$sql = "SELECT * FROM Orders LIMIT 15, 10";
+Notice that the numbers are reversed when you use a comma.

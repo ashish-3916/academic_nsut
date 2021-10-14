@@ -1,0 +1,34 @@
+//map opcode 
+
+// decimal to binary 
+
+// r1 -- r8 -> representation in binary  mapped
+// p1 -- p8 
+
+
+--------------------------------------------------------------------
+
+string -> string mapping of memeonics
+
+array of memory 256
+
+register array of size 8
+-----------------------------------------------------------------------
+012345678
+MRR R1 R2
+MRM R2 14
+MRD R1 12
+MMR 10 R1
+OAD R1 R2
+OSB R1 R2
+OAN R1 R2
+OOR R1 R2
+OXR R1 R2
+OMD R1 R2
+INC R1
+DEC R1
+CLS R1
+CRS R1
+CMN R1
+XCH R1 R2
+HLT
