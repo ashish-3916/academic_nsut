@@ -1,0 +1,63 @@
+clear; close all; clc;
+
+% BER of BASK under AWGN
+N = 1000;
+m = randi([0 1] , 1 , N);	 	% generate random no
+
+for i = 1 : N  			% initial BASK mapping though its already done is case of BASK
+    if m(i) == 0
+        x(i) = 0;
+	else
+		x(i) = 1;
+	end
+end
+
+ber_sim =[];
+ber_theory_erfc = [] ;
+
+% EbN0dB=5 ; 			initially we just checked for one snr
+
+for EbN0dB = 0 : 1 :15
+
+
+	EbN0 =  10 ^ (EbN0dB/10);  %snr 
+
+	sigma = sqrt( 1 / ( 2 * EbN0));
+
+	r = x + sigma* rand(1,N); 			% awgn channel (noise)
+
+	m_cap = (r>0.5);
+
+	%BER calculation
+
+	no_of_error = sum(m ~= m_cap);
+
+	ber_sim1 = no_of_error/N ; 
+
+	ber_sim =[ber_sim ber_sim1]; % push_back result to the vector 
+
+	ber_theory_erfc1 = 0.5 erfc(sqrt(EbN0/4));
+
+	ber_theory_erfc = [ber_theory_erfc ber_theory_erfc1]; % push_back in theoritical 
+end
+
+%done 
+
+%plot
+
+EbN0dB = 0 : 1 :15;
+
+%semilogy(EbN0dB , ber_sim , 'r*-');		% x- axis , y - axis  
+
+semilogy(EbN0dB , ber_sim , 'r*-' ,EbN0dB , ber_theory_erfc , 'k*-' );
+
+xlabel('EbN0(dB)'); %naming x axis
+ylabel('BER'); %naming y axis
+
+legend ('simulation', 'theoritical (erfc)'); 
+
+
+%increase N to get smooth graph  
+
+%----------------------------
+

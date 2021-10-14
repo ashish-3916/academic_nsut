@@ -1,0 +1,51 @@
+CIA -> confidentiality , integrity , availability 
+threat (potentail of voilation of securiy )  
+attack ( delibrate attemp to breach security )
+
+OSI MODEL ->
+	security attack -> actions that compromises security
+		passive : learn and make use of info , no change in info , still attacker get many info from location , frequcny etc about type of data being send , hard to detect 
+			release of msg contents : try to read messages eaavesdropping (secreatly listening to messages)
+			traffic analysis : loactiton , host , frequency of data sent , length of data sent .
+
+		active : modification of data stream or insertion of new data streeams . hard to prevent
+
+			masquarade : steals someones crediantials to act like the host itself.
+			replay : capture info and send it again and again 
+			modification of messages : 
+			denial of services : overloading server , and server unable to repond to the one who need it. 
+
+	security services -> enhance the security /protection , provide services.
+		data confidentilty :
+		data integrity :
+		authentication : proves the identity of the claim , gmail login OTP
+		access control : who can access what 
+		nonrepudiation : proof that msg was sent by transmiiting party and proof that msg was recived by recieving party.	(u can't deny it once you are done sending or recieving)
+
+	security mechanisms -> detect , prevent and recover from security attack
+		encipherment :
+		digital signature : prove the identity of sender
+		access control :
+		data integrity :
+		authentication exchange : entities some msg to each other to prove their identity 
+		traffic pading : introduce dummy data stream when both entities are idle.
+		routing control : 
+		notarization : trusted third party is used to control communication bt the two entities  
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+cryptography -> defination , block diagram etc 
+
+cryptanalsis -> trying to decode the cipher text by attack , they try to find key based on some patterns , observation etc or use his previos knowledge to detect relationships etc 
+
+bruteforce attack  -> trying all posible cmbination , can be prevneted using captcha etc to slow down process . 
+
+
+substitution 
+	ceaser 
+	monoalphabtic
+	polyalbhabet
+	playfair 
+	hill 
+	one time pad 
+transposition keyless , keypad ||||  railfence columnar doulble 

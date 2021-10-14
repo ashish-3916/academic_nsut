@@ -1,0 +1,256 @@
+syllabus -> introduction , data , exploring data
+
+-------------------------------------------------READ HIGHLIGHTED STUFF FROM PDF-------------------------------------
+UNIT 1 
+
+DEFINATIONS
+	
+	Non trivial extraction of implicit ,previously unknown and potential useful information
+
+	Data mining is a technology that blends traditional data analysis methods with sophisticated algorithms for processing large volumes of data .
+	Data mining is the process of automatically discovering useful information in large data repositories.
+	find useful patterns, predict outcomes for future observation 
+
+	data minnng is a teechnology used to discover useful info in large datasets with help of cmplx algo in ordeer to find useful patterns, predict outcomes for future observation 
+
+KDD(knowledge discovery in databases) -> process of converting raw data into useful information 
+	BLOCK ->  input -> data prepocessing -> data mining -> data postprocesssing -> information 
+							(7 ways below)						 (filtering,pattern recogn,visualzn)								
+
+challenges -> 
+	scalability : large need , need high computatuional power , parellel processing 
+	high dimensinality : complexity increases with large no of features 
+	hetro and complex data : time sereiss data , autocorrelation  , N- dimension 
+	data ownership and distribution : how do we keep so much data ? then how can we access it easily ? security issues?
+
+data mining task -> 2 tasks 
+	predictive tasks : we hve to predict dependent/target ariable from independent variables (classsificatin and regression) ,
+	descriptive tasks : derive patterns (clustering(closely related), assosiation analysis, anomaly detection(behaviour diff from others )) 
+
+	dont miss any of the subpoints / examples 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UNIT 2 
+	to study ->
+ 		types of data (quantitiative and qualitative) 
+ 		data quality(noise ,outliers , missing data , duplicates , inconsistent) 
+ 		preprocessing techniques (6-7 techinques)
+ 		measures of similarity and dissimilarity 
+ 		-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	1.types of data
+		types of attribute : 
+				->		nominal, 	oridinal, 		interval, ratio
+				    categorical(qualitative)   numerical(quantitative)
+				    distinctness , order	  	  add/sub , mul/divide		
+				    	(=,~=)  , ( < , >)			(+,-)  ,   (*,/)
+
+			on # of values : discreate(n-ary) and continuous (real no)
+			asymetric attributes : presence of non zero attribute matters the most, we would already know most of the data is sparse so we actually care about values present in it. 
+
+		characterstics of data sets :
+			dimensionality -> # of features , curse of dimlty
+			spartiality -> is a pros , 
+			resolution -> different data patterns are observed at different levels of magnification. (eg : zoom in/out google earth)
+		
+		types of data sets :
+			record data (simple tablles with hetrogenous attributes )
+				transaction data (raw entries) 
+				data matrix (simple tablles with homogenous attributes [to be specific numeric attributes only ])
+				documentation (there might be dynamic attributes based on instances , eg : count of specific words on several documents )
+
+			graph data -> 
+				relationship (nodes and edges [eg hyperlinks in realted webpages/information ]), 
+				representation (molecule representaion)
+			
+			ordered data -> relationship changes with time or space 
+				sequential data -> record data + time (visiting time in mall)
+				sequence data -> order of sequence matter without taking account of time (genes (postions of ATGC))
+				time series data ->  sequential data + time series (taken over time) (eg stocks) [temporal autocorelation]
+				spatial data -> position + areas (eg weather geography) [spatial autocorrleation]
+
+		temporal autocorelation -> if two measurements are close in time, then the values of those measurements are often very similar 
+		spatial autocorelation -> objects that are physically close, tend to be similar in other ways as well.
+		------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	2. data quality
+		detection and correction (data cleaning)
+		algo to tolerate poor data
+
+		measurement and data collection errors 
+			noise (distortion , disturbance) 
+			artifacts  (hardware , sof errors , caused by equipment, techniques or conditions)
+			precision(closeness to one another , (standard devaition))
+			accuracy(closeness to true value )
+			bias(x - x_bar)
+			
+			outliers (different from the most ,  anomaly detection)
+			missing values 
+				eliminate attribute (ez :') )
+				ignore values
+				estimate ->
+					similar data  - closest value
+					continuous data -> mean , median
+					freq -> mode
+			incorrect values (phone no not equal to 10 digits )
+			duplicate data 
+		----------------------------------------------------------------------------------------------------------------------------------------------------------------------------	
+	3. Data Preprocessing
+	 Aggregation -> combining twoo or more features into one [adv -> combined features might predict better res  , dis-> we might lose some intersting patterns ] 
+
+	 Sampling -> selecting subset of data to analyse
+	 	simple random sampling(with/out replacement) [ there is an equal probability of selecting any particular item]
+	 	stratified sampling (the number of objects drawn from each group is proportional to the size of that group)
+	 	progressive sampling (start with samll sample size)
+
+	 Dimensionality reduction
+	 	PCA to reduce dimensinality 
+	 		 finds new attributes that are linear combinations of the original attributes are orthogonal (perpendicular) to each other and  capture the maximum amount of variation in the data
+	 	single value decomposition (SVD)
+	 
+	 Feature subset selection
+	 	use only subsets of feature (not choose reduntant and irrelevent features )
+	 		embedded -> algo decides itself which subset to choose 
+	 		filter -> 
+	 		wrapper(black box) -> try 2^n combination to find best result
+	 
+	 Feature creation
+	 	creates new features from old attributes
+	 		feature extraction ->The creation of a new set of features from the original raw data
+	 		feature contruction -> new feature can be more useful than original feature (may be algo cant figure out things from old data set even if data set is good)
+	 		mapping to new space -> fourier transform :(
+
+	 Variable transformation
+	 	normalisation ->mean , median , mode , absolute , functions
+	 	standardisation -> variance , sd
+	 
+	 Discretization and binarization
+		transform a continuous attribute into a categorical attribute (discretization)
+		transform a continuous or discreater attribute into a one or more binary attribute (binarization)
+	 		//ppt me sirf definations hai of this subtopic
+
+		------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	 4.Measures of similarity and disimilarity
+	
+	 	proximity is used to refer to either similarity( two obj are alike ) or dissimilarity/distances.
+
+	 	corelation and euclid distance -> dense data 
+	 	jaccard and cosine similarity -> sparse data
+
+      ---------PRO TIP : STUDY FROM PPT AND QUESTION PRACTICE FROM ASSIGNMENT 
+	 	
+	 	dissimalrity bt attributes (nominal , ordinals |x-y|/(n-1) , ratio - interval|x-y| ka TABLE)
+	 	dissimalrity bt data objects
+	 		mikowiski distance
+	 			L1 [hamming/manhattan]  L2[euclidean]  Loo[ maximum difference between any attribute of the objects]
+	 			-> Hamming distance, which is the number of bits that are different between two objects that have only binary attributes
+	 	
+	 	similarity bt data objects
+	 		confusion matrix 
+
+	 	other proximity measures -> 
+	 		simple matching coffecient (SMC)  and Jaccard Coffiecient [for binary]
+	 			jaccard coffienect is used in case of asymetric binary atttributes (where only presence matters )
+
+	 		cosine (for non- binary)
+
+	 	corelation[pearson's correlation] -> covariance(x , y) /  sd(x) * sd(y) 
+	 		tells only linear relation among attributes but there may be possibility that there exist better corelation bt features on some other function say F(quardratic)
+	 		lies in [-1 , 1]  
+	 			1 -> perfect linear correlated
+	 		  -1 -> perfect inverse linear correlated
+	 		   0 -> no linear correlation
+
+	 	issues in proximity calcluation
+	 		many issues like two features which we are comparing might not be on  a good scale or one may be categorical and other may be numerical blah blah 
+
+	 	mahalanobis distance ->   sq_root ( transpose(x-y) * inverse_covariance * (x-y) )
+	 									 isske covariance matrix me (n-1) [instead of n] se divide hota hai while calculating covariance and variance
+	 	
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	database -> storing and retrieving data. query processing.These systems are used day to day operations of and organization. OLTP , ER
+	datawarehouse -> huge amount of data is stored ,It is meant for users or knowledge workers in the role of data analysis and decision making. OLAP star/snowflake
+	OLAP vs OLTP
+	star vs snowflake -> measures and dimensions , fact table , dimension table 
+	etl (codebasics) extraction transformation loading
+	
+	PCA to reduce dimensinality 
+	   finds new attributes that are linear combinations of the original attributes are orthogonal (perpendicular) to each other and  capture the maximum amount of variation in the data standardasation (move to origin)
+	
+			calculate PCA percentage (lambds)
+					standardisation 
+		-	 		prepare covariance matrix (M) from data set
+			 		M - LAMBDA * I = 0
+			 		drop out lower lambda
+			calculate eigen vectors (X) for each lambda
+			 		MX = lambda X
+			project feature vectors on PCAs
+			 		transpose(X)*(feature- mean)
+
+	knowledge discovery (KDD) -> discussed above (find patterns/useful info data)
+	triplet : data -> info -> knowledge
+	Information Retrivel Vs Information Extraction
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+CONCEPT HIERARCHY :
+	a sequence of mappings from a set of low-level concepts to higher-level,
+	types ->	
+		• Schema hierarchy
+			total or partial order among attributes in a database schema . express existing relationships between attribute
+			street -> city -> state -> country
+			seconds -> minutes -> hours -> days -> months -> quaters -> year
+															\							^
+															  ---> weeks -------/
+		• Set grouping hierarchy
+			discretizing or grouping values for a given dimension or attribute, resulting in a set-grouping hierarchy.
+		• Operation driven hierarchy
+				a set of operations on the data ((encoding, decoding,)
+		• Rule-based hierarchy
+			defined by a set of rules to determine partial order. A lattice-like structure is used for graphically describing this type of hierarchies, in which every child-parent path is linked with a generalization rule.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Knowledge representation is the presentation of knowledge to the user for visualization in terms of trees, tables, rules graphs, charts, matrices, etc.
+
+DATA MINING TASK PRIMITIVES  (total 5 )
+	->The set of *task-relevant data* to be mined: set of data to be mined
+	->The *kind of knowledge* to be mined: which characterstices are we interested in?
+	->The *background knowledge* to be used in the discovery process: concept herirachy are mainly used .
+		• Schema hierarchy
+		• Set grouping hierarchy
+		• Operation driven hierarchy
+		• Rule-based hierarchy
+	->The *interestingness measures* and thresholds for pattern evaluation:
+	->The expected *representation for visualizing* the discovered patterns: knowledge representation
+		1. Pixel- oriented visualization technique
+		2. Geometric projection visualization technique
+			scatter plots
+		3. Icon-based visualization techniques
+			Chernoff faces.
+		4. Hierarchical visualization techniques
+			dividing all data into subsets (kind of box represntation of decision trees)
+			treemaps
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+METRICS :
+	measure of central tendancy ->mean , median , mode
+	measure of central dispersion -> vaariace , sd  , quartile
+	quartile [	|	|	|	]
+					q1    q3
+		interquartile range (IQR) = q3-q1 = box length
+
+	outlier analysis -> box plot and scatter plot 
+	outliers detection formula ->
+		start of tail =  max(low , q1 - 1.5*IQR )
+		end of tail =   min(high , q3 + 1.5*IQR )
+		values outside this range are outliers 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+NORMALISATION -> need? blah blah
+	
+	Min -Max Normalisation  (value -min )/ (max - min)  scale bt [0 1]
+	Z-score = (value - mean) / sd 
+	
+	Min-max normalization: Guarantees all features will have the exact same scale but does not handle outliers well.
+   Z-score normalization: Handles outliers, but does not produce normalized data with the exact same scale.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+

@@ -1,0 +1,224 @@
+every computing defination be like -> hpc/perform/processing/problems/resources / homo -hetro
+
+----------------------------------------------General computing-------------------------------------------------------------
+parellel computing -> a set of processors work cooperatively to solve a computational problem. These processor 
+		machines or CPUs are mostly of homogeneous type . Problem are broken into discreate parts and are solved concurrently
+
+distributed computing -> consists of multiple computers or processor machines connected through a network, which can be 
+		homogeneous or heterogeneous, but run as a single system .The goal of distributed computing is to make such a network work as a single computer , eg workstations.
+		scalabily -> easy to expand 
+		redundnacy -> if one fails , info present on other system. 
+			i think distributed is same system placed at different places but does similar job.
+
+cluster computing -> we have nodes and graph . different system work cooperatively and are dependent on each others response.
+			i think cluster are some systems placed at same/different places but does different job but they together complete a task eg-> transmission needs......
+
+grid computing -> The idea of grid computing is to make use of such nonutilized computing power by the needy           				organizations,and thereby the return on investment (ROI) on computing investments can be increased .These act 				 as a midleware for other organisation. WE ALL ARE PART OF GRID , WE ARE CONNECTED VIA GRID, WE ACCCESS INTERNET AND 			WE DONT CARE THE PLACE WE ARE ACCESSING FROM (INDIA , USA ,) AND PAY PER USE! 
+
+cloud computing -> access anything over interent form wheresoever in no-time irrespectie of users conneceted, cloud version 		of grid computing
+
+Network computing -> servers-client environment, etcc
+
+-------------------------------------------------fancy names----------------------------------------------------------
+mobile computing -> the processing (or computing) elements are small (i.e., handheld devices) and the communication between 		various resources is taking place using wireless media.
+
+Quantum computing -> taking info on subatomic level and IC , silicon chips etc ..... something exists between 0 and 1 bit.
+
+Nano computing -> small scale compting eg transitors, IC chips, , make comptuing millions times faster <- ^| 
+
+----------------------------------------------------science fields-----------------------------------------------------
+biocomputing -> Biocomputing systems use the concepts of biologically derived or simulated molecules (or models) that 				perform computational processes in order to solve a problem.
+
+optical computing -> using photons in info excahange , 10 times faster than elcetric signal , OPTICAL FIBRES.  
+
+-----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------
+UNIT 2->
+
+capital expenditure -> buy everthing of your own ie , resources, networking , storage , maintaince , etc  , costly
+operational expenditure -> get it from provider, pay as we use.
+
+cloud computing is a mechanism of bringing–hiring or getting the services of the computing power or infrastructure to an organizational or individual level to the extent required and paying only for the consumed services
+
+NEED OF CLOUD COMPUTING
+	convienece and relaibility
+
+DEFINATIONS
+	cloud computing means storing and accessing data and programs over the Internet from a remote location or computer instead of our computer’s hard drive.
+
+	cloud computing is a mechanism of bringing–hiring or getting the services of the computing power or infrastructure to an organizational or individual level to the extent required and paying only for the consumed services
+
+	Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool 
+	of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or serive provider interaction.
+--------------------------------------------------------------------------------------------------------------------------	
+cloud model -> 5-4-3	
+CC is a service -> store images , video , collaborative projects , audio
+CC is a platform -> WWW (platform is that it is the support on which applications run or give results to the users)
+					web is becoming platform , hosting google docs, gmail, online info exchange etc.
+----------------------------------------------------------------------------------------------------------------------------
+5 charactetstics 
+	on demand self service -> user can increase/descrease service demand automatically without human interaction with 			service provider. Cloud Computing allows the users to use web services and resources on demand. One can logon to 		a website at any time and use them.
+	broad network access -> cloud computing is completely web based, it can be accessed from anywhere and at any time.
+	elastic resource pooling ->resources can be pooled/shared with multiple consumers at a time independently.
+	rapid elasticity -> hori and verticle scaling of resources should be done with ease. Scaling of resources means the 		ability of resources to deal with increasing or decreasing demand
+	measured services -> cloud provider controls and monitors all the aspects of cloud service. Resource optimization, 			billing, and capacity planning etc. depend on it.
+
+4 deployment (ways cloud services can be made availble to cunsomers) 
+	private ->used by single orgainistion and its buisness units  , managed by themsekves or third party , on/off premesis
+	public -> open for everyone , managed by govt, big org(Amazon , google , micro ,VMware Vcloud) on premisis
+	community -> shared by groups of  org (mission , security) on/off premisis
+	hybrid -> mix of above ,some things arre public and some are private .(e.g., cloud bursting for load balancing between clouds)
+
+	advantage/disadvange based on scalabilty , avaialbilty , cost , costumizable , security , 
+
+3 service model
+	SaaS -> everything(network, servers, operating systems, storage ,etc ) is given by vendor , we use as per requirment , 
+		eg :(CRM,  , buisness analyticts , microsoft officeemail, web browser )
+	PaaS -> offers runtime env . user have some part and depends rest on vendor for some things like(software , IDE (without 	istallation))    eg (microsoft azure services ,google app engine , play store ) 
+	IaaS -> user has everything but still need some fundamental services like storage , deployment services , infrastrucure 	, servers,db)  eg :AWS
+
+	we have one more thing called on-premises where wwe have everything but obv its so costly , hence not feasible, unless we stands for organistaion(vendor) here .
+
+	some general points to write : scalability, efficiency and performance ,commpactabiliity , managment , issues , customisable?
+----------------------------------------------------------------------------------------------------------------------------
+Cloud ecosystem ->Cloud ecosystem is a term used to describe the complete environment system of interdependent components or entities that work together to enable and support the cloud services
+
+various actors :
+	Cloud service users (CSU)->end users who users cloud services ,can be anyone (indiv , org , community ) 
+	Cloud service providers (CSP) -> which provides services , Saas,PaaS,IaaS
+	Cloud service partners (CSN)-> those who help CSP to build sevices offered by cloud (developers , etc).
+----------------------------------------------------------------------------------------------------------------------------
+Requirement for cloud services
+	multitenancy -> aiming to provide isolation of the different users ,while maximizing resource sharing. 
+	service life cycle management ->serivces can be used and stoped anytime from user, so cloud should support automatic 		service provisioning  metering and charging or billing settlement needs to be provided for services that are 			dynamically created, modified, and then released in virtual environments.
+	security -> securtiy is need in multi-tenant
+	responsiveness -> enable early detection, diagnosis, and fixing of service-related problems
+	Service reliability, service availability, and quality assurance->
+	portability ->
+	interportability -> well-documented and well-tested specifications that allow heterogeneous systems in cloud 
+		environments to work together
+	service access  -> available from any device .
+	Accounting and charging -> It is expected that a cloud service be capable to support various accounting and charging 			models and policies
+	
+----------------------------------------------------------------------------------------------------------------------------
+advantages -> green IT ,convinent , relabilty  , accessbility , save money , only operational expenditure    
+disadvantages -> nothing without interet access , conecern about security , interporatbality  , shift from one cloud to another (as all cloud doesnt provide all services) .
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+UNIT 3 ->
+
+virtualization where a single physical infrastructure can be used to run multiple operating systems (OSs) and applications
+block diagram ->
+	earlier every OS had its own physical infrastructure (processor , memory, storage , network) 
+	but now we have one physical structure and OS/applications run on logival partiotioning where uses some amount of physical resources ( Vprocessor , Vmemory, Vstorage , Vnetwork).
+
+BENIFTS ->
+	increases the resource utilization 
+	increases ROI
+	dynamic data center
+	green IT 
+	ease of admistration
+	Improves disaster recovery
+
+DRAWBACKS
+	Single point of failure
+	Demands high-end and powerful infrastructure
+	May lead to lower performance
+	Requires specialized skill set
+
+Virtualization is the process of abstracting the physical resources to the pool 
+of virtual resources that can be given to any virtual machines (VMs).
+
+-------------------------------------------------------------------------------------------------------------------------
+see block diagramss 
+
+processor virtualisation
+	Processor virtualization allows the VMs to share the virtual processors that 
+	are abstracted from the physical processors available at the underlying infrastructure. The virtualization layer abstracts the physical processor to the pool of virtual processors that is shared by the VMs.
+
+	BLOCK -> [VARIOUS PROCESSORS] -> [POOL OF VPROCESSOR] -> [GIVE TO VM (WIN/LINUX)] ->[RUN APPLICATIONS]
+
+memory virtualisation
+	physical main memmory is mapped to virtual main meemory
+	baaki defination format same 
+	map virtual page numbers to physical page numbers 
+
+	BLOCK -> [VARIOUS P_MEMORIES] -> [POOL OF VMEMORIES] -> [GIVE TO VM (WIN/LINUX)] ->[RUN APPLICATIONS]
+
+storage virtualisation
+	physical storage disks  -> virutual storage disks/logical storage
+  	baaki defination format same 
+
+	BLOCK -> [VARIOUS P_STORAGE] -> [POOL OF VSTORAGE] -> [GIVE TO VM (WIN/LINUX)] ->[RUN APPLICATIONS]
+
+network virtualisation
+	physical network -> virtual network	
+	physical network includes -> routers , switches , firewalls , NICs (netw card interface)
+	then several hosts are connected to this virtual network
+	
+								  VIRUTALISATION LAYER
+	BLOCK -> [VARIOUS DEVICES] -> [POOL OF VDEVICES] -> [build virtual private network] ->[connect many hosts]
+
+Data virtualisation 
+	Data virtualization  is the ability to retrieve the data without knowing its *type* and the physical *location* where it is stored
+	location can be anything like rdbms, dbms , noSql , mediafiles , 
+
+	BLOCK -> [VARIOUS DATA SOURCES] -> [VIRUTALISATION LAYER] -> [GIVE INFO TO VARIOUS SERVICES] 
+
+Application Virtualisation
+	The application virtualization offers the ability to the user to use the application without the need to install any software or tools in the machine.
+
+	BLOCK -> [VARIOUS SHARED APPLICATIONS] -> [VIRUTALISATION LAYER] -> [GIVE INSTANCE OF APPLICATIONS TO USE] 
+
+-------------------------------------------------------------------------------------------------------------------------
+RINGS 
+3 LEVELS ->   KERNEL > DEVICE DRIVERS (2LAYERS) > APPLICATIONS   [ORDER OF PRIVILAGE , ACCESS TO PHYSICAL RESOURCES]
+-------------------------------------------------------------------------------------------------------------------------
+hypervisor is a tool to create VMs
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!READ FROM BOOK !!!!!!!!!!!!!!!!!!!!!!1!!!!!!!!!!!!!!!!!!
+
+APPROCHES TO VIRTULISATION ->
+1. Full virtualization -> The guest OS is not aware that it is virtualized and thinks it is running 
+	on the real hardware
+	ring 0 : hipervisor (VMM)  ring1|2 : guest OS ring3 : aplivations run 
+
+	instructions ->
+		direct execution : ring3 -> physical infra(hardware)
+		binary translation : 2steps   ring1|2 -> ring0 (VMM) -> physical infra
+
+	pros : isolation and security 
+	cons : 2transaltion makes performance low  , correct combination of hardware and software 
+
+2. Paravirtualization / OS-assisted Vr -> The main difference between the full virtualization and paravirtualization is the 	guest OS knows that it is running in virtualized environment in paravirtualization.
+
+	instruxtions ->
+		direct execution remains same
+		instead of translation we have	HYPERCALLS (SYSTEM CALLS) to communicate from guestOS  and hypervisor(VMs) 
+
+	ring0 : Modified guestOS   ring3 : aplivations run 
+
+	pros : hypercalls improves efficcencey and performance 
+	cons : guestOS kenel modifiaction 
+		   correct combination of hardware and software(write same thing in different language | hint:use host keyword) 
+
+3. Hardware-assisted virtualization
+	in 1st -> overhead transaltions wwere used
+	in 2nd -> OS /kernel of guest was modified
+
+	in this hardware is modified itself to provide virtualsation ( eg :intel and AMD) 
+
+	ring0 : guestOS   ring3 : aplivations run 
+
+	instructions->
+		direct execution is same
+		so no hypercalls or transalations to VMMs
+
+	pros : no hypercalls , no translation , more good performance   , no guestOS modification
+	cons : new to market so compactibilty isssues 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!READ FROM BOOK !!!!!!!!!!!!!!!!!!!!!!1!!!!!!!!!!!!!!!!!!
+-------------------------------------------------------------------------------------------------------------------------
+virtualisation vs CC 
