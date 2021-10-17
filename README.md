@@ -1,9 +1,9 @@
 # 🖇️ academic_nsut
 I hope I don't get a backlog 😟
 
-##  `To Who It May Concern ` 🦧🦧
+##  `To Who It May Concern ` 
 
-| Branch           |                                        |
+| Branch           | 🦧🦧                                     |
 | ---------------- | -------------------------------------- |
 | `CoE`            | YUSSSSSSSSSS!!!!!!!!!!!!!!!!!!!!       |
 | `CSAI`           | Hmm                                    |
