@@ -8,7 +8,7 @@ I hope I don't get a backlog 😟
 | `CoE`            | YUSSSSSSSSSS!!!!!!!!!!!!!!!!!!!!       |
 | `CSAI`           | Hmm                                    |
 | `IT`             | Ok.                                    |
-| `Others`         | I hope you are having a good day       |
+| `Others`         | I hope you're having a good day        |
 
 <!--
 | `weserv-query`   | Image manipulation query parameters    |
