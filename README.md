@@ -22,10 +22,10 @@ I hope I don't get a backlog 😟
 | `sort`           | Sort repositories by this parameter    |
 | `order`          | Order by "asc" or "desc"               |
 -->
-This content is sensitive to human error, please rely at your own risk.
+This content is sensitive to human error, please rely at your own risk 😋
 
-Repo will be updated after the end sems 😋
-
+<!--Repo will be updated after the end sems 
+-->
 ## 📄 License
 
 - Code: [MIT](./LICENSE) © 2021 Ashish Dangi
