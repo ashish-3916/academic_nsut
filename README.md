@@ -4,6 +4,9 @@ I hope I don't get a backlog 😟
 ##  `To Who It May Concern`
 
 
+This content is sensitive to human error, please rely at your own risk.
+
+Repo will be updated after the end sems 😋
 <!--
 # Fork this repository
 
