@@ -1,9 +1,27 @@
-# academic_nsut
+# 🖇️ academic_nsut
 I hope I don't get a backlog 😟
 
 ##  `To Who It May Concern`
 
+| Branch           |                                        |
+| ---------------- | -------------------------------------- |
+| `CoE`            | YUSSSSSSSSSS!!!!!!!!!!!!!!!!!!!!       |
+| `CSAI`           | Hmm                                    |
+| `IT`             | Ok.                                    |
+| `Others`         | I hope you are having a good day       |
 
+<!--
+| `weserv-query`   | Image manipulation query parameters    |
+| `no-homepage`    | Link to repository, not homepage       |
+| `suffix`         | Content to add at the end of the list  |
+| `path`           | Path to file to update with content    |
+| `start`          | Starting comment to look for           |
+| `end`            | Ending comment                         |
+| `commit-message` | Updating file commit message           |
+| `one-per-owner`  | Show only one repo per owner           |
+| `sort`           | Sort repositories by this parameter    |
+| `order`          | Order by "asc" or "desc"               |
+-->
 This content is sensitive to human error, please rely at your own risk.
 
 Repo will be updated after the end sems 😋
