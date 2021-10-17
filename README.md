@@ -25,6 +25,12 @@ I hope I don't get a backlog 😟
 This content is sensitive to human error, please rely at your own risk.
 
 Repo will be updated after the end sems 😋
+
+## 📄 License
+
+- Code: [MIT](./LICENSE) © 2021 Ashish Dangi
+- "GitHub" is a trademark of GitHub, Inc.
+
 <!--
 # Fork this repository
 
