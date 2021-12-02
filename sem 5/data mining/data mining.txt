@@ -235,7 +235,7 @@ METRICS :
 	measure of central tendancy ->mean , median , mode
 	measure of central dispersion -> vaariace , sd  , quartile
 	quartile [	|	|	|	]
-					q1    q3
+				q1     q3
 		interquartile range (IQR) = q3-q1 = box length
 
 	outlier analysis -> box plot and scatter plot 

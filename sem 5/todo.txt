@@ -1,3 +1,4 @@
+HEY THIS IS SPEAKING FROM 21 NOV 
 --------------------------------------------------------END SEM----------------------------------------------------------
 you will soon have practical classed hopefully  next week , but you know they won't be much productive , so might be spending most of the time in
 making practical files [29 nov - 5 dec]
@@ -55,7 +56,54 @@ MACHINE LEARNING
 	u have read most of the stuff , still u have *must* read the ppts before end of this month , special revisoion of neural network and svm
 
 DATA MINING
-	still don't know, but it looks similar to machine learning , still don't know
+_-------------------------->
+	
+gini index  (examples)
+cart algo (examples)
+ide3 algo (examples)
+regression and classification
+bayes theorm (examples)
+bayesian belief network (examples)
+knn
+decision trees (examples)
+rule based classifier
+linear and logistic regression
+
+see PPTS of these topics : 
+
+svm's : the whole derivation till we find the optimal value as 2/||W||
+bagging and boosting : random forest , adaboost , gradient boost(basics)
+	there are some practice problems
+	ensemble learning 
+	holdout and cross validations
+interestingness measures  : pattern recognisation and something more too !
+
+association rules  : apriori algorithm (psuedo code and example)
+					 pattern growth
+					 verticle data format approach
+					 lift 
+					 x^2 measures
+		find a YT video for this 
+
+clustering :
+	partitioning measures 
+	k-means algo and some variation in it. 
+	hierarchical methods (AGNES , DIANA , dendogram)
+	centriod , radius
+
+	fuzzy set and fuzzy clustering 
+	expectation maximasation algorithm (there is a numerical in the ppt)
+
+  find a YT video for this too !
+
+attribute oriented analysis :
+
+	intial thoughts: donno know what actually is this topic about .
+		looks like it something related to x^2 test and correlation among the attributes .
+		and to find the covariance . there are screenshot from book though . most of it is the reading part. some numerical examples . lets see it in the end . 
+
+		OBV THIS IS THE END!!!
+_-------------------------->
 
 COMPILER CONSTRUCTION
 	maam have uploaded notes on classroom , also gate smasher has most of  the syllabus covered. 
@@ -64,6 +112,7 @@ COMPILER CONSTRUCTION
 CRYPTOGRAPHY 
 	u better start it tomorrow , huge and complex syllabus , u need to do all the upcoming classes . 
 	UPD : [I'M CONFUSED IN MAC AND HASH , WT- ]
+	i will do after the practicals now 
 
 
 --------------------------------------------------------MID SEM----------------------------------------------------------
