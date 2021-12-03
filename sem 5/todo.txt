@@ -1,5 +1,42 @@
-HEY THIS IS SPEAKING FROM 21 NOV 
 --------------------------------------------------------END SEM----------------------------------------------------------
+today is 4 dec and we have a weekend 
+
+need to do : 3 practical files 
+poc : we have codes ,need to install env and test and make file
+CC : mix all of them
+data mining : from scratch , unless we get a miracle
+
+need to study cloud computing
+
+how good are we with the subjects ?
+
+cloud computing :  i need to study this today . 3 units mp , lets see
+
+data mining :
+	i have read the most of the topics , need to revise before mid sems though a bit rusty , though i can do on day of practical/ exam day
+	so we are kinda good here.
+	:SOS: need to complete file here though by weekend!
+
+machine learning :
+	all good to go , ig  a quick revsion of mid sem though.
+
+compiler construction : done the video part , last unit still left , have to do on sunday for sure ,
+	:SOS: need to complete file here though by weekend!
+	REMINDER : though we had few classes , so I need to meet teacher (which i dont know who is lol) and need to ask a bit about exam pattern 
+	but lets prepare for viva till then
+
+cryptography :
+	hell No , and i am not ready for this! need to meet maam for this URGENT on monday for sure . 
+	though we don't have practicals to we can leave it for now 
+
+
+we are totally good with mid sem marks in all subjects.
+
+LETS BRING THE END SEM DOWN TO FEET!!!
+
+--------------------------------------------------------END SEM----------------------------------------------------------
+HEY THIS IS ME FROM 21 NOV
+
 you will soon have practical classed hopefully  next week , but you know they won't be much productive , so might be spending most of the time in
 making practical files [29 nov - 5 dec]
 
@@ -76,14 +113,16 @@ bagging and boosting : random forest , adaboost , gradient boost(basics)
 	there are some practice problems
 	ensemble learning 
 	holdout and cross validations
+
 interestingness measures  : pattern recognisation and something more too !
 
-association rules  : apriori algorithm (psuedo code and example)
-					 pattern growth
+association rules  : apriori algorithm (psuedo code and example)[bfs]
+					 pattern growth -> fp tree [dfs]
 					 verticle data format approach
+					 
 					 lift 
 					 x^2 measures
-		find a YT video for this 
+		find a YT video for this  				[UPD : DONE TILL HERE]
 
 clustering :
 	partitioning measures 
@@ -115,6 +154,9 @@ CRYPTOGRAPHY
 	i will do after the practicals now 
 
 
+
+
+-------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------MID SEM----------------------------------------------------------
 data sheet ->
 
