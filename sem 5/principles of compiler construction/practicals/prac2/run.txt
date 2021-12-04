@@ -1,0 +1,7 @@
+/*
+C:\Users\dangi\OneDrive\Desktop\poc\prac2>flex C_lex_analyzer.l
+
+C:\Users\dangi\OneDrive\Desktop\poc\prac2>gcc lex.yy.c
+
+C:\Users\dangi\OneDrive\Desktop\poc\prac2>a.exe
+*/
