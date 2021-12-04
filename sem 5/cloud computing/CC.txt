@@ -36,7 +36,7 @@ optical computing -> using photons in info excahange , 10 times faster than elce
 -----------------------------------------------------------------------------------------------------------------------
 UNIT 2->
 
-capital expenditure -> buy everthing of your own ie , resources, networking , storage , maintaince , etc  , costly
+capital expenditure -> buy everything of your own ie , resources, networking , storage , maintaince , etc  , costly
 operational expenditure -> get it from provider, pay as we use.
 
 cloud computing is a mechanism of bringing–hiring or getting the services of the computing power or infrastructure to an organizational or individual level to the extent required and paying only for the consumed services
@@ -107,7 +107,7 @@ disadvantages -> nothing without interet access , conecern about security , inte
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
-UNIT 3 ->
+UNIT 7 ->
 
 virtualization where a single physical infrastructure can be used to run multiple operating systems (OSs) and applications
 block diagram ->
@@ -162,7 +162,7 @@ network virtualisation
 	BLOCK -> [VARIOUS DEVICES] -> [POOL OF VDEVICES] -> [build virtual private network] ->[connect many hosts]
 
 Data virtualisation 
-	Data virtualization  is the ability to retrieve the data without knowing its *type* and the physical *location* where it is stored
+	Data virtualization is the ability to retrieve the data without knowing its *type* and the physical *location* where it is stored
 	location can be anything like rdbms, dbms , noSql , mediafiles , 
 
 	BLOCK -> [VARIOUS DATA SOURCES] -> [VIRUTALISATION LAYER] -> [GIVE INFO TO VARIOUS SERVICES] 

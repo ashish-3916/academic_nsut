@@ -1,0 +1,11 @@
+C:\Users\dangi\OneDrive\Desktop\poc\prac6>bison -d forloop.y
+
+C:\Users\dangi\OneDrive\Desktop\poc\prac6>flex for.l
+
+C:\Users\dangi\OneDrive\Desktop\poc\prac6>gcc lex.yy.c forloop.tab.c -w
+
+C:\Users\dangi\OneDrive\Desktop\poc\prac6>a.exe
+if(i<10){}
+else {}
+IF..ELSE   for(i = 0 ;i<10 ; i++){}
+error
