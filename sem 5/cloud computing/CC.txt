@@ -65,13 +65,13 @@ CC is a platform -> WWW (platform is that it is the support on which application
 	measured services -> cloud provider controls and monitors all the aspects of cloud service. Resource optimization, 			billing, and capacity planning etc. depend on it.
 
 4 deployment (ways cloud services can be made availble to cunsomers) 
-	private ->used by single orgainistion and its buisness units  , managed by themsekves or third party , on/off premesis
+	private -> used by single orgainistion and its buisness units  , managed by themsekves or third party , on/off premesis
 	public -> open for everyone , managed by govt, big org(Amazon , google , micro ,VMware Vcloud) on premisis
 	community -> shared by groups of  org (mission , security) on/off premisis
 	hybrid -> mix of above ,some things arre public and some are private .(e.g., cloud bursting for load balancing between clouds)
 
 	advantage/disadvange based on scalabilty , avaialbilty , cost , costumizable , security , 
-
+ 
 3 service model
 	SaaS -> everything(network, servers, operating systems, storage ,etc ) is given by vendor , we use as per requirment , 
 		eg :(CRM,  , buisness analyticts , microsoft officeemail, web browser )
@@ -82,7 +82,7 @@ CC is a platform -> WWW (platform is that it is the support on which application
 
 	some general points to write : scalability, efficiency and performance ,commpactabiliity , managment , issues , customisable?
 ----------------------------------------------------------------------------------------------------------------------------
-Cloud ecosystem ->Cloud ecosystem is a term used to describe the complete environment system of interdependent components or entities that work together to enable and support the cloud services
+Cloud ecosystem -> Cloud ecosystem is a term used to describe the complete environment system of interdependent components or entities that work together to enable and support the cloud services
 
 various actors :
 	Cloud service users (CSU)->end users who users cloud services ,can be anyone (indiv , org , community ) 
@@ -161,6 +161,7 @@ network virtualisation
 								  VIRUTALISATION LAYER
 	BLOCK -> [VARIOUS DEVICES] -> [POOL OF VDEVICES] -> [build virtual private network] ->[connect many hosts]
 
+----------------------------------------------->
 Data virtualisation 
 	Data virtualization is the ability to retrieve the data without knowing its *type* and the physical *location* where it is stored
 	location can be anything like rdbms, dbms , noSql , mediafiles , 
