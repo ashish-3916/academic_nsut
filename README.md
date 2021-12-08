@@ -1,3 +1,5 @@
+other ML codes : https://github.com/ashish-3916/machine-learning-
+
 # 🖇️ academic_nsut
 I hope I don't get a backlog 😟
 
