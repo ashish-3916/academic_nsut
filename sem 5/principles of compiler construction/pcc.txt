@@ -1,0 +1,340 @@
+THOERY :
+	translator : prog that takes as i/p a prog in one languate and produces as o/p writtern in another language
+
+	compiler : high level ( C++ , fortran) to low level language (m/c code or assembly language )
+
+	interpreter : same but executes line by line , execution time is slower , 
+	aaise diffrenciate kar dena 
+
+	assembler : assembly language to m/c language
+
+	preprocessor : take program in one high LL and convert into another HLL
+			
+	.cpp ---->compiler --.obj--> linker ----.out-->loader ----> .exe  
+------------------------------------------------------------------------------------------------------------------------------------------------->
+steps :
+	analysis/ frontend / machine independent 
+		lexical analysis 
+		syntax analysis
+		sematic analysis 
+		intermediate code generation
+
+	synthesis/ backend / machine dependent
+		code optimisation
+		target code generation
+------------------------------------------------------------------------------------------------------------------------------------------------->
+LEXICAL ANALYSIS : 
+	takes input stream and genreate tokens
+	tokenisation
+	give error message -> illegal characcter (=+ , $) , unmatched string , lexical error(#define)
+	remove tabs and space , comments
+
+	lexemes vs token
+
+	lexemes -> seq of char from input that match the pattern
+	tokens -> symbolic names to the lexemes [keyword , operator , identifier , separator etc...]
+
+	input buffering : 2 pointer (begin and forward)
+	senital(eof): Sentinels is used to make a check, each time when the forward pointer is moved, a check is done to ensure that one half of the buffer has not moved off. If it is done, then the other half must be reloaded.
+
+output is tokens
+------------------------------------------------------------------------------------------------------------------------------------------------->
+SYNTAX ANALYSIS :
+	FIRST and FOLLOW :
+		FIRST  : all terminal symbol present in FIRST place of every string derieved by A
+		FOLLOW : all terminal symbols present at immediate right of A
+				 if non terminal symbol is present the FIRST(A) , some exception / tricks (FOLLOW(S))
+				 epsilon not allowed
+	
+	parser : process of derieving string from given grammar , wether the incoming streams/tokens belong to grammer or not (as per thier rules ) 
+			 and generater parse tree
+
+	top down :
+		recursive descent :
+			uses set of recursive procedures to scan the input
+			may involve bracktracking
+			procedures are writtern of nonterminal symbols
+			procedures functions , match functions , calling S() from main() .....etc etc
+
+
+		LL1 [L->R, leftmost deviation, 1 symbol at a time]
+			table  : non-terminals vs terminals
+			how to fill for a grammer :
+					***rhs ke FIRST me , if rhs is epsilon then lhs ke FOLLOW me***
+
+	bottom up :
+
+		we need to make canonical items for this
+		we have shift states , reduced state and accepted states
+
+		accpeted state - > S' -> S.
+		reduced state -> all other grammers which have completely procressed (r[production rule])
+		shift state -> transition states (s[next_state])
+
+		start symbol is augumented
+		whenever . is followed by a non terminal state , we open all the productions of non terminal symbol within that canonical item
+
+		state table : items vs (terminal + non_terminal )
+
+		-----------> RR/SR conflicts
+		LR0
+		 - reduced state for that item is written in all the terminal symbols 
+		SLR1
+		 - reduced state for that item is wittern in lhs ke FOLLOW me for that grammar
+		----------->
+		these two states contains lookahead symbols
+		LALR
+		 - reduced state form of CLR , based on lookaheads 
+		CLR
+		 - on expanding non terminal symbol preceded by .  ,lookahead symbol is FIRST of rest of grammar
+		 - reduced state for that item is writtem in the lookahead symbols
+		------------->
+
+		states   : LR0 <= SLR1 = LALR1 < CLR1
+		powerful : LR0 <  SLR1 < LALR1 < CLR1
+
+		------------->
+		OPERATION PRECEDENCE  : works on ambiguous grammer
+
+output is a parse tree
+------------------------------------------------------------------------------------------------------------------------------------------------->
+SEMANTIC ANALYSIS :
+	SDT (Syntax directed translation) = Grammer + semantic rules
+	semantic rules tell what actions to be performed corresponding to the grammar.
+	actions are attached to production CFG Grammar
+	The value associated with grammar symbol is called translation to that symbol
+
+	E.val
+
+	Top down and Bottom up parsing method to evaluate SDT
+
+	types of SDT :
+	 	A->BCD
+		inherit : child takes value from parent /siblings    [ translation of non terminal symbols on right side of production is defined in term of translation of non_ter at lhs]
+		synthesis : parent takes value from child 	    [ translation of non terminal symbols on left side of production is function of translation of non_ter at rhs]
+
+	S- attributed :
+		- based on synthesis attribute
+		- bottom up parsing
+		- semantic rules are writtern RHS
+	L- attributed :
+		- based on synthesis attribute or inherited attribute (parent and left siblings)
+		- top down parsing
+		- semantic rules are written anywhere
+
+output is annotated parse tree.(parse tree showing the values of the attributes at each node)
+------------------------------------------------------------------------------------------------------------------------------------------------->
+INTERMEDIATE CODE GENERATION :
+	abstract syntax tree :
+		simple form of parse tree
+	DAG:
+		bas repeated values of combone kardena
+	postfix notation :
+		postfix notation me convert karlo (a+b -> ab+)
+		stack se evaluation karlo and fhir syntax tree banalo
+
+	3 address code :
+		- A seq of statements , of form A = B op C  , where A,B , C are operands / constants , op-> operator
+		- contains 3 addresses , 2 for operands , 1 for result
+		- various statements :
+			- assignement  -> x = y op z ;  x = op y ; x = y
+			- jump ->
+				conditional : if x rel_op y  goto z
+				uncoditional  : goto z
+			- array ass -> x = y[i]  , x[i] = y
+			- pointer ass -> x=&y ; x= *y
+	  REPRESENTATION OF 3 ADDRESS CODE :
+		quadruples :
+			each instruction has 4 fields : OP ARG1 ARG2 RESULT
+
+	    triples :
+	        each instruction has 3 fields : OP ARG1 AGR2  (yaha par index use kar lete hai RESULTS KA)
+
+	    indirect triples : pointers to the triplets , instead of triplets themselves (isme indexs ka bhi ke address table bana lete hai)  
+
+	    see examples for notes.
+
+	    quadruples takes more memory than triplets 
+	    [ -C : uminus c]
+	    ---------------------------------------------------------->
+	    [[skipped](IC for boolean expressoion/ control flow)
+	    	kuch hona to hai nahi ... ek block bana dena + semantic rules likh dena [.code .true .false .next newlabel()  | E.place , newtemp()   blah..blah]
+
+	    	translation for assignment oepratore
+
+	    	lookup() for terminal symbol(id)
+	    	E-> id  p = lookup(id.name)
+		    	 			if p==nil
+		    	 			error
+		    	 			else 
+		    	 			emit(p = E.place())
+
+	    	E-> E+E  E.place = newtemp()
+	    				E.place = E.place + E.place 		
+	    	 
+	    	tranaslation for boolean explression
+
+	    	E -> E AND E  : E.place = newtemp()
+	    						 E.place = E.place AND E.place
+
+	    	E -> id rel_op id : E.place = newtemp()
+	    							  if id rel_op id true then goto add + 3
+	    							  t=0;
+	    							  goto add+2
+	    							  t=1;
+	    	 ]
+	    	 translation of control staments :
+	    	  .code , .true , .false, begin , newlabel , goto
+
+	    backpatching :
+	    	The problem in generating three address codes in a single pass is that we may not know the labels that control must go to at the time jump statements are generated.So to get around this problem a series of branching statements with the targets of the jumps temporarily left unspecified is generated.
+			Back Patching is putting the address instead of labels when the proper label is determined during second pass.
+
+			3 func :
+			makelist(i)
+			mergelist(i1 , i2)
+			backpatch(i , label)
+			nextquad
+
+		---------------------------------------------------------->
+		JESUS LOVES YOU !
+		---------------------------------------------------------->
+
+		RUNTIME ENVIRONMENT AND ACTIVATION RECORD
+			runtime, we mean a program in execution. Runtime environment is a state of the target machine, which may include software libraries, environment variables, etc., to provide services to the processes running in the system.
+
+			A program is a sequence of instructions combined into a number of procedures. Instructions in a procedure are executed sequentially. A procedure has a start and an end delimiter and everything inside it is called the body of the procedure. The procedure identifier and the sequence of finite instructions inside it make up the body of the procedure.
+
+			The execution of a procedure is called its activation. An activation record contains all the necessary information required to call a procedure
+			Whenever a procedure is executed, its activation record is stored on the stack, also known as control stack.
+			This type of control flow makes it easier to represent a series of activations in the form of a tree, known as the activation tree.
+
+			local variable
+			temp variable
+			control link 
+			access link 
+			return value 
+			actual parameters 
+			machine states
+
+		SYMBOL TABLE
+			Symbol table is an important data structure created and maintained by compilers in order to store information about the occurrence of various entities such as variable names, function names, objects, classes, interfaces, etc. Symbol table is used by both the analysis and the synthesis parts of a compiler.
+			A symbol table is simply a table which can be either linear or a hash table.
+			insert() and lookup()
+
+output is 3 address code or smth , that support machine dependent optmisation , and backend can generate target code
+------------------------------------------------------------------------------------------------------------------------------------------------->
+CODE OPTIMISATION :
+	common subexpression elimination ->
+			commone subexpression matlab exp kisiko pahle calclute kiya tha , and meanwhile chnge bhi nahi hua and doobara calculate kar rahe hai
+
+	compile time evaluation :	
+		constant folding -> PI = 3.14 |  root2 =  1.414  | # define ko substitue karo
+		constant propagation -> piR2 = 3.14*4*4
+
+	code motion -> moving statements outside the loop , if there is no affect on evaluting outside the loop .
+
+	dead code elimantion -> remove statemets that are never executed , or some unwnated code  ( ex : after return statements)
+
+	strength reduction -> replacing expensive operations with cheap one left shift and right shifts 
+
+
+  THE PEEPHOLE OPTIMISATION : instead of optimising whole code at a time , we make a window and examine these short sequence of instruction and see if they can be optimised or not
+ 	-> reduntanct ins elimination : LOAD and STORE walle examples  
+ 	-> dead code elimination
+ 	-> flow of control optimistion : eliminate multiple jumps [GOTO statements ]
+ 	-> algebraic simplification : a = a+0  , a= a*1 ,  x^x , x*2  , x/2 
+ 	-> strength reduction
+ 	-> faster operation : increment and decrement  operation s
+ 		 saare same hi hai ,likhdo bas 
+
+------------------------------------------------------------------------------------------------------------------------------------------------->
+LOOP OPTIMISATION : 
+	-> code motion : moving statements outside the loop , if there is no affect on evaluting outside the loop .
+   -> loop unrolling :  reducing no of iteration 
+   						for(int i = 0 ; i<10 ;i++) add() ;         is same as 
+   						for(int i = 0 ; i< 5 ;i++) add() , add(); 
+   -> loop fusion : combine /fuse multiple loops in one 
+
+   OPTIMISATION OF BASIC BLOCK : sabme same hi hai upar waale ,(peephole vegera)
+
+   ISSUES IN CODE GENERATION :
+   	- input to code generation: input can be in multiple forms , like postfix , DAG , syntax tree , 3 address code , so ab 3 method ke like alaga alag method of gencode(); 
+   	- target program : target output can be of 3 forms :-
+   								1.absolute machine language ( stored at fixed location inside  main memory)
+   								2.relocate machine languwate (stored jaha jagah khalli mille ) there is object code and then LOADER AND LINKER
+   								3.assembly language
+
+   	- memory management : symbol table is used
+   	- instruction selectoin : selection is important to execute in faster way
+   	- evaluation order : order matters , we want to use minimum no of registers (sieth ulmaan algo)
+   	- register allocation :
+
+   BASIC BLOCK :  is a set of statements that always executes in a sequence one after the other ,
+   				 they dont contain any jump statements , no branching or halt , do not loose flow of control
+   	LEADER :
+   		- first line is the leader
+   		- address of location of goto are leaders 
+   		- statemtent next to goto are leaders. 
+
+------------------------------------------------------------------------------------------------------------------------------------------------->
+SEITH - ULMANN ALGO ->
+	
+------------------------------------------------------------------------------------------------------------------------------------------------->
+grammar :
+	grammar is set of rules G(V,T,S,P) give example and explain.
+	derivation is seq of productions rules , used to get input string by these rules.
+	leftmost and righmost derivations
+
+parse tree : graphical representation of how input can be derieved from the grammar (give exaample and explain)
+
+ambiguous grammar: 
+	grammar is said to be ambigious if there are two derivation tree of the same input 
+		- more than one left most derivation / right most tree 
+	ex : F = F + F / id 
+
+	higher precedence on lower level of tree
+	if we have to check if yes or no , we have to find the input string by ourselves.
+
+	precendence parser accept ambiguous tree
+
+	grow tree in left recursive mannaer and FOLLOW precedence rules.
+
+left recursion :
+	(be aware of indirect left recursion)
+
+	A -> Aa/b   -> baaaaaaaaaaa.......aa ->  ba*
+ 
+   -> A -> bA'
+     A'-> aA'/e
+
+   remove left factring for less no of backtracking.
+
+------------------------------------------------------------------------------------------------------------------------------------------------->
+Types of errors :
+	A parser should be able to detect and report any error in the program
+	A program may have the following kinds of errors at various stages:
+
+	Lexical : name of some identifier typed incorrectly
+	Syntactical : missing semicolon or unbalanced parenthesis
+	Semantical : incompatible value assignment
+	Logical : code not reachable, infinite loop
+
+	4 recovery modes 
+
+	panic mode : When a parser encounters an error anywhere in the statement, it ignores the rest of the statement by not processing input from erroneous input to delimiter, such as semi-colon
+	
+	statement mode :When a parser encounters an error, it tries to take corrective measures so that the rest of inputs of statement allow the parser to parse ahead. For example, inserting a missing semicolon, replacing comma with a semicolon etc. 
+
+	error productions : the designers can create augmented grammar to be used, as productions that generate erroneous constructs when these errors are encountered.
+
+	global correction : tries to find the closest match which is error free 
+
+------------------------------------------------------------------------------------------------------------------------------------------------->
+r-value
+The value of an expression is called its r-value. The value contained in a single variable also becomes an r-value if it appears on the right-hand side of the assignment operator. r-values can always be assigned to some other variable.
+
+l-value
+The location of memory (address) where an expression is stored is known as the l-value of that expression. It always appears at the left hand side of an assignment operator.
+
+------------------------------------------------------------------------------------------------------------------------------------------------->

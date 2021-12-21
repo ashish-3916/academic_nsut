@@ -1,6 +1,6 @@
 -> linear relation bt target and predictors 
 -> no /less multicollenatiy in independent variables (bcz we do partial derivates in gradient descent which assume other attributes are assumed constant and do not change upon 		changing one of the atribute) 
 -> no heteroskedacity (constant error variance ) - errors should show random behaviour , ie , errors should not be functon of attributes 
+-> exogenity -  independent variables X are not dependent on the dependent variable (Y). 
 -> no autocorelation in errors - independent error terms
 -> normal distribution of errors -Most of the data points are centred around the best-fit line and fewer on the extremes
--> exogenity -  independent variables X are not dependent on the dependent variable (Y). 

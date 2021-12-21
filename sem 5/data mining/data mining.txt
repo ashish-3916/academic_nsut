@@ -3,7 +3,7 @@ syllabus -> introduction , data , exploring data
 -------------------------------------------------READ HIGHLIGHTED STUFF FROM PDF-------------------------------------
 UNIT 1 
 
-DEFINATIONS
+ DEFINATIONS
 	
 	Non trivial extraction of implicit ,previously unknown and potential useful information
 
@@ -13,17 +13,17 @@ DEFINATIONS
 
 	data minnng is a teechnology used to discover useful info in large datasets with help of cmplx algo in ordeer to find useful patterns, predict outcomes for future observation 
 
-KDD(knowledge discovery in databases) -> process of converting raw data into useful information 
+ KDD(knowledge discovery in databases) -> process of converting raw data into useful information 
 	BLOCK ->  input -> data prepocessing -> data mining -> data postprocesssing -> information 
 							(7 ways below)						 (filtering,pattern recogn,visualzn)								
 
-challenges -> 
+ challenges -> 
 	scalability : large need , need high computatuional power , parellel processing 
 	high dimensinality : complexity increases with large no of features 
 	hetro and complex data : time sereiss data , autocorrelation  , N- dimension 
 	data ownership and distribution : how do we keep so much data ? then how can we access it easily ? security issues?
 
-data mining task -> 2 tasks 
+ data mining task -> 2 tasks 
 	predictive tasks : we hve to predict dependent/target ariable from independent variables (classsificatin and regression) ,
 	descriptive tasks : derive patterns (clustering(closely related), assosiation analysis, anomaly detection(behaviour diff from others )) 
 
@@ -43,7 +43,7 @@ UNIT 2
 		types of attribute : 
 				->		nominal, 	oridinal, 		interval, ratio
 				    categorical(qualitative)   numerical(quantitative)
-				    distinctness , order	  	  add/sub , mul/divide		
+				    distinctness , order	  meaningful diff , mul/divide		
 				    	(=,~=)  , ( < , >)			(+,-)  ,   (*,/)
 
 			on # of values : discreate(n-ary) and continuous (real no)
@@ -169,6 +169,7 @@ UNIT 2
 	 	
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+datahouse
 
 	database -> storing and retrieving data. query processing.These systems are used day to day operations of and organization. OLTP , ER
 	datawarehouse -> huge amount of data is stored ,It is meant for users or knowledge workers in the role of data analysis and decision making. OLAP star/snowflake
@@ -207,8 +208,11 @@ CONCEPT HIERARCHY :
 			discretizing or grouping values for a given dimension or attribute, resulting in a set-grouping hierarchy.
 		• Operation driven hierarchy
 				a set of operations on the data ((encoding, decoding,)
+				emailD
 		• Rule-based hierarchy
-			defined by a set of rules to determine partial order. A lattice-like structure is used for graphically describing this type of hierarchies, in which every child-parent path is linked with a generalization rule.
+			defined by a set of rules to determine partial order.
+			A->B  antecedents -> consequent
+		    A lattice-like structure is used for graphically describing this type of hierarchies, in which every child-parent path is linked with a generalization rule.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 Knowledge representation is the presentation of knowledge to the user for visualization in terms of trees, tables, rules graphs, charts, matrices, etc.
 
@@ -250,7 +254,7 @@ NORMALISATION -> need? blah blah
 	Z-score = (value - mean) / sd 
 	
 	Min-max normalization: Guarantees all features will have the exact same scale but does not handle outliers well.
-   Z-score normalization: Handles outliers, but does not produce normalized data with the exact same scale.
+   Z-score standardization: Handles outliers, but does not produce normalized data with the exact same scale.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
 
