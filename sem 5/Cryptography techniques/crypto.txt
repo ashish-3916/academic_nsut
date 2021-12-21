@@ -1,3 +1,5 @@
+block diagram bna lena , nahi to 1 no good bye 
+---------------------------------------------------------------------------->
 CIA -> confidentiality , integrity , availability 
 threat (potentail of voilation of securiy )  
 attack ( delibrate attemp to breach security )
@@ -23,12 +25,15 @@ OSI MODEL ->
 		nonrepudiation : proof that msg was sent by transmiiting party and proof that msg was recived by recieving party.	(u can't deny it once you are done sending or recieving)
 
 	security mechanisms -> detect , prevent and recover from security attack
-		encipherment :
-		digital signature : prove the identity of sender
-		access control :
 		data integrity :
 		authentication exchange : entities some msg to each other to prove their identity 
+
+		encipherment :
+		access control :
+		
+		digital signature : prove the identity of sender
 		traffic pading : introduce dummy data stream when both entities are idle.
+		
 		routing control : 
 		notarization : trusted third party is used to control communication bt the two entities  
 
@@ -40,12 +45,446 @@ cryptanalsis -> trying to decode the cipher text by attack , they try to find ke
 
 bruteforce attack  -> trying all posible cmbination , can be prevneted using captcha etc to slow down process . 
 
-
+classical encipherment techniques:
 substitution 
-	ceaser 
-	monoalphabtic
-	polyalbhabet
-	playfair 
-	hill 
-	one time pad 
-transposition keyless , keypad ||||  railfence columnar doulble 
+	ceaser ( 3 shift)
+	monoalphabtic (one to one mapping)
+	playfair (put in the table and then vo 3 rules , pahle duplicates me filler add karne hai) 
+	hill ( mtarix multipication and uske baad inverse nikalna hai , MMI ka use hoga , k^-1 ko pahle hi simplify karlio)
+	polyalbhabet (key ko repeat kar dete to size of plain text , one to many mapping )
+	one time pad (for every msg we have a unique key)
+
+transposition 
+    keyless , keypad ||||  
+    railfence (diagonal me likh do  and then read)
+    columnar (rowwise likhdo and then accorgding to key column wise karo)
+    doulble (multiple time karo same cheez)
+
+Modern encipeherment techiques :
+
+ stream cipher and block cipher 
+
+block cipher
+	both are symetric key encryption technique
+	DES
+ 		fiestel cipher 
+   		64 -> 56 -> 48 size key
+   		fiestel rounds 16 
+   		swapping 
+   		inside the function -> 32 bit data -> expansion box -> 48 xor 48 bit key -> sbox -> 32 bit 
+
+   	~meet me behind the mall~
+
+   	meet in the middle attack
+   	double DES , triple DES
+
+
+   	AES
+   		plain text is of 128 bits
+   		state is in form of matrix [4 words 128 bits ]
+
+   		intital key = 128 ie 4 words -> 44 words are gernated for sebsequent rnds
+   	
+   		substitution (subbyte transformation)
+   		shift row 
+   		mix column 
+   		add round key
+
+   		intital round contains only add round key (ie xor operation )
+
+   		last round doesn't contain mixing column
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+BLOCK CIPHER MODE OF OPERATION NAHI KAR RAHA , CBC YAAD HAI BAS 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+just a quick recap :
+
+RSA 
+deffie hellman key exchnage , man in the middle attack 
+
+MMI nikala dekhliya  (1001)(s1-qs2)
+fermet dekhle 
+
+--------------------------------------------->
+hash function :
+	fixed length hash value (msg digest) for variable size input 
+	hash gives integrity
+
+
+	characterstics :
+	small chnage in input change hash by a lot 
+	pre image resistant (one way)
+	weak collision resistant 
+	strong collision resistant 
+
+	how hashes are made ? 
+		one way is to divide in blocks of size of hash value and do xor operation to each bit of every block
+
+		we can improve my making left shifts after xoring with a block 
+
+		rest we have SHA , MD5
+
+	applications : can provide authentication / confidentiality
+
+	using symmetric key encryption :
+		4 ways 
+		 -  E(m + h(m)) -> confidentiality
+		 -  m + E(h(m)) -> no confidentiality
+		 -  m + h(m+ secret_code) -> no confidentiality
+		 -  E[m + h(m+ secret_code)] -> confidentiality
+
+	asymetric key -> provides authenticattion , user apni private key se emcrypt karega 
+	decrypt karne vala iski public key se karega , msg milgya to matlab user ne bheja hai
+		2 ways 
+		 - m + PR(h(m))  => no confidentiality , but authentication
+		 - E( m + PR(h(m)) ) => confidentiality  amd authentication = DIGITAL SIGNATURE (integrity to pahle se hi thi bcz hash use hua hai)
+
+	other application : login ke time use hota hai , hash value match hoti h
+
+	ex MD5 , SHA
+--------------------------------------------->
+sha dehkte hai baad me 
+
+	bye bye nahi dekh raha , ganda hai , pahle 2 step yad hai lol
+
+	input is less the 1<<128 and output is 512 bits 
+	padding 10000000.....
+	append length , add 128 bits and make expanded msg multiple of 1024
+	initilise hash buffer and we say goodbye 
+--------------------------------------------->
+MAC 
+	provide intigrety and authentication 
+	fixed length mac output 
+	also called cryptographic checksum
+	MAC = C(K, M)
+
+	3 ways 
+	 - m + C(k , m) -> authentication
+	 - E[m + C(k , m)] -> authentication + confidentiality  ( tied to plain text)
+	 - E(m) + C(k , E(m)) -> authentication + confidentiality  ( tied to cipher text)
+
+	differnce btw hash and mac 
+
+
+ MAC based on hash [HMAC] : 
+
+  [block diagram]
+	msg -> hash -> msg digest -> encrypt -> output 
+
+  7 steps  ->
+  	make K+ of length b
+  	XOR it with ipad [36] to give Si
+  	append msg to Si   [Si + msg]
+  	pass through hash (MD5  ,SHA) to get output H
+  	XOR K+ with opad [5c] to give So
+  	append H to So   [So + H]
+  	pass through hash (MD5  ,SHA) to get final HMAC
+
+ MAC based on cipher mode :
+	DAA (data authentication algo)
+		works on CBC mode (jisme chaining hoti h)
+		use DES for encryption
+		
+		[D1 -> DES -> O1 bits]----->	 
+		[D2 XOR O1  -> DES -> O2]----> and so one 
+
+		equation likh dena 
+
+	CMAC :
+		use AES and triple DES
+  		divided into blocks (like AES 128 , DES 64)
+
+		[M1 -> E[K , Mi] -> O1 block]----->	 
+		[M2 XOR O1  -> E[K , Mi] -> O2]----> and so one 
+		--last me ---
+		[Mn XOR On XOR K'  -> E[K , Mi] -> On]----> MSB bits bcz MAC is of specific no of bits
+
+		equation likh dena 
+--------------------------------------------------->
+digital signature bhi (vaise uska ek block diagram already pata hai )
+	mathematical technoque to validate aithentication and integrity of message or digital signature .
+	identity and content of the message cnnt be changed during transmission,
+	signing key with private key
+	reciever uses the public key to ensures the authentication 
+	we can use hash for integrity 
+	- key generation
+	- siginng 
+	- verification
+
+	disadvantage : signatures are for short time 
+	both parties must have digital signature .
+--------------------------------------------------->
+Key distribution/mangement dekhte hai baad me and
+	ye dikhne me to kerberoses walle steps hi hia , ke appas me verify karo appni apni keys deke
+
+	The main aim of key management is to generate a secret key between two parties and store it toprove the authenticity between communicating users.
+    Key management is the techniques which support key generation, storage and maintenance ofthe key between authorized users.
+	
+    key distribution :
+    	symmetric / private key distribution
+    		symmetric 
+    		asymetric
+    	assymmetric / public key distribution
+    		public announcememnt of public keys 
+    		directory 
+    		public key authority
+    		public key certificates 
+
+    master key , sessoin key 
+ 1.a
+    A asks KDC to communicate with B
+    KDC provide an emcrytp key , half of which A can decode 
+    A sends the rest of msg_key to B 
+    B decypt rrest of msg_key (matlab inka kuch authentication ka chal raha hai )
+    then they send a nonce and send btw A and B 
+    now they are authenticated , hece they can comminicate now
+ 
+
+ 	KDC me heirarchy ho skte hai  
+ 	session key life time 	
+
+
+ 	decentralised key (no use of KDC )
+ 	do apas me hi settle kar lete hai 
+ 	session key excahnged wothout KDC
+  
+  1.b
+  	one uses public key of other , and vo dursa apni private se authenticate kar lega 
+
+  2a. broadcast his public key  ( no authentication , anyone can pretend to be any user )
+   b. trusted entity maintain a directoy of pubic keys (vahi KDC wala RR)
+   c. use certificate generated by CA 
+   d. 
+
+--------------------------------------------------->
+ELGAMAL KARNE KA MANN NAHI  jesus pls love me today
+--------------------------------------------------->
+KERBEROS ( 3 head dog m guardian of the entrance)
+
+	- authentication  (of user who want to use service )
+	- authorisation  ( KDC (key distribution center) )
+	- acounting ( services )
+
+
+	requirement  -> it should be
+	- reliable 
+	- secure 
+	- scalable
+
+	KDC -> AS + tgs
+	authenication server (AS) -> its a database where all the users id and passwords are saved and check it user is authorised or not.
+	ticket granting server tgs  -> A server that issues tickets for desired services . 
+	
+	ticket -> Created once the AS accepts the user as authentic; contains the user’s ID and	network address and the server’s ID
+
+	SIMPLE AUTHENTICATION DIALOGUE :
+		3 steps  
+		- user asks AS for ticket to access a service by giviing its identity annd address of service 
+			C-> AS [IDuser , passworduser , IDservice]
+		- AS gives a encrypted ticket which only the service can decrypt 
+			AS -> C [ E(k ,IDuser , IDservice , etc )  ](ticket)
+		- user take this ticket to service , it verifies if it is authorized user  and grant access to service 
+			C-> V   [IDuser , ticket]
+	
+	MORE SECURE AUTHENTICATION DIALOGUE :
+		5 steps
+		- user tgssks AS for communication with S for ticket to access a service by giviing its identity annd id of T
+			C-> AS [IDuser , IDtgs]
+		- AS gives a encrypted ticket which only the tgs can decrypt 
+			AS -> C [ E(k ,IDuser , IDtgs , lifetime , etc )  ](ticket)
+		- user take this ticket to tgs ,  
+			C-> tgs  [IDuser ,IDservice , ticket]
+		- tgs verifies if it is authorized user  and a ticket is grante a ticket  for accessing service 
+			tgs -> C [ E(k ,IDuser , IDservice , lifetime , etc ) ]
+		- user take this ticket to service , it verifies if it is authorized user  and grant access to service 
+			C-> V   [IDuser , ticket]
+
+ disadvantage -> har session ke liye key leni hogi , vaise inke alag alag they kagnksndknba
+--------------------------------------------------->
+X509 certificate  : its kind of a license / idcard whose main aim is to provide authentication of resorrces over internet . it is based on cryptography(RSA) and digital signature 	
+
+ it has  ->
+	- version 
+	- serial no
+	- algo used to sign certificate
+
+	- validity period 
+
+	- identity of the issuer  ( certificate authority )
+	- verify id of the issuer ( certificate authority )
+
+	- identity of the owner 
+	- verify id of the owner 
+	
+	- users public key info and the algo used to generater it 
+
+	- digital signature  (hash code of above things)
+
+	- extension (others)
+
+ revocation of certifcate 
+	- maybe its expired validity
+	- user chnges its private key for some reason 
+	- no longer verified 
+
+	think of credit card (what you give to get one (identity , identity of previous certificate(signature)  , new dates , etc))
+--------------------------------------------------->
+PRIX dekhte hai baad me 
+(Public-key infrastructure (PKI) as the set of hardware, software, people, policies, and procedures needed to
+create, manage, store, distribute, and revoke digital certificates based on asymmetric cryptography.)
+
+baaki uske kuch elemnts hote hai 
+End entity , Certification authority (CA)  , Registration authority (RA) , CRL issuer , Repository 
+--------------------------------------------------->
+PGP  (pretty good service) [JAVATPOINT]
+	
+	- provides email security
+	- uses digital signature to provide all the things (privacy, integrity, authentication, non repudation)
+	- uses several combunation of hashing , data compression , symmetic and assym encrytion and various algo at each step
+	- email compactaboly using RADIX-64 security scheme 
+	- convert the email into NVT 7 bit ascii format.
+
+	[basic block diagram ]
+		email ---[SHA]---> hash code ---[RSA]---> digital signature -> zip code -> aaa aage gada sa hai (symetric key encryption ) + key ka assymmtric encryption + concatinatie karke 
+		digital signatures banke bhej do 
+--------------------------------------------------->
+S/MIME	Secure/Multipurpose Internet Mail Extensions [JAVATPOINT]
+	
+	pahle PGP ki limitations likh dena 
+		help non acsii data to send through the emails (eg digital content , pictures ,video , audio )
+		differnet languages like french and german which cannt be represented in acsii can also be sent 
+	uses SMTP (simple mail transfer protocol) 
+	aymmetric key encrypion 
+	uses digital signature to provide all the things (privacy, integrity, authentication, non repudation)
+
+	MIME headers -> 
+	1. MIME Version
+	It defines the version of the MIME protocol. This header usually has a parameter value 1.0, indicating that the message is formatted using MIME.
+
+	2. Content Type
+	It describes the type and subtype of information to be sent in the message. These messages can be of many types such as Text, Image, Audio, Video, and they also have many subtypes such
+	 that the subtype of the image can be png or jpeg. Similarly, the subtype of Video can be WEBM, MP4 etc.
+
+	3. Content Type Encoding
+	In this field, it is told which method has been used to convert mail information into ASCII or Binary number, such as 7-bit encoding, 8-bit encoding, etc.
+
+	4. Content Id
+	In this field, a unique "Content Id" number is appended to all email messages so that they can be uniquely identified.
+	
+	5. Content description
+	This field contains a brief description of the content within the email. This means that information about whatever is being sent in the mail is clearly in the "Content Description". 
+	This field also provides the information of name, creation date, and modification date of the file.
+
+
+	advantages : vahi PGP ki limitations ko likh do sahi karke
+--------------------------------------------------->
+LAYERS ->  PHYSICAL < DATA < NETWORK < TRANSPORT < APPLICATION
+--------------------------------------------------->
+UNIT 5 overview
+
+IPSec (internet protocol security)
+	on network layer 
+	2 modes :
+		transport mode : doesn't hide the IP address , encrypt the IP data 
+		tunnel mode : hides org IP address and gives new IP address , hence whole packet is encrypted, uses VPNs.
+
+		block diagram 
+
+	2 protocols 
+	AH (authentication header )
+		authe + confi , but no privacy
+		transport and tunnel mode ke block diagram ez
+		ek AH data add hota hai
+
+	ESP (encapsulating security payload)
+		authe + confi + privacy
+		transport and tunnel mode ke block diagram ez
+		ek ESP header , ESP tail , ESP auth add hota hai
+
+	IKE (internet key exchange)
+		first phase 
+		provide secure VPN for communicatuon
+		works in tunnel mode 
+		outcome is security association (SA)
+		u know what is SA
+--------------------------------------------------->
+security Association , basically info hoti hai (idk) jisme pahle se hi we know ki hme konsa algo use karna hai , key size kya hai , lifetime kya hai ...etc ...etc 
+	
+	3 main parameters
+		Security paramater index ( ye ek unique index hota h)
+		Security protocol identifier (konsa hai ESP/AH ?)
+		IP destination address
+	others
+		algo used 
+		ESP/AH info , key lifetime etc
+--------------------------------------------------->
+security socket layer (SSL)
+	lies between application and transport layer 
+	security -> integrity + confidentiality + authentication
+
+	4 protocols (pahle 2 imp)
+	- Handshake protocol ( connection establishment  + authentication)
+	- SSL record protocol ( integrity + confidentility)
+	- alert protocol (alert message , error msgs while transmission etc)
+	- change cipher spec protocol (1 bit ko change/flip karta hai , ye smj jo pending state -> running state )
+--------------------------------------------------->
+FIREWALLS
+	a breach between external and internal internet.
+	prevents unauthorised access 
+	Monitors and contiols the incoming and outgsing traffic 
+	can be software hardware or a mixture 
+
+	TYPEs 
+	- packet filtering (layer 4)
+		checks IP header , TCP headers 
+		works on network and transport layer 
+		can block IP address , or even entire service
+		sourceIP, destIP ,sourcePORT, destPORT
+
+	- application level gateway (level 5)
+		works on application layer 
+		data ko bhi check karta hai 
+		if there are malacious packets 
+		more secure 
+		processing overhead (diadvantage)
+
+	- circuit level gateaway
+		uses 2 TCP connection
+			b/w internal host and gateaway
+			b/w external host and gateaway
+		surity check is done before connection establishment 
+--------------------------------------------------->
+INTRUSION DETECTION SYSTEM 
+	pahle thodi thery likh dena , ke intruder kya hota hia, vo aaise kyo karta hia , hme detection systems kyo cahiye
+
+	METHODS :
+		signature based :
+		- patterns/signature amorng packets 
+		- we create databse of these pattern 
+		- so agar match hua koi pattern to we know there is a intruder 
+		- (disadvantage) koi naya pattern nahi recognise kar paega
+
+		anomaly based :
+		- abnormal behaviour
+		- matlab ek student agar nsut ke data base se cherchar karega to obv shak hoga 
+		- deviation from normal job/behaviour
+
+	TYPEs :
+		network based
+		- basically network me intruders dudhta hai
+		- matches traffic to the known attack
+		- monitors , captures (screenshot) netword traffic and analysis it 
+		- difficult to do in busy network
+
+		host based  
+		- installed on device /computers 
+		- monitors packets from device only
+		- alert if found 
+		- file is removed or deleted
+--------------------------------------------------->
+NAT (network address translation)
+	matlab vahi ki address ko translate kar dete hai , VPN vagera jo karte hai ,taaki access kar paye , ya apna address chupa paye 
+	use a set of private address and global internet adddresses for ecternal commuications 
+	use translation table to route msgs btw 2 networks
+--------------------------------------------------->
+A computer virus is a sort of malware that attaches itself to another program and can replicate and propagate once it has been installed on a user’s computer
