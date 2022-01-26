@@ -288,7 +288,7 @@ KERBEROS ( 3 head dog m guardian of the entrance)
 	
 	MORE SECURE AUTHENTICATION DIALOGUE :
 		5 steps
-		- user tgssks AS for communication with S for ticket to access a service by giviing its identity annd id of T
+		- user asks AS for communication with S for ticket to access a service by giviing its identity annd id of T
 			C-> AS [IDuser , IDtgs]
 		- AS gives a encrypted ticket which only the tgs can decrypt 
 			AS -> C [ E(k ,IDuser , IDtgs , lifetime , etc )  ](ticket)
@@ -341,11 +341,11 @@ PGP  (pretty good service) [JAVATPOINT]
 	- provides email security
 	- uses digital signature to provide all the things (privacy, integrity, authentication, non repudation)
 	- uses several combunation of hashing , data compression , symmetic and assym encrytion and various algo at each step
-	- email compactaboly using RADIX-64 security scheme 
+	- email compactability using RADIX-64 security scheme 
 	- convert the email into NVT 7 bit ascii format.
 
 	[basic block diagram ]
-		email ---[SHA]---> hash code ---[RSA]---> digital signature -> zip code -> aaa aage gada sa hai (symetric key encryption ) + key ka assymmtric encryption + concatinatie karke 
+		email ---[SHA]---> hash code ---[RSA]---> digital signature -> zip code -> aaa aage ganda sa hai (symetric key encryption ) + key ka assymmtric encryption + concatinatie karke 
 		digital signatures banke bhej do 
 --------------------------------------------------->
 S/MIME	Secure/Multipurpose Internet Mail Extensions [JAVATPOINT]

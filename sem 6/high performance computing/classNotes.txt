@@ -1,0 +1,146 @@
+HPC
+---------------------------------------------------------
+Notes
+-HPC Defination: In HPC we use a cluster of computer that are interconnected that work together. Then the task to be performed is divided into smaller parts which are then processed on diff machines in the cluster arrangement. Uses techniques of parallel processing, distributed computing, cluster computing etc.
+
+-Master-slave arrrangement used, they are of different types. Each computer is called a node in the cluster. 
+-Each nodes has own OS, Storage, Processor, Network
+-Very good if paired with cloud services coz scalable as unlimited resources.
+
+-Earlier very large system so only used by large orgs or govt.
+-Challenges: Fixed installed Hw, Long time required
+
+-Types of HPC nodes: General purpose, Compute Optimized, Memory Optimized and one more (Depending upon task to be done)
+-Nodes ke features in detail in ppt, can use VM
+
+-Uses: Called supercomputing since deals with large amount of data, can do highly precise calculations on large volume of data, can perform simulations
+1. Visual Effects
+2. Genome Sequencing (Mutants 😳)
+3. Financial Services and business predictions
+4. Medical calculations
+5. Automobile
+6. Natural disaster predictions
+
+- GPU a type of HPC architecture + kuchh gande shabd bole idk kya 🤷
+
+
+HPC Class 2
+
+NOTES
+-$ Intro:
+- Serial computing vs Parallel computing: Diff is Overhead and Resource utiliztion and Time to perform task.
+- Parallel processing done by multithreading, multicore etc. etc. 
+- Parallel Processing Used to process big data
+- Problems with Parallel computing - Overhead, cohesion and coupling, performance bottleneck, parallel processing suitable programs
+- How to improve the speed of parallel computing: 
+1) Make our devices faster and faster, but there is a limitation to how much the H/w can be made faster and also faster means that the H/w will have reduced life.
+2) Changing, modifying and improving the architecture of computer- Use diff things like overlapping but of instructions and functional unit of the system, pipelining in this
+
+- $ Flynn classifications of parallel computing systems into 4 cat. based on number of instruction and data streams:
+(Instruction stream ki kitne instruction saath mai process ho rahe hai, Data stream is ki kitne types se ek hi instuction process ho raha hai)
+1)SISD 2) MISD 3)SIMD 4) MIMD <- Sabke model dekh lena, ez understanding
+
+- $ Parallelism based on task 
+1) Temporal Parallelism - Diagram ez, called temporal coz a single task is divided into parts and those parts are overlapped over the same time period for processing with parts of other tasks. (Some overhead coz in the start all processors will not have a task, but better if specialization of tasks required so less latency)
+2) Data Parallelism - Diagram ez, called data coz out of all tasks we divide the tasks into diff grps which are then processed in parallel (Less overhead but more latency coz less specialization)
+3) Mixed Parallelism - Combined of dono upar waale here we divide all tasks into diff grps and then further divide the tasks in a grp into parts
+
+Inka basic intro, next class in details
+- Dependecies and Hazards
+- PRAM model
+- Numericals
+
+iske ppt hai group par 
+
+HPC Class 3
+
+NOTES
+-Factors affecting the performance of a computer: 
+1) Clock Cycle: 1Low phase + 1High phase
+2) Cycle time(tau): No. of secs per cycle
+3) Clock rate/frequency: 1/tau
+4) Program execution time/CPU time: Total time that a program takes for its execution or the total clock cycles required for a program execution. Given by = Seconds/Program = (Cycles/Program)*(Seconds/Cycle)
+5)Program size: The size of a progasm is determined in terms of the number of machine instructions called Instruction count(Ic) to be exectued in the program.
+6) CPI(cycles per instruction): TIme for each instruction to execute
+4*/7)CPU Time = Ic*CPI*tau
+-------------------------------------------------------
+QUESTIONS
+Q1) Clock rate = 233Mhx, find tau. 	
+
+ANS = 4.3 ns
+------------------------------------------------------------
+NOTES
+A typical Instruction: 
+a)Fetch
+b)Decode
+c)Operand fetch
+d)Execution
+e)Store results
+
+8) Memory cycle
+9) CPI: Total processor cycles + Total memory cycles
+So, T = Ic*(p+m*k)*tau
+---------------------------------------------------
+The five performance factors are affected by 4 system attributes which are:
+1) ISA(Instruction set architecture)
+2) Compiler Technology
+3) CPU implementation and control
+4) Cache and memory hierarchy
+------------------------------------------------------
+⭐⭐ T = C*tau = C/f = CPI*Ic*tau = CPI*IC/f  (CPI = C/Ic)
+
+10) MIPS rate (Millions of instrc. per sec): Ic/(T*10^6) = f/(CPI*10^6) = (f*Ic)/(Cx10^6)
+
+11) FLOPS: Floating point operations per second. mflops, glops, teraflops, petaflops. (Measure ki machine kitne floating pt. operations kar sakti hai per unit time)
+12)THROUGHPUT RATE: Programs executed per unit time(Prog/sec).
+Types: System throughput(Ws), CPU throughput which is lower than system one.
+
+Compare performance of two comps: Based on execution time. Greater the execution time, worse the performance.
+
+----------------------------------------
+QUESTIONS
+Q2)
+A program is running on the CPU with
+Total instr. in program = 10 mil
+Avg. cycle req. for an instr. = 2.5
+Clock operates at = 200 MHz
+
+Calculate tau and execution time
+
+ANS: T = 125ms, tau = 5ns
+---------------------------------------------------------
+Q3)
+Ic = 9.5 mil
+CPI = 3
+f = 3 Mhz
+
+ANS: tau=1/3M,  T=95ms
+Speed up = 1+(125-95/95) = 1.3157
+--------------------------------------------------------
+Q4)
+Instuction set has 3 instrc. classes A, B and C
+CPIa = 1, CPIb = 2, CPIc = 3
+Ic:
+Program       A      B      C
+1                  2       1      2
+2                  4       1      1
+
+Find the CPI for both the code sequences.
+
+ANS
+1: (2+2+6)/5 = 2
+2: (4+2+3)/6 = 1.5
+
+
+HPC Class 4
+
+QUESTIONS
+- Q 1 (https://www.scribd.com/document/314370476/Module-1-Problems-CSA) A 400 Mhz processor was used to execute the following instruction mix.
+a)Find effective CPI
+b)Calculate the MIPS rate
+
+Ans. a) ((450000 x 1) + (320000 x 2) + (150000 x 2))/1000000 = 1.55, 
+b) (400*10^6)/(1.55*10^6) = 258.06
+c) 0.0038
+
+iske baad ppt hai 
