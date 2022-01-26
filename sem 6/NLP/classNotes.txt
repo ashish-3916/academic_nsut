@@ -1,0 +1,76 @@
+NLP
+---------------------------------------------------------
+-NLP defination: Field of ML that deals with development and study of algos that allow computers to analyse and understand the human language
+- Machines using NLP: Smart assistants, Translators, Keyboards with speech typing, chatbots, auto-replier, filterlist in mail.
+- NLPvsProgramming: 1) Same word can mean multiple things depending upon user, context and semantic rules which are varied BUT in Prpgramming a fixed syntax with a fixed set of rules is followed which are predefined. Natural language is ambiguous- : 2) Rules and structure of NLP can evolve over time at a faster rate than Programming rules. 
+- AI vs ML vs NLP: AI broad field which includes all tasks that a machine can perform in order to mimic human intelligence and decision making skills. 
+ML and NLP: Subsets of AI which basically deal with a specific type of taskrelated to human intelligence which will be ML: Decision making and in NLP: Ability to understand human language.
+- AI vs Programming: We give instruction and uske basis pe task performed in prog, AI: The machine can make and modify their own instructions
+
+NLP class 2
+
+NOTES
+- NLP definition: ppt
+- NLP uses: In class1
+- AI vs ML vs NLP: In class 1 (Other things under AI - Deep learning, Comp Vision, Neural Networks etc)
+- NLP involves two parts which are: NL understanding, NL generation
+	-> Out of these NL understanding is the more difficult one since while doing so we need to take care of the context, tone and other things while breaking down the NL. This is coz NL is ambiguous
+
+- Subtasks under NL understanding: 
+1) Syntax analysis - NL according to the rules of the grammar
+2) Semantic analysis - NL has a meaning or not
+	-> A sentence can be syntactically correct but semantically wrong. 
+
+- Subtasks of syntax and semantic analysis:
+1) Tokenization: Dividing the NL into tokens, generally a white space indicates the end of a token but variety exists due to difference in speech
+2) NET DISCONNET HO GAYA THA (ppt se dekh lena) 😢
+3) Parsing: Try to identify and see if the syntax is correct or not
+	-> Types of parsing:
+	a) Constituency parsing: Identifies the different types of word usage in a sentence. Like what is a noun, verb, etc. etc. and their relationship
+	b) Dependency parsing: Identifies a root word and then finds the word depending on it and so on using something called Nmod and other stuff (later in detail)
+
+
+NLP Class 3 (Game khelte hue suna tha issliye detail mai nahi likha kuchh 🤡 )
+
+NOTES
+-Start from week 2
+- Now contd.
+
+4) Stemming: Stemming is used to normalize words into its base form or root form. Sometimes can be bad since the root word formed may be invalid random word.
+
+5) Lemmatization: It is used to grp different inflected forms of the word called Lemma. It produces a root word which has meaning and here root word finding is dictionary based. 
+
+6) Stop word removal: Removing words which add little semantic value to a sentence such as repetitive words etc.
+
+7) Named entity recognition(NER): Helps to determine items in a text which can be located and classified into pre defined categories. Cat. can be names etc.
+
+8) Relationship extraction: Identifying the relationship b/w named entities in NER and something (I forgor 💀)
+
+NLP Class 4 
+
+NOTES 
+- 5 main phases of NLP
+1) Lexical Analysis
+2) Syntactic Analysis (Parsing)
+-> Checking grammar, word arrangements and shows the relationship among the words
+3) Semantic Analysis
+-> Helps to determine the meaning of the NL. 
+-> Sentences can be synatctically correct but semantically wrong.
+-> In this, First each separate word is mapped with appropriate objects in the database and dictionary meaning of every word is found.
+-> Secondly we try to use meaning of the words to find the meaning of the entire sentence.
+4) Discourse Intergration 
+-> Try to find the meaning of the sentence based upon the previous sentence, Taaki pura meaning samajh aaye context ke saath.
+5) Pragmatic Analysis
+-> Kinda same as discourse integration but ye instead of previous, abhi tak jo bhi saare sentence hai pahle ke sabka use karta hai for finding contextual meaning.
+
+Order of phases is: 1 -> 2 and 3 -> 4 and 5
+(Jo and waale hai woh aage peeche ho sakte hai and overlap karte hai + unke jo subtasks hai woh kabhi pahle kardete hai ya kabhi baad mai)
+
+- Challenges to NLP (Kinds of ambiguity)
+1) Lexical Ambiguity - Word can have multiple meanings Eg. Silver - Bhartan and Color.
+2) Syntactic Ambiguity - "Man saw the girl with the telescope" - 2 meaning, either girl ke paas telescope aur girl so fat that and far away ki dekhne ke liye telescope ka use kye HueHue.
+3) Semantic Ambiguity - "The car hit the pole while moving"- Pole can't move but computer fuddu
+4) Anaphoric Ambguity - "The horse ran up the hill. It was very steep. It soon got tired" - 1st refers to hill, 2nd to horse but Computer to fuddu hai bc
+5) Pragmatic ambiguity - "I like you too"- 😢😣Ye example kyu use kar liya 😭😭 -  I like you too response ho sakta hai ya fir "I like you too like someone else" ek normal sentence leading to threesome, toh iska standalone meaning nahi hai
+
+iski ppt hai 
