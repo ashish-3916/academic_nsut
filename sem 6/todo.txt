@@ -1,3 +1,19 @@
+hpc
+
+unit 1 :
+	ppt 1 :introduction parallel and serial computing
+		VON NEUMAN ARCHITECTURE
+	ppt 2 :
+		flynns classifiaction and parallel and temporal parallelism
+	ppt 3 :
+		that numerical stuff clock cycle and mips rate
+	ppt 4 :
+		dependencies, data , flow , output, anti. etc etc control resource , problems ,bernstein's conditions, pipleling and hazards (ye book se padna hai ig ,ganda sa lag raha hia ppt me ) . PRAM variants vagerah 
+
+	cahlo aaj sirf unit 1 karte hia jitna ho paye
+
+
+
 -------------------------------------------------------------------------------------
 26 january
 

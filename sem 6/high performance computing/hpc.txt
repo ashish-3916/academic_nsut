@@ -1,0 +1,277 @@
+serial computing : Problem is divided in smaller instructions. These discrete instructions are then executed on the Central Processing Unit of a computer one by one. Only after one instruction is finished, 
+	next one starts. (Sequential)
+	limitation : slow , i/o requests , often crashes
+
+parallel computing : uses multiple computer cores, break down a job into its component parts and multi-task them parallel processor is capable of multithreading on a large scale, and can therefore 
+	simultaneously process several streams of data.
+	
+	advantages : faster , reptitive calculations can be done faster , electrical power used by a processor generally increases by the square of its switching speed, so less switching less power consumption, 
+		computation time reduces to 1/n.
+	challenges : communication and syncronization, low coupling and high cohesion, skilled programmers (hum jaiso ki bharose nahi ;) )
+	applications : research , syntesis of molecules , weather study , data analysis animations etcetc
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+FLYNN’S CLASSIFICATION : [block diagrams]
+	Single Instruction stream Single Data stream (SISD) : a single stream of instructions and a single stream of data are accessed by the PE from the 
+		main memory, processed and the results stored back in the main memory
+	Single Instruction stream Multiple Data stream (SIMD):All processors in this structure are given identical instructions to execute and they execute 
+		them in a lock-step-fashion (simultaneously) using data in their memory.there is no explicit communication among processors. adding a set of
+		arrays simultaneously . Parallel programming , 
+	 MISD : different PEs run different programs on the same data example pipelining
+	 MIMD :
+	-------------------------------------------------------------------------------
+
+PARALLELISM : [TEMPORAL, DATA, MIXED]
+	let us have a program with (n) no of identical jobs which take (p) time to completely execute one job and each job contains (k) sub-tasks in itself (k processors) ( their time is p/k)  
+	without parallelism ( total time = np)
+
+	temporal : give each subtask to a processor and they will execute subtask concuurrently for all the jobs.
+				p + (n-1)p/k
+		best to use when each subtask is independent and require same time to execute.
+		time taken to send the subtask to next processor is negligible.	
+		no of subtasks are smaller than the no of jobs to be done (n >> p)
+
+		problems :
+			syncronization : subtasks aren't identical has time taken to execute is differnet.
+			bubbles : jobs are not indentical , hence some jobs might be missing some subtasks hence processrs will be idle that time.
+			Fault Tolerence : if one processor stops working , good bye dead
+			time taken to send the subtask to next processor might not be  negligible.
+			limited no of processors.
+			processors are dependent on previous processors.
+
+
+	data : jobs are divided and one processor execute the whole job( all the subtasks ) . processors are independent of each other.
+			total time =distribution time + exectution time
+ 					   = nq + p*n/k	
+ 			advantage  : ~ disadvatage_temporal
+ 			disadvantage : complete job to be executed by single processor
+ 						   different processor may take different time to complete the given task.
+ 						   jobs should be independent of each other.
+
+ 			[difference table dekh lena from ppt]
+	-------------------------------------------------------------------------------
+
+SYSTEM ATTRIBUTES TO PERFORMANCE :
+	clock cycle -> tic-tok
+	cycle time(τ) -> seconds in clock cycle
+	clock rate (f) -> 1/τ
+	instruction count (Ic) : total no of instruction in a program
+	CPI : cycles per instruction 
+	execution time : Ic * CPI * τ 
+	MIPS rate : millions of instrucetion per second  [= Ic/(T*1e6) = f/(CPI *1e6)]
+	throughput rate : Programs executed per unit time = 1/execution_time
+
+	[do numericals from video]
+	-------------------------------------------------------------------------------
+
+DEPENDENCIES :
+	A dependence is a relationship between two computations that places some constraints on their execution order.
+
+	DATA DEPENDENCE : Two statements have a data dependence if they cannot be executed simultaneously because of conflicting uses of the same variable.
+		flow dependence : RAW
+		anti dependnece : WAR
+		output dependece: WAW when both statements write the same variable.
+		i/o dependence : i/o dependence occurs not because the same variable is involved but because the same file is referenced by both i/o statements
+		unknown dependence :
+	CONTROL DEPENDENCE : This refers to the situation where the order of execution of statements cannot be determined before run time.S7 determines whether S8 will be executed or not. if else statements.
+	RESOURCE DEPENDENCE: concerned with the conflicts in using shared resources, such as integer units, foating—point units, registers, and memory areas, among parallel events.
+
+	-------------------------------------------------------------------------------
+
+BERNSTEINS CONDITIONS : we can check which two process can be executed parallely.
+	process, input set and output set. 
+	1. R(S1) ∩ W(S2) = { }
+	2. W(S1) ∩ R(S2) = { }
+	3. W(S1) ∩ W(S2) = { } 
+
+	-------------------------------------------------------------------------------
+
+PIPELINING AND HAZARDS : 
+	ideal -> similar subtasks , eqaual time to execute , no branching , suffecient resource , successive instruction are independent, 
+	pipeline hazards : Delays in pipeline execution of instructions due to non-ideal conditions .
+
+	Stall : A stall is a cycle in the pipeline without new input.
+	types of hazards : 
+		data hazard : Delays due to data dependency between instructions. (jo upar padhi thi , read write operations , RAW , WAR , WAW)
+			avoidance : forwarding -> It adds special circuitry to the pipeline.
+						code reordering -> 
+						stall insertion -> delays that operation 
+		control hazard: transfer of control instructions such as BRANCH, CALL, JMP
+			avoidance : Branch Prediction is the method through which stalls due to control dependency can be eliminated.
+						add stalls until we get outcome 
+						predict behavoir of branch
+		structural hazard : resource conflict in the pipeline. A resource conflict is a situation when more than one instruction tries to access the same resource in the same cycle
+			avoidance : wait until its free.
+
+	-------------------------------------------------------------------------------
+
+PARALLEL RANDOM ACCESS MODELS (PRAMS) [block diagram]
+	
+	p <-> MAU <-> shared memory
+	A PRAM can be used to model both SIMD and MIMD machines.
+	read compute write
+
+	EREW(weakest) CREW(most commonly used ) CRCW(best) ERCW
+	several protocols for cuncurrent write :
+		Priority CW :  processors are assigned certain priorities
+		Common CW: processors that are trying to write to a memory location are allowed to do so only when they write the same value
+		Arbitrary CW : The processor that succeeds is selected arbitrarily without affecting the correctness of the algorithm. algorithm must specify exactly how the successful processor is to be selected
+		Combining CW : there is a function that maps the multiple values that the processors try to write to a single value eg sum of multiple values in array , jo MP me dekha tha/matrix multipilation me CRCW
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+UNIT 2 :
+
+HARDWARE AND SOFTWARE PARALLELISM :
+	Hardware Parallelism : type of parallelism defined by the machine architecture and hardware multiplicity. Function of cost and performance tradeoffs.
+	Software Parallelism : type of parallelism is revealed in the program profile or in the program flowgraph. function of algorithm, programming style, and program design.
+	example of 4 load and 4 airthmetic instruction(8/3)(8/7)
+		types :
+		control parallelism : allows two or more operations to be performed simultaneously (pipelining)
+		data parallelism : almost the same operation is perfomied over many data elements by many processors simultaneously.practiced inboth SIMD and MIMD
+
+	to solve mismatch we can either add complilation support or redesign hardware.
+
+	GRAIN SIZE/GRANULARITY :a measure of the amount of computation involved in a software process .
+	the quantum of work done by a PE before it communicates with another processor is called the grain size.
+	grain size determines the frequency of communication between PEs during the solution of a problem.
+	simplest measure is to count the number of instructions 
+
+	(fine , medium , coarse)
+		instruction level : (instruction and statements) <20 ins
+			instruction scheduling: The process of arranging sequences of straight line code so that stall will be eliminated or reduced
+				reorder instructions to minimize delays caused by having to wait for results from previously instructions.
+			trace scheduling: 
+				A trace is a sequence of instructions, including branches but not including loops, that is executed for some input data.
+				Trace scheduling uses a basic block scheduling method to schedule the instructions in each entire trace, beginning with the trace with the highest frequency.
+				It then adds compensation code at the entry and exit of each trace to compensate for any effects.
+				ex  : ek if else statement hai , usko pahle humne modify karliya acconding the majority frequency. and then baad me thoda sa code likh diya to handle minority (compensatation) stuff.
+
+			softawre pipelining : used to optimize loops, in a manner that parallels hardware pipelining. (reordering is done by compiler instead of processor)
+				loop unrolling [ for(int i = 1 ; i< 3 ; i++) arr[i]+=1;  =>  for(i=0;){arr[i]+=1 , arr[i+1]+=1, arr[i+2] +=1 }]
+				(decoupled software pipeline) : It transforms a loop into multiple decoupled loops which can be run on multiple cores. [merged loops kindof]
+		loop level : (non recursive and unfolded iterative loops) <500
+		procedure : subroutines  <2000
+		subprogram :
+		job (program) level :
+
+
+	LATENCY is a time measure of the communication overhead incurred between machine subsystems. 
+		Memory latency : is the time required by a processor to access the memory. 
+		syncronization latency: The time required for two processes to synehroniioe with each other 
+
+	-------------------------------------------------------------------
+
+DECOMPOSTION TECHNIQUES :
+	dividing the big task into the sub-tasks and then assigning them to different processors.
+
+	data decompostion : data is diiferent but the computation is same . eg [matrix multiplication]
+	recursivee decompostion : divide and conquer , decompose till basic unit and then combine , eg : merge sort, quick sort
+	exploratory decompostion :  decompostion is done alongside its execution , solving a puzzle game , make two choices (up/ left) and now problem is reduced to finding answer in smaller matrix
+	speculative decompostion : we don't know dependencies beforehand , the action is absed in output of previous part. Eg : topological sort, switch case.
+
+PARALLEL PROGAMMING :
+	explicit parallel programming :the user has full control and has to explicitly provide all the details while the compiler effort is minimal
+	implicit parallel programming : the compiler has full responsibility for extracting the parallelism in the program
+
+	parallel programming model contains :
+		shared memory programming :
+		messsage passsing programming :
+		hertrogeous programming :
+		MapReduce programming :
+
+	Message Passing Programming :
+		 programs (applications) as a collection of cooperating processes with private (local) variables.some memory is local  to each processor but none is globally accessible
+		 two primitives : SEND and RECIEVE (send/recieve data/instruction from one processor to another)
+		 		blocked send/ recieve : synchronous in nature ( wait until its send or recieved before continuing the process )
+		 		send/ recieve : asynchronous in nature (continues wihout waiting)
+
+		 	in block send/recieve ordering of the instructions is important.
+
+		 	Send (destination processor address, variable name, size)
+			Recieve (souce processor address, variable name, size)
+
+		simple addition program on array elements using 2 , k processors ( simple send and recieve instruction are executed , ez pz:) )
+
+		SPMD (single program multiple data programming ) 
+			writing one program, and then replicating it as many times as their parallel computer has processor , losely snychronous.
+			processors asynchronously execute the same program (instance) but manipulate their own portion of data.
+			use of unique identifier, procid.
+	
+	Message Passing Programming with MPI :
+		MPI is a library (#include <mpi.h>)
+		MPI assumes static processes; all processes are created when a parallel program is loaded. 
+		No process can be created or terminated in the middle of programexecution. All processes stay alive till the program terminates.
+
+		MPI_INIT : Initiate an MPI computation.
+		MPI_COMM_SIZE : Determine number of processes.
+		MPI_COMM_RANK : Determine my process identifier.
+		MPI_SEND : Send a message.
+		MPI_RECV : Receive a message.
+		MPI_FINALIZE : Terminate a computation.
+
+
+		 The routines MPI_Send and MPI_Recv are used in order to send/receive a message to/from a process .
+		 MPI_Send(&N; 1, MPI_INT, i, i, MPI_COMM_WORLD)
+		 [message adderess,message count , message datatype , dectination id , tag , communicator]
+
+		 message is like a letter. It has two parts namely, 
+		 	the contents of the message (message buffer -the letter itself) and 
+				  MPI_PACKED datatype in order to send non-contiguous data items. When a sequence of non-contiguous array items is to be sent, the data items can be first packed into a contiguous temporary 
+				  buffer and then sent
+		 	the destination of the message (message envelope—what is on the letter/envelope)
+		 		The destination process id specifies the process to which the message is to be sent.
+		 		The tag argument allows the programmer to deal with the arrival of messages in an orderly way
+
+	-------------------------------------------------------------------
+	SHARED MEMORY PROGRAMMING :
+		programmers view their programs as a collection of cooperating processes accessing a common pool of shared variables.
+		The main program creates separate processes for each processor and allocates them along with information on the locations where data are stored for each process. Each processor computes independently.
+		main and slave processor.
+		fork and join [ we use semaphores and looks , exapmple de dena addtion of 2 values to final sum ]
+
+		example given hai of additoon of array elements k processor 
+		SPMD ka bhi hia example using  unique identifier, procid.
+
+	SHARED MEMORY PROGRAMMING WITH OpenMP (Open Multi-Processing) : it is portable standard for programming shared memorry parallel computing.
+		MPI requires a programmer to parallelize (convert) the entire application immediately. 
+		OpenMP, on the other hand, allows the programmer to incrementally parallelize the application without major restructuring.
+
+		three distinct components :
+			compiler directives, runtime library routine, environment variables
+
+		creates multiple cooperating threads which run on multiple processors or cores.
+		master and slave threads
+		At the parallel construct, the master thread, creates a team of threads consisting of number of new thread callsed slave.
+		The fork and join a operation are implicit.
+		at the end only the master thread continues the execution.
+
+	LOOP SCHEDULING :
+		It is possible to incrementally parallelize a sequential program that has many for loops by successively using the OpenMP parallel for directive for each of the loops
+		 restrictions : 
+		 	- the total number of iterations is known in advance
+		 	- the iterations of the for loop must be independent of each other
+		loop-carried dependence cant be executed using parallel loop scheduling 
+		OpenMP does not parallelize while loops and do-while loop
+
+		[ https://www.youtube.com/watch?v=QDNvXCt7t0M&ab_channel=BilalSaid ]
+		static scheduling : loop iteration are divide into peice of size chunk and then statically assignied to treads. IT chunk is not specified , then iterations are eevernly divided among threads. 
+		dynamic schedling :When thread finished one cchunk, it is dynamically assigned another, no delay
+		guided scheduling : dynamocally assigned but block size decrease each time 
+				intial size of block : # iteration / # threads
+				sebsequent size of block : # remaining_iteration / # threads
+
+	odd even transposition sorting: (compare exchange) example likh dena 
+	sorting :
+		rank of si =  # (si > sj) (for every si in the array)
+		CRCW : n2 processors  O(1) time  , Pij writes 1 to ri
+		CREW : n processors  O(n) time, Pij adds 1 to ri 
+		EREW : n processors , O(n) time , k = (i+j)%n , Pij adds 1 to ri
+	matrix multiplication: m*n n*k
+		CRCW: n3 processors O(1) time (value bas add hoti jaenge concurrently)
+		CREW: n2 processors O(n) time (ek baar me hi complete M[i,j] nikalke likhdo )
+		EREW: n2 processors O(n) time (L=[i+j+k]%n ,ek baar me hi complete M[i,j] nikalke likhdo )	
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------

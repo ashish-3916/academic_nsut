@@ -1,3 +1,50 @@
+contituency parsing [unit 13]
+  gp of words which act like a single unit , name to consittuent phrases is given on basis of headword 
+  phrases : nous , verb , adjective 
+  CFG :  {T,N,S,R} terminals , non terminals , start symbol , production rules .
+
+  s -> npvp
+  np -> det nominal
+  nominal -> noun/noun nominal
+
+"a flight"
+	S -> NP
+	Np -> det nominal
+	nominal -> proper noun 
+	det -> a 
+	proper noun -> flight
+
+recursive production :
+PP -> prop NP  , NP -> noun PP 
+
+S → NP VP
+S -> aux NP VP 
+S → VP 
+NP → Pronoun 
+NP → Proper-Noun 
+NP → Det Nominal  
+Nominal → Noun 
+Nominal → Nominal Noun 
+Nominal → Nominal PP 
+VP → Verb 
+VP → Verb NP 
+VP → Verb NP PP  
+VP → Verb PP 
+VP → VP PP 
+PP → Preposition NP
+
+lexicons : 
+det-> the/a/that/this
+noun → book | flight | meal | money
+verb → book | include | prefer
+Pronoun → I | she | me
+Proper Noun → TWA | Houston
+aux -> does
+prep ->from/ to/ on/ near/   [[[[[[[[[page 260]]]]]]]]]
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+MID SEM
 NLP
 ---------------------------------------------------------
 -NLP defination: Field of ML that deals with development and study of algos that allow computers to analyse and understand the human language
