@@ -17,4 +17,12 @@ UNIT 3.
 	https://www.youtube.com/watch?v=wHDCvbZ3zDI&t=1013s&ab_channel=WangZhiyang
 
 UNIT 4.
-	114
+	NPTEL lecture 37-40 lexical semantics, wordNet, word sense , word disambiguition...
+	standford 114-118
+	book chapter 15 18 19
+	baaki Coe 2 class gp pe hai 
+	rest kisi ke notes mile to 
+	and finally maam ke haath me ankgsnkangklasnf
+
+flights = pd.read_csv("/content/flights.csv")
+flights = pd.read_csv("/content/flights.csv")
