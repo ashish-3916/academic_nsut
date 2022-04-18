@@ -1,0 +1,53 @@
+type checker:
+	module of a compiler devoted to type checking tasks
+
+type checking:
+	static: compile time
+	dynamic: done at run time
+
+design of type checker depends on:
+	syntactic structure of lang constructs
+	type expression of lang
+	semantic rules for assigning type to constructs
+
+type checking is done after parsing and returns syntax tree to icg
+
+type expressions(TE): denotes the type of lang constructors
+type of expression:
+	basic type: int, float, bool, char, void
+	type constructor/name: arrays, product, pointer, function
+
+if T -> TE, the array(index, T)-> TE
+
+
+type system: collection of rules for assigning TE
+
+components:
+	basic type
+	type constructor
+	type equivalence:
+		name equivalence
+			char a, b
+			a = 'A'
+			b = a
+			both b and a are handling same name 'A'
+		structural equivalence
+			struct a, b
+			both have same structure
+
+type conversion/casting:
+	conversion from 1 type to another
+	2 types:
+		implicit
+			compiler 1 data types into another of data automatically
+			no data loss
+			bool -> char -> short -> int ->long->float
+			eg:
+			short a = 20
+			int b = a
+		explicit:
+			data of 1 type is converted explicitly to another type with help of predefined fn
+			chance of data loss
+			some conversion can't be made implicitly
+			eg: int to short
+			

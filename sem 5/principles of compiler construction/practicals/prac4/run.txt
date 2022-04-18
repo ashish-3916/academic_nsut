@@ -1,0 +1,12 @@
+C:\Users\dangi\OneDrive\Desktop\poc\prac4>bison -d cl.y
+
+C:\Users\dangi\OneDrive\Desktop\poc\prac4>flex cal.l
+
+C:\Users\dangi\OneDrive\Desktop\poc\prac4>gcc lex.yy.c cl.tab.c -w
+
+C:\Users\dangi\OneDrive\Desktop\poc\prac4>a.exe
+
+
+
+Bison is the GNU implementation/extension of Yacc,
+Flex is the successor of Lex. In either case, it's fine (and recommended) to use bison / flex

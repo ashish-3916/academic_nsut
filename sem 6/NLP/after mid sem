@@ -1,0 +1,20 @@
+UNIT 3.
+	unit 12 -> suruat ke topicsm
+	CFG -> 12.2 there can be recursion in CFG
+
+	this whole below is covered in unit 13 from the book
+	NPTEL lecture 22 - 27 [consituentcy parsing and dependency]
+	stanford video 88 - 91 [cyk algorith along with probabbiltites with backtracking to find the tree]
+	so basically extrating grammer from CFG is polynomial time , since production rules can be n-ary
+	so there is need of binarisation, reduce to CNF , onto which now CYK algo can be appiled in O(N^3) time.
+
+	now some topics are left(last ke topics) jo maam ne notes daal rahkhe hia on classroom but we found videos on yt yayyaya
+	feature structures and two important operations on feature structures, namely, subsumption and unification.
+
+	https://www.youtube.com/playlist?list=PLJJzI13YAXCHxbVgiFaSI88hj-mRSoMtI
+	https://www.youtube.com/playlist?list=PLLssT5z_DsK8HbD2sPcUIDfQ7zmBarMYv
+	https://www.youtube.com/playlist?list=PLlnJDVO5phqabarhPGTDYASjR02yojdjp
+	https://www.youtube.com/watch?v=wHDCvbZ3zDI&t=1013s&ab_channel=WangZhiyang
+
+UNIT 4.
+	114

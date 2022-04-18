@@ -1,0 +1,23 @@
+logistic regression
+	https://towardsdatascience.com/logistic-regression-from-scratch-69db4f587e17#:~:text=%20Logistic%20Regression%20from%20Scratch%20%201%20Introduction.,and%2095%25%20accuracy%2C%20which%20is%20a...%20More%20
+
+	https://medium.com/@martinpella/logistic-regression-from-scratch-in-python-124c5636b8ac
+
+single layer perceptron
+	https://letsfigureout.com/building-a-perceptron-with-python/#:~:text=%20A%20Perceptron%20in%20Python%20%201%20Breaking,this%20is%20achieved%20with%20the%20back...%20More%20
+
+naive bayes , knn , linear -> i have done myself already
+
+	
+
+roc auc
+	https://thecleverprogrammer.com/2021/04/07/auc-and-roc-curve-using-python/
+	
+kmeans
+	https://www.askpython.com/python/examples/k-means-clustering-from-scratch#:~:text=K-Means%20Clustering%20From%20Scratch%20in%20Python%20%5BAlgorithm%20Explained%5D,the%20clusters%20of%20data%20in%20a%20given%20dataset.
+
+
+
+
+elbow point
+The basic idea behind this algorithm is that it plots the various values of cost with changing k. As the value of K increases, there will be fewer elements in the cluster. So average distortion will decrease. The lesser number of elements means closer to the centroid. So, the point where this distortion declines the most is the elbow point and that will be our optimal K.

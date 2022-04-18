@@ -1,0 +1,11 @@
+C:\Users\dangi\OneDrive\Desktop\github\academic_nsut\sem 5\principles of compiler construction\practicals\prac5>bison -d parser.y
+
+C:\Users\dangi\OneDrive\Desktop\github\academic_nsut\sem 5\principles of compiler construction\practicals\prac5>flex parser.l
+
+C:\Users\dangi\OneDrive\Desktop\github\academic_nsut\sem 5\principles of compiler construction\practicals\prac5>gcc lex.yy.c parser.tab.c -w
+
+C:\Users\dangi\OneDrive\Desktop\github\academic_nsut\sem 5\principles of compiler construction\practicals\prac5>./a.exe < input.c
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\dangi\OneDrive\Desktop\github\academic_nsut\sem 5\principles of compiler construction\practicals\prac5>a.exe < input.c

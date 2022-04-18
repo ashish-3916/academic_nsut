@@ -1,0 +1,592 @@
+PPT 1 : huihuihuihui brrrrrrrrrrrrrrrrrr
+----------------------------------------------------------------------------------------------------------------
+PPT 2 :	MAIN COMPONENETS 
+
+	sense user : motion, location, camera... (sense the surroudings)
+	sense objects : check for availbilty in the model or the need (pressure sensor , volume sensor , previous records, history)
+	decision making : make decision on set of predefined or dynamic rules.
+	notify : gives outpur oe desired communication using alarms, notifs, message, info over protocols etc 
+
+	so IoT has 5 stuff : (components of iot)	
+		- Thing : the actual device or model
+		- Controller : the processor 
+		- Sensor : i/p
+		- Actuators : o/p
+		- Communicators : connect, transmit data
+
+	An actuator is a component of a machine that is responsible for moving and controlling a mechanism or system, for example by opening a valve. In 
+	simple terms, it is a "mover".Its main energy source may be an electric current, hydraulic pressure, or pneumatic(pressurised gas) pressure.
+
+	no of devices connected are 2 folds 5
+
+	The Internet of things (IoT) describes physical objects (or groups of such objects) that are embedded with sensors, processing ability, software,
+	and other technologies that connect and exchange data with other devices and systems over the Internet or other communications networks
+
+	advantages/disadvantages/ characterstics [to-do, not in ppt]
+
+	advantages : 
+		minimises human efforts
+		saves time 
+		efficient resource utilization 
+		imporves quality of life
+		better monitoring of devices 
+		access info from anywhere, anytime 
+
+	disadvantages :
+	    lack of security on privacy
+	    complexity
+	    unemployement
+	    technology takes over life
+	    compatibilty 
+
+	characterstics :
+		connectivity 
+		intelligence : extraction of knowledge
+		enourmous scalabilty :
+		heterogenety:
+		unique identity: each device as unique address for tracking it .
+		dynamic and self adapting: temperature sensor etc
+		safety
+----------------------------------------------------------------------------------------------------------------
+PPT 3 : ABOUT IoT
+	IoP vs IoT
+	IoP :Internet of People refers to the digitalization of relationships between people and the collection, processing and application of personal 
+		data. It forms a network of collective intelligence and stimulates interactive communication among our digital selves through digital devices, 
+		theinternet and sharing of data
+
+	Evolution of IoT :
+	People connected with things : smart watch , band , mobiles
+	Things connected with things : servers , database, providers 
+	
+	where is IoT ? everywhere :clown:
+----------------------------------------------------------------------------------------------------------------
+PPT 4 : APPLICATIONS OF IoT
+	smart homes: lightning heating security entertainment smart tv , refrigrator lcd , cameras and 	home alarm ,burglary
+	wearables: fitness, bands, text msgs , calls, step counts , smart clothes 
+	connected health: sensors to monitor patient condition in real time. collect health data
+	smart retail: tags on clothes , online payment
+	smart farming : soil moisture, presence of nutrients, data collection etcc..
+	industrial automation: emmison of toxic gas detection, diagnose a machine
+	connected cars : automation , fuel efficiecy, navigation, heavy traffic alerts. (gps sensor , lidar , radar , video camera )
+	smart grid : manage everything remotely , ex , traffic lights , jams , parking , earthquake warning , weather .
+	smart city: waste mangements , khud se likh dena yr, kitna boring hai ye , I wish IoT was smart enoght not to bore me!
+----------------------------------------------------------------------------------------------------------------
+PPT 5 : EMBEDDED SYSTEMS 
+
+	real time systems : tasks are related with time constraints. The tasks assigned to real-time systems need to be completed in given time 
+	interval. hard and soft real time system (based on flexibility) . stock trading , miltary stuff , gps trackes , 
+	
+	embedded systems :  It can be said as a dedicated computer system which has been developed for some particular reason. But it is not our
+	traditional computer system or general purpose computers, these are the Embedded systems which may work independently or attached to a 
+	larger system to work on few specific functions. These embedded systems can work without human intervention or with a little human 
+	intervention
+	example washing machine , smart watches , printers , microwave oven, refrigrator 
+	
+	Typically implemented using MCU
+
+	many embedded systems can combine to form a whole working model :
+	ex : motor bike : speed , wheel rotation , fuel levels , heartrate 
+	automated vehicles : cuise(steering) control , automatic air bags sensor , location tracking(gps) , air pressure inside the tire, 
+	surroundings
+	or some other areas like :  ABS;navigation system,collision avoidance system; tire pressure monitoring; lane warning; adaptive 
+	cruise control; climate control; airbag control unit; electric window and central locking; parking aid; automatic wiper control; alarm 
+
+	dedicated systems doesn't contain program memory
+	use of actuators and sensors 
+----------------------------------------------------------------------------------------------------------------
+PPT 6 : HCI (HUMAN COMPUTER INTERACTION)
+	Human-computer interaction (HCI) is a multidisciplinary field of study focusing on the design of computer technology and, in particular, 
+	the interaction between humans (the users) and computers.
+	A central objective of HCI is to make computer systems more user-friendly and mre usable. 
+    HCI is a discipline concerned with the design, evaluation and implementation of interactive computing systems for human use
+
+    Interfaces : GUI(hardware , touch) , VUI (speech , gesture , VR)
+
+    seven design principles :
+	   - Equitable use : same means for all users
+	   - Flexibility in use
+	   - Simplicity and intuitiveness of use 
+	   - Tolerance for error
+	   - Perceptible information
+	   - Low physical effort
+	   - Size and space for approach and use 
+
+	Context is any information that can be used to characterize the situation of an entity. An entity is a person, place, or object that 
+	is considered relevant to the interaction between a user and an application, including the user and applications themselves”
+
+	 Smartphone adjusts the screen to the orientation of the device
+	 Apple Watch turns on display if arm lifted/rotated
+	 Orientation is determined by using both a gyroscope and an accelerometer
+	 auto brightness using light sensor
+	 location using gps
+	 touch screen proximity sensor 
+
+	challenges :
+		complexity : complex system doesn't means better performance , but may be hard to maintain.
+		Error : 
+		privacy
+		user preferences 
+		information overloaded : system hi hang karne lag jaye , so we need to decide what to include and what not to include in out model.  
+----------------------------------------------------------------------------------------------------------------
+PPT 7 : SENSORS
+	a sensor is a device that recieves a stimulus and respond with an electrical signal.
+	detect changes in the env
+	response :  a signal which can be channeled, amplified, and modified by electronic devices
+	transducers :A transducer is a device that converts energy from one form to another. Usually a transducer converts a signal in one form of 
+	energy to a signal in another.
+
+	ways of I/O :
+		UART (universal asynchronous reciever/transmitter)
+		SPI (serial peripherial interface) send any no of bits without any interuption
+		I2C (inter integrated circuit)
+		GPIO (general purpose i/o) A general-purpose input/output (GPIO) is an uncommitted digital signal pin on an integrated circuit or 
+			electronic circuit board which may be used as an input or output, or both, and is controllable by the user at runtime.
+
+	one of the ADC method : successive approximation method
+		converts a continuous analog waveform into a discrete digital representation via a binary search through all possible quantization 
+		levels before finally converging upon a digital output for each conversion
+
+		algo :
+		- we use lot of trail voltage to get value of unkown input signal
+		- number of trial voltages = number of bits used to encode the signal
+		- First trial voltage is 1/2 the full scale range of the ADC
+		- if (remainder of input voltage > trial voltage) bit value 1 is entered , else 0 is entered
+		- successive bits are multiplied to their corresponding trail voltage and added up.
+
+		trail_vol = full_scale/2;
+		input_vol 
+		A
+		for(n bits){
+			if(input_vol > trail_vol ) A{1 , trail_vol}  input_vol -= trail_vol
+			else A{0 , trail_vol}
+			trail_vol/=2;
+		}
+		total = sum(A[i][0] * A[i][1])
+
+		no of quantisation level = 2^bits
+		resolution = full scale voltage / no of quantisation level
+		quantisation error  = resolution / 2; [ ie 1/2 of interval  idk]
+
+	DAC : E = E' * sum[(2^x)^(-1)Bi]  x:{1...n}  [0.5, 0.25, 0.125 ....]
+
+	types of sensor : 
+		based on output 
+			- analog(continuous output) LDR , accelometer
+			- digital(discreate output 0/1) door sensor
+		based in data type
+			- scalar (only magnitude matters) temperature
+			- vector (position and orinetation also matters)sound , velocity , gives coordinates
+		hardware and software sensor
+
+	sensor resolution : the min change req in the env that sensor can detect
+
+	characterstics : 
+		- high sensitive     - linearity  ( out is directly prop to input)
+		- high resolution 	 - less noise
+		- no deviation from external factors over no of trials 
+
+	active sensor : need external power supply, battery, send signal into environment and measure interaction of signal w/ env, radar sonar
+	passive sensor : do not need external power supply , record signals already present in environment , video camera 
+
+	errors in sensor :
+		offset/bias : default error we get without any input
+		drift : output changes due to the change in the hardware over year, physical change
+		hysteris : different output for same input value
+		quantisation error : exists in digital system while conversion from analog to digital
+	
+	components of sensor :
+		- power unit
+		- sensing unit ( sensor , ADC)
+		- procession unit (mcu)
+		- transmission unit (radio)
+
+	actuators : converts source energy to mechanical motion for example by opening a valve. In simple terms, it is a "mover". 
+		Hardware devices that convert a controller command signal into a change in a physical parameter
+		types : 
+			electrical (motor)
+			hydraulic:  The mechanical motion gives an output in terms of linear, rotatory or oscillatory motion. As liquids are nearly 
+			impossible to compress, a hydraulic actuator can exert a large force. The drawback of this approach is its limited acceleration.
+			pneumatic (compressed gas)  produced from relatively small pressure changes
+----------------------------------------------------------------------------------------------------------------
+PPT 8 : IOT architecture and standards
+	overview layered structure
+		sensing layer : sensors and actuators 
+		network layer : internet and gateway
+		data processing layer : data analysis and decision unit platform(API, protocols)
+		application layer : connected applications 
+	Edge Computing  :
+		Computation takes place at the edge of a device’s network, which is known as edge computing.With this technology, data is processed 
+		and transmitted to the devices instantly. Yet, edge nodes transmit all the data captured or generated by the device regardless of the 
+		importance of the data. Edge computing helps devices to get faster results by processing the data simultaneously received from the 
+		devices. 
+	Fog computing :
+		It is a layer in between the edge and the cloud. When edge computers send huge amounts of data to the cloud, fog nodes receive the 
+		data and analyze what’s important. Then the fog nodes transfer the important data to the cloud to be stored and delete the unimportant 
+		data or keep them with themselves for further analysis. In this way, fog computing saves a lot of space in the cloud and transfers 
+		important data quickly.
+	Cloud Computing :
+		Cloud computing refers to the on-demand delivery of IT services/resources over the internet.
+	[give example of real time temperature sensor]
+
+	iot gateway :
+		Gateway acts as a medium to open up connection between cloud and controller(sensors / devices). A gateway can be a typical hardware 
+		device or software program.
+		it also performs many other tasks such as this IoT gateway performs protocol translation (like using MQTT), aggregating all data, 
+		local processing and filtering of data before sending it to cloud, locally storing data and autonomously controlling devices based on 
+		some inputted data, providing additional device security. 
+
+		Working of IoT Gateway :
+			Receives data from sensor network.
+			Performs Pre processing, filtering and cleaning on unfiltered data.
+			Transports into standard protocols for communication.
+			Sends data to cloud.
+
+
+	iot standards :
+		Multiple regulation bodies and industry alliances are standardizing the means by which devices can interact with each another and with 
+		gateways or cloud services.
+
+	The Institute of Electrical and Electronics Engineers (IEEE) 
+		- deals with defining protocols for wireless access network
+		- targeting bands like 2.4GHz, 5GHz, 900MHz , modules like ZigBee builds , HaLow
+	The 3rd Generation Partnership Project (3GPP)
+		- Focuses on specifying cellular network architectures and protocols (e.g., GSM, 3G, 4G-LTE, etc)
+		- LTE-M  , NB-IoT
+	The Internet Engineering Task Force (IETF)
+		- Focuses on specifying protocols that are used across the Internet , RFCs (req for comments )
+		- CoAP, 6LoWPAN , The JavaScript Object Notation (JSON) Data Interchange Format – RFC 8259
+	there are other standars also 
+	like NIST (AES , DES)  , ISO  
+----------------------------------------------------------------------------------------------------------------
+PPT 9 : NETWORK BASIC 
+	group of computers and associated devices that are connected by communication facilities
+	WAN , MAN , LAN
+	TOPOLOGIES : 
+		fully connected , star , bus , ring , mesh 
+	network protocols are formal standards and policies enabling communication
+
+	OSI MODEL (Open System Interconnection)
+		Please Do Not Throw Sauce Pizza Away
+		- Application layer :  It provides protocols that allow software to send and receive information and present meaningful data to users
+			eg of protocols  are  http ftp smtp dns
+		- Presentation layer : how data should look like (presentation)  encode, encrypt, and compress data
+		- Session layer : creates communication channels, called sessions, between devices  , authentication, permissions 
+		- Transport layer :(port no) transport layer carries out flow control, sending data at a rate that matches the connection speed of the 
+			receiving device, and error control, checking if data was received incorrectly and if not, requesting it again.
+		- Network layer : (IP ADDRESS) routing and switching 
+			2 function - 
+		       breaking up segments into network packets, and reassembling the packets on the receiving end
+		       routing packets by discovering the best path across a physical networ
+		- Data layer : (MAC)establishes and terminates a connection between two physically-connected nodes on a network. It breaks up packets into 
+			frames and sends them from source to destination.
+		- Physical layer : the physical cable or wireless connection between network nodes. 
+		
+	data layer add both prefix and suffix , baaki only suffix
+
+	[physical layer] wired wireless ; reflection, scattering, diffraction , shadowing ; ASK FSK PSK
+	[data layer] (MAC)
+		IEEE 802.3  (Ethernet)
+			CSMA/CD Protocol
+				• Carrier Sense : Sense” (listen) carrier (“is anyone else talking right now?”) If “busy”: wait; if “idle”: transmit
+				• Multiple Access
+				• Collision Detection :  Keep listening while transmitting If collision detected: retry at a later time
+
+		IEEE 802.11 (wifi)
+			CSMA/CA Protocol
+				• Carrier Sense
+				• Multiple Access
+				• Collision Avoidance
+					Transmitter sends request-to-send (RTS)
+					Receiver sends clear-to-send (CTS)
+	[network layer] (IP address)
+		IPv4 : 32-bit  [network ID, Host ID]
+			- expressed in dotted-decimal 128.100.11.56
+		IPv6 : 128 bits long
+		 	- 16 bytes of IPv6 address are represented as a group of hexadecimal digits
+		Routers : identify source and destination of packets, Look up routing tables that determines “next hop”
+	[trasnport layer]
+		UDP(User Datagram Protocol) Unreliable packets can get lost; packets can arrive out of order
+		TCP(Transmission Control Protocol)
+			- more reliable 
+			- assignes sequence to the packets and recieves acknowledgement
+----------------------------------------------------------------------------------------------------------------
+PPT 10 : ARCHITECTURAL VIEW
+	cntd ppt 8
+		sensing layer : sensors and actuators (GPS , RFID , sensors)
+		network layer : internet and gateway (WWAN , WPAN , WLAN , WMAN )
+		data processing layer : data analysis and decision unit platform(API, protocols) (Data center , mining)
+		application layer : connected applications (smart grid , envi.	)
+	TCP/IP model 4 layers
+		application layer 
+		transport layer 
+		internet layer 
+		network access layer
+
+	in IOT stack : 
+		data : binary,JSON
+		application layer : CoAP , MQTT, XMPP,AMQP
+		transport layer : UDP
+		internet layer : IPv6/IP routing LoWPAN
+		Network/Link layer : IEEE
+	ICMP : Internet Control Message Protocol
+
+	iot layers to-do confusion
+----------------------------------------------------------------------------------------------------------------
+PPT 11 : WIFI (MANet)
+	IEEE 802.11 a b g n ac
+	based on CSMA/CA
+	infrastructure network [diagram]
+		- station :terminal with access mechanisms to the wireless medium and radio contact to the access point
+		- access point : station integrated into the wireless LAN and the distribution system
+		- portal : bridge to other (wired) networks ,portal is used when other family of 802 is connected
+		- distributed system : multiple access points are connected to form distribution system
+		- Basic service set (bss) :group of stations using the same radio frequency
+
+		station ----wireless(bss)--> access point -> portal ---- wired ---> 802.11x
+
+		SCANNING :
+			active (host initiates)
+			 - probe req (broadcast) sent from host 
+			 - probe res sent from access point 
+			 - assocation request sent from host to access point 
+			 - assocation response sent from access point to host 
+
+			passive (access point initiates)
+			 - Beacons sent from Access Points
+			 - assocation request sent from host to access point 
+			 - assocation response sent from access point to host 
+
+	infrastructureless network (adhoc network [temporary network]) 
+	  	no need of infrastructure
+	  	eg Mobile Adhoc network
+
+	  	MANET :
+	  		totoally wireless , no fixed infrastructure, dynamic topologies
+	  		node in manet can act as host or router accordingly
+
+	  	2 points main : mobile , no fixed infrastructure
+
+	  	characterstics : dynamic topo, energy constrained (as they are mobile) , 
+	  	prop : fast network establishment , P2P connection , No access point requred , wireless 
+	  	challenges : routing(As nodes are mobile) , topology , security , bandwith , energy
+
+	 	An ad-hoc routing protocol is a convention that controls how nodes decide which way to route packets between computing devices in a mobile ad-hoc networ
+		types based on routing info update 
+			- proactive (table driven routing ) Route information always available; no need to search for route
+				adv : minimum time to find route
+				dis : priodically  info exchange req, so table has to be updated continuuly
+					high netork overload
+					high bandwidth consumption
+					not suited for large networks
+				 eg :STAR 
+				 	 DSDV (destination Sequenced Distance Vector Routing Protocol) based on bellmenford algo
+				 	 GSR (Global State Routing) : based on Dijkstra’s 
+			
+			- reactive (obtain route when req)
+				adv = ~dis above
+				dis : time to discover route is non predictabel
+				 eg DSR (dynamic source routing) [flood-fill algo]
+				 	bfs , Route Request (RREQ)  , Route Reply (RREP)
+			
+			- Geographic
+				Nodes use location information to make routing decision,sender must know the locations of itself, the destination, and its neighbor
+					Unicast Location-Based Routing :
+						Each forwarding node makes localized decision based on the location of the destination and the node’s neighbors (greedy forwarding)
+						challenge : may arrive to a node which doesnt have any neighbours  (holes , voids)
+					Geocasting :
+						Packet is sent to all or some nodes within specific geographic region
+						challenge  : distribute packet near or in the target region (flooding)
+				 eg CEDAR
+----------------------------------------------------------------------------------------------------------------
+	this ain't for the best my reputation have never been worse, so you must like me for me.
+	We can't make any promises can we babe? but you can make me a drink
+	1 2 3 lessss go b*tch!
+	is it chill that you have hit my head , cuz i know thats delicate!
+----------------------------------------------------------------------------------------------------------------
+PPT 12 : HTTP AND REST
+	cloud computing : Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool 
+	of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management 
+	effort or serive provider interaction.	(oh my ~NSIT~  NIST )
+	adv :pay per use , scalable , flexble elastic , anywhere access 
+	IaaS, PaaS, SaaS
+	Virtualization is the process of abstracting the physical resources to the pool of virtual resources that can be given to any virtual machines (VMs).
+
+	SaaS: complete solution including application(s) Google Apps
+	PaaS: computer + OS (incl. development environment) Heroku
+	IaaS: barebones computer  Amazon Web Services (AWS)
+
+	clouds for IOT : thingSpeak ,AWS IoT
+
+	HTTP 
+
+	response is a sequence of bytes with an associated MIME (Multipurpose Internet Mail Extensions) type
+	response can be static(files , audio , images) or dynamic(on-the-fly)in nature 
+
+	Each file managed by a server has a unique name called a URL
+	can be static or dynamic(fds?fd)
+
+	request : <method> <uri> <version>
+	<method> is either 
+		GET retrieve information, 
+		POST send data to the server,
+		HEAD Same as GET, no data in response body, 
+		PUT, Write a file to the server
+		DELETE,  Delete a file on the server
+		TRACE Echo request in response body
+		OPTIONS, 
+
+	response : <version> <status code> <status msg>
+		200 OK Request was handled without error
+		403 Forbidden Server lacks permission to access file
+		404 Not found Server couldn’t find the fil
+
+	REpresentational State Transfer (REST) is a software architectural style that defines the constraints to create web services.
+	REST is an architectural style, or design pattern, for APIs.
+	It means when a RESTful API is called, the server will transfer to the client a representation of the state of the requested resource.
+	[examples]
+
+	3 fundamental aspects : resource , URL , simple operations
+	3 concepts : resource[endpoints] , verbs[GET POST PUT DELETE] , Representation (data format [JSON XML]) 
+	
+	Axioms by tim lee 
+	Axiom 0: all resources on the Web must be uniquely identified with a URI.
+----------------------------------------------------------------------------------------------------------------
+PPT 13 : RFID
+	Radio Frequency Identification
+	- for identification and tracking 
+	RFID tags are attached to the objects and the contains electronic stored information.
+
+	RFID tag -> chip -> antenna -> covering
+	
+	components of RFID system :
+		- RFID reader 
+		- RFID tag
+		- antenna 
+		- software
+
+	RFID tag : contains chip which contains info of onject being tagged, It sends response. transmits data to RFID reader with radio frequency is encountered
+		tags can be passive and active in nature
+		active : self power , expensive , battery , long range , usefil on tracking and locating stuff	
+		passive : depends on RFID reader for power , cheap in nature , used in short distance , used for identification purposes
+
+	RFID reader :
+		contains two way radio transmitter receiver (transceiver)
+		 - reader me antenna hota hai to send the signal and activate the chip
+		 - also ek decoder hota hao to interpret receiving data
+
+		 can be fixed or mobile in nature 
+
+	Antenna : helps in communication btw reader and tag
+
+	software : used for storing and interpretting the data 
+
+	ADVANTAGES : 
+		No line of sight required for reading
+		Multiple items can be read with a single scan
+		uses EPC (electroninc product code )
+
+	RFID vs BARCODE
+		barcode  : 
+			optical technology
+			UPC (universal product code)
+			unlimited shelf life but are degraded with time 
+			can be easily duplicated and reattached
+			size comparison
+		RFID
+			radio technology
+			EPC(electonic product code)
+			tags have no moving parts so unlimimted life span 
+			diifcult to duplicate 
+
+	Applications :security , retail shop , tracking , manufacturing 
+
+	NFC (near field communication)
+		NFC is based on RFID technology that uses magnetic field induction between electronic devices in close proximity
+		distance less than 20 cm 
+		contactless data transfer btw the devices 
+		bidirectional communication (P2P)
+
+	NFC are passive 
+	NFC device is capable of being both an NFC reader and an NFC tag.
+	Only one NFC can be scanned at a time		 
+	eg : contactless payment , ticketicng , attendace marking , wireless pairing , UPIs
+----------------------------------------------------------------------------------------------------------------
+PPT 14 : MQTT
+	Message Queuing Telemetry Transport
+	It is event based IoT middleware works in publish subscribe with predictable bi-directional message delivery.
+	componenets :
+		publisher subscriber broker 
+	[diagram][eg teemperature]
+	Message have a topic, quality of service, and retain status associated with them.
+
+	 - clients don't know each other , they only know the IP and port of the broker
+	 - clients don't have to run at the same time
+	 - hierarchy is used for the topics
+	 - maybe possible the clients message is never consumed by subscriber
+
+	Topic : its is an identifier by MQTT broker to identify the righful clients for delivering the message
+		each published data has a topic associated to it , and the subcrised subscriber will recieve it.
+		eg : /home/rooms/kitchen/temperature
+
+	Wildcards can be used to subscribe to multiple topics.
+	eg home/hall/temp
+	   home/+/temp
+	   home/#
+
+	subscriptiom : durable , non-durable
+	uses TCP on transport layer (1883 port)
+
+	MQTT supports three Quality of Service (QoS) levels. This specifies if a message has guaranteed delivery.
+		QoS 0 ‘At most once delivery’ – Best effort delivery, no response is sent from the receiver and no retry is performed by the sender. 
+				Fire and forget This is the most efficient.
+		QoS 1 ‘At least once delivery’ – Ensures the message is received at least once, however multiple duplicate messages are possible.(2 message overhaed ,[sent , pub_ack])
+		QoS 2 ‘Exactly once delivery’ – Highest QoS and incurs the most overhead and the slowest (4 overhead)
+
+	MQTT message format : see block diagram 
+	shortest msg of 2 bytes 
+
+	bits 	0 	1 	2 	3 	| 	4 	|	5 	6 	|	7 	
+	byte 1 	  message type     DUP 	  	QoS		  retain 
+	byte 2 		reaminaing length (1-4 bytes)
+	byte 3 	
+	  .
+	  .				optional variable length header
+	  .
+	byte m
+	  .
+	  .				optional variable message payload
+	  .
+	byte n
+
+	message types : connect , PUBLISH , SUBSCRIBE , PUBACK (pub ack) , PUBREC (pub recieved) ,PUBREL (publish release), PUBCOMP (publish complete) 
+	DUP : Duplicate msg flag , indicating that message has already been recieved 
+	QoS level : 
+	RETAIN : to ratain the last published  message and serve it first to new subscription
+	remaining length : baki bacha hua msg
+
+
+
+	SMQTT (secure MQTT) Protocol 
+		is session layer protocol.
+		uses light weight attribute based encryption.
+		Algorithm is divided into four parts viz. setup, encryption, publish and decryption. [IMP]
+		Key generation algorithm is not standardized and depends on developers. Encryption algorithms depend on developers too.
+		In the setup phase, subscribers and publishers register themselves with broker and obtain master secret key.
+
+		pura crypto walla part hai key exchange ig 
+----------------------------------------------------------------------------------------------------------------
+THANK YOU
+	contact me 
+		ashish3916@gmail.com
+		ashish.3916@nsut.ac.in
+		www.ashish3916.com
+
+	LinkedIn: https://www.linkedin.com/in/ashish3916/
+	Twitter: https://twitter.com/ashish3916
+
+	:clown
+----------------------------------------------------------------------------------------------------------------
+
+to do 
+tim lees axioms
+enablers bisi

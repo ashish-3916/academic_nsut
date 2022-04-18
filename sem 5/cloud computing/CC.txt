@@ -1,45 +1,52 @@
+UNIT 1
 every computing defination be like -> hpc/perform/processing/problems/resources / homo -hetro
 
-----------------------------------------------General computing-------------------------------------------------------------
-parellel computing -> a set of processors work cooperatively to solve a computational problem. These processor 
-		machines or CPUs are mostly of homogeneous type . Problem are broken into discreate parts and are solved concurrently
+-----------General computing------------>
+parellel computing -> a set of processors work cooperatively to solve a computational problem. These processor 	machines or CPUs are mostly of homogeneous type . Problem are 
+		broken into discreate parts and are solved concurrently
 
-distributed computing -> consists of multiple computers or processor machines connected through a network, which can be 
-		homogeneous or heterogeneous, but run as a single system .The goal of distributed computing is to make such a network work as a single computer , eg workstations.
-		scalabily -> easy to expand 
-		redundnacy -> if one fails , info present on other system. 
-			i think distributed is same system placed at different places but does similar job.
+distributed computing -> consists of multiple computers or processor machines connected through a network, which can be	homogeneous or heterogeneous, but run as a single 
+			system .The goal of distributed computing is to make such a network work as a single computer , eg workstations.
+			scalabily -> easy to expand 
+			redundnacy -> if one fails , info present on other system. 
+				i think distributed is same system placed at different places but does similar job.
 
 cluster computing -> we have nodes and graph . different system work cooperatively and are dependent on each others response.
 			i think cluster are some systems placed at same/different places but does different job but they together complete a task eg-> transmission needs......
 
-grid computing -> The idea of grid computing is to make use of such nonutilized computing power by the needy           				organizations,and thereby the return on investment (ROI) on computing investments can be increased .These act 				 as a midleware for other organisation. WE ALL ARE PART OF GRID , WE ARE CONNECTED VIA GRID, WE ACCCESS INTERNET AND 			WE DONT CARE THE PLACE WE ARE ACCESSING FROM (INDIA , USA ,) AND PAY PER USE! 
+grid computing -> The idea of grid computing is to make use of such nonutilized computing power by the needy organizations,and thereby the return on investment (ROI) on 
+		computing investments can be increased .These act as a midleware for other organisation. WE ALL ARE PART OF GRID , WE ARE CONNECTED VIA GRID, WE ACCCESS INTERNET AN 
+		WE DONT CARE THE PLACE WE ARE ACCESSING FROM (INDIA , USA ,) AND PAY PER USE! 
 
-cloud computing -> access anything over interent form wheresoever in no-time irrespectie of users conneceted, cloud version 		of grid computing
+yaha ki table , grid vs power grid 
+
+cloud computing -> access anything over interent form wheresoever in no-time irrespectie of users conneceted, cloud version of grid computing
 
 Network computing -> servers-client environment, etcc
 
--------------------------------------------------fancy names----------------------------------------------------------
-mobile computing -> the processing (or computing) elements are small (i.e., handheld devices) and the communication between 		various resources is taking place using wireless media.
+----------------fancy names------------>
+mobile computing -> the processing (or computing) elements are small (i.e., handheld devices) and the communication between various resources is taking place using wireless 
+		media.
 
 Quantum computing -> taking info on subatomic level and IC , silicon chips etc ..... something exists between 0 and 1 bit.
 
 Nano computing -> small scale compting eg transitors, IC chips, , make comptuing millions times faster <- ^| 
 
-----------------------------------------------------science fields-----------------------------------------------------
-biocomputing -> Biocomputing systems use the concepts of biologically derived or simulated molecules (or models) that 				perform computational processes in order to solve a problem.
+-------------science fields------------>
+biocomputing -> Biocomputing systems use the concepts of biologically derived or simulated molecules (or models) that perform computational processes in order to solve a 
+		problem.
 
 optical computing -> using photons in info excahange , 10 times faster than elcetric signal , OPTICAL FIBRES.  
 
------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 UNIT 2->
 
-capital expenditure -> buy everthing of your own ie , resources, networking , storage , maintaince , etc  , costly
+capital expenditure -> buy everything of your own ie , resources, networking , storage , maintaince , etc  , costly
 operational expenditure -> get it from provider, pay as we use.
 
-cloud computing is a mechanism of bringing–hiring or getting the services of the computing power or infrastructure to an organizational or individual level to the extent required and paying only for the consumed services
+cloud computing is a mechanism of bringing–hiring or getting the services of the computing power or infrastructure to an organizational or individual level to the extent 
+	required and paying only for the consumed services
 
 NEED OF CLOUD COMPUTING
 	convienece and relaibility
@@ -47,67 +54,78 @@ NEED OF CLOUD COMPUTING
 DEFINATIONS
 	cloud computing means storing and accessing data and programs over the Internet from a remote location or computer instead of our computer’s hard drive.
 
-	cloud computing is a mechanism of bringing–hiring or getting the services of the computing power or infrastructure to an organizational or individual level to the extent required and paying only for the consumed services
+	cloud computing is a mechanism of bringing–hiring or getting the services of the computing power or infrastructure to an organizational or individual level to the extent
+	 required and paying only for the consumed services
 
 	Cloud computing is a model for enabling ubiquitous, convenient, on-demand network access to a shared pool 
-	of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management effort or serive provider interaction.
---------------------------------------------------------------------------------------------------------------------------	
+	of configurable computing resources (e.g., networks, servers, storage, applications, and services) that can be rapidly provisioned and released with minimal management 
+	effort or serive provider interaction.
+
+-------------------------------------------------->	
 cloud model -> 5-4-3	
 CC is a service -> store images , video , collaborative projects , audio
 CC is a platform -> WWW (platform is that it is the support on which applications run or give results to the users)
 					web is becoming platform , hosting google docs, gmail, online info exchange etc.
-----------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------->
 5 charactetstics 
-	on demand self service -> user can increase/descrease service demand automatically without human interaction with 			service provider. Cloud Computing allows the users to use web services and resources on demand. One can logon to 		a website at any time and use them.
+	on demand self service -> user can increase/descrease service demand automatically without human interaction with service provider. Cloud Computing allows the users to 
+		use web services and resources on demand. One can logon to a website at any time and use them.
 	broad network access -> cloud computing is completely web based, it can be accessed from anywhere and at any time.
 	elastic resource pooling ->resources can be pooled/shared with multiple consumers at a time independently.
-	rapid elasticity -> hori and verticle scaling of resources should be done with ease. Scaling of resources means the 		ability of resources to deal with increasing or decreasing demand
-	measured services -> cloud provider controls and monitors all the aspects of cloud service. Resource optimization, 			billing, and capacity planning etc. depend on it.
+	rapid elasticity -> hori and verticle scaling of resources should be done with ease. Scaling of resources means the ability of resources to deal with increasing or 	
+		decreasing demand
+	measured services -> cloud provider controls and monitors all the aspects of cloud service. Resource optimization,billing, and capacity planning etc. depend on it.
 
 4 deployment (ways cloud services can be made availble to cunsomers) 
-	private ->used by single orgainistion and its buisness units  , managed by themsekves or third party , on/off premesis
+	private -> used by single orgainistion and its buisness units  , managed by themsekves or third party , on/off premesis
 	public -> open for everyone , managed by govt, big org(Amazon , google , micro ,VMware Vcloud) on premisis
-	community -> shared by groups of  org (mission , security) on/off premisis
+	community -> extension of private cloud , shared by groups of  org (mission , security) on/off premisis
 	hybrid -> mix of above ,some things arre public and some are private .(e.g., cloud bursting for load balancing between clouds)
 
 	advantage/disadvange based on scalabilty , avaialbilty , cost , costumizable , security , 
-
+ 
 3 service model
 	SaaS -> everything(network, servers, operating systems, storage ,etc ) is given by vendor , we use as per requirment , 
 		eg :(CRM,  , buisness analyticts , microsoft officeemail, web browser )
-	PaaS -> offers runtime env . user have some part and depends rest on vendor for some things like(software , IDE (without 	istallation))    eg (microsoft azure services ,google app engine , play store ) 
-	IaaS -> user has everything but still need some fundamental services like storage , deployment services , infrastrucure 	, servers,db)  eg :AWS
+	PaaS -> offers runtime env . user have some part and depends rest on vendor for some things like(software , IDE (without istallation))eg (microsoft azure services 
+		,google app engine , play store ) 
+	IaaS -> user has everything but still need some fundamental services like storage , deployment services , infrastrucure, servers,db)  eg :AWS
 
 	we have one more thing called on-premises where wwe have everything but obv its so costly , hence not feasible, unless we stands for organistaion(vendor) here .
 
 	some general points to write : scalability, efficiency and performance ,commpactabiliity , managment , issues , customisable?
-----------------------------------------------------------------------------------------------------------------------------
-Cloud ecosystem ->Cloud ecosystem is a term used to describe the complete environment system of interdependent components or entities that work together to enable and support the cloud services
+
+--------------------------------------------->
+Cloud ecosystem -> Cloud ecosystem is a term used to describe the complete environment system of interdependent components or entities that work together to enable and 
+support the cloud services
 
 various actors :
 	Cloud service users (CSU)->end users who users cloud services ,can be anyone (indiv , org , community ) 
 	Cloud service providers (CSP) -> which provides services , Saas,PaaS,IaaS
 	Cloud service partners (CSN)-> those who help CSP to build sevices offered by cloud (developers , etc).
-----------------------------------------------------------------------------------------------------------------------------
+
+	yaha ka block diagram 
+--------------------------------------------->
 Requirement for cloud services
 	multitenancy -> aiming to provide isolation of the different users ,while maximizing resource sharing. 
-	service life cycle management ->serivces can be used and stoped anytime from user, so cloud should support automatic 		service provisioning  metering and charging or billing settlement needs to be provided for services that are 			dynamically created, modified, and then released in virtual environments.
+	service life cycle management ->serivces can be used and stoped anytime from user, so cloud should support automaticservice provisioning  metering and charging or billing 
+		settlement needs to be provided for services that are dynamically created, modified, and then released in virtual environments.
 	security -> securtiy is need in multi-tenant
 	responsiveness -> enable early detection, diagnosis, and fixing of service-related problems
 	Service reliability, service availability, and quality assurance->
 	portability ->
-	interportability -> well-documented and well-tested specifications that allow heterogeneous systems in cloud 
-		environments to work together
+	interportability -> well-documented and well-tested specifications that allow heterogeneous systems in cloud environments to work together
 	service access  -> available from any device .
-	Accounting and charging -> It is expected that a cloud service be capable to support various accounting and charging 			models and policies
-	
-----------------------------------------------------------------------------------------------------------------------------
+	fleixbility :
+	Accounting and charging -> It is expected that a cloud service be capable to support various accounting and charging models and policies
+--------------------------------------------->
+
 advantages -> green IT ,convinent , relabilty  , accessbility , save money , only operational expenditure    
-disadvantages -> nothing without interet access , conecern about security , interporatbality  , shift from one cloud to another (as all cloud doesnt provide all services) .
-----------------------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------------
-UNIT 3 ->
+disadvantages -> nothing without interet access , conecern about security , interporatbality  , (migration) (vendor-lock)shift from one cloud to another (as all cloud doesnt provide all services) .
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+UNIT 7 ->
 
 virtualization where a single physical infrastructure can be used to run multiple operating systems (OSs) and applications
 block diagram ->
@@ -128,15 +146,14 @@ DRAWBACKS
 	May lead to lower performance
 	Requires specialized skill set
 
-Virtualization is the process of abstracting the physical resources to the pool 
-of virtual resources that can be given to any virtual machines (VMs).
+Virtualization is the process of abstracting the physical resources to the pool of virtual resources that can be given to any virtual machines (VMs).
 
 -------------------------------------------------------------------------------------------------------------------------
 see block diagramss 
 
 processor virtualisation
-	Processor virtualization allows the VMs to share the virtual processors that 
-	are abstracted from the physical processors available at the underlying infrastructure. The virtualization layer abstracts the physical processor to the pool of virtual processors that is shared by the VMs.
+	Processor virtualization allows the VMs to share the virtual processors that are abstracted from the physical processors available at the underlying infrastructure. The 
+	virtualization layer abstracts the physical processor to the pool of virtual processors that is shared by the VMs.
 
 	BLOCK -> [VARIOUS PROCESSORS] -> [POOL OF VPROCESSOR] -> [GIVE TO VM (WIN/LINUX)] ->[RUN APPLICATIONS]
 
@@ -161,8 +178,9 @@ network virtualisation
 								  VIRUTALISATION LAYER
 	BLOCK -> [VARIOUS DEVICES] -> [POOL OF VDEVICES] -> [build virtual private network] ->[connect many hosts]
 
+----------------------------------------------->
 Data virtualisation 
-	Data virtualization  is the ability to retrieve the data without knowing its *type* and the physical *location* where it is stored
+	Data virtualization is the ability to retrieve the data without knowing its *type* and the physical *location* where it is stored
 	location can be anything like rdbms, dbms , noSql , mediafiles , 
 
 	BLOCK -> [VARIOUS DATA SOURCES] -> [VIRUTALISATION LAYER] -> [GIVE INFO TO VARIOUS SERVICES] 
@@ -173,7 +191,7 @@ Application Virtualisation
 	BLOCK -> [VARIOUS SHARED APPLICATIONS] -> [VIRUTALISATION LAYER] -> [GIVE INSTANCE OF APPLICATIONS TO USE] 
 
 -------------------------------------------------------------------------------------------------------------------------
-RINGS 
+RINGS  are used to isolate the OS from untrusted applications 
 3 LEVELS ->   KERNEL > DEVICE DRIVERS (2LAYERS) > APPLICATIONS   [ORDER OF PRIVILAGE , ACCESS TO PHYSICAL RESOURCES]
 -------------------------------------------------------------------------------------------------------------------------
 hypervisor is a tool to create VMs
@@ -192,7 +210,8 @@ APPROCHES TO VIRTULISATION ->
 	pros : isolation and security 
 	cons : 2transaltion makes performance low  , correct combination of hardware and software 
 
-2. Paravirtualization / OS-assisted Vr -> The main difference between the full virtualization and paravirtualization is the 	guest OS knows that it is running in virtualized environment in paravirtualization.
+2. Paravirtualization / OS-assisted Vr -> The main difference between the full virtualization and paravirtualization is the guest OS knows that it is running in virtualized 
+environment in paravirtualization.
 
 	instruxtions ->
 		direct execution remains same
@@ -215,10 +234,465 @@ APPROCHES TO VIRTULISATION ->
 	instructions->
 		direct execution is same
 		so no hypercalls or transalations to VMMs
+		traps
 
 	pros : no hypercalls , no translation , more good performance   , no guestOS modification
 	cons : new to market so compactibilty isssues 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!READ FROM BOOK !!!!!!!!!!!!!!!!!!!!!!1!!!!!!!!!!!!!!!!!!
+HYPERVISORS : softwares which are used to create virtual machines 
+	
+	types :
+		type1/bare metal hypervisors ->
+			runs directly on the hardware
+			run and access physical resources directly without the help of any host OS
+
+		type2/hosted hypervisors ->
+			runs on host OS	
+			requires the host OS and does not have direct access to the physical hardwar
+			The major disadvantage of this approach is if the host OS fails or crashes, it also results in crashing of VMs
+
+	threats to hypervisor :
+		by host OS :
+			by expoltiong host OS itself , then we can expoit guest OS too.
+			then we can do malacious activites like denial of service , stealing useful information
+
+		by guest OS :
+			make a parallel guest OS in the hypervisor , 
+			now we can attack on other guest OS , host OS , physical resources (so on both Type 1 and Type 2)
+
+	virtualisation vs CC 
+	1. it is more to infrastructure  | it provides Iaas , paas , saas 
+	2. not a on demand service | is a on demand service 
+	3. no self service to end users | self service to users 
+	3. not east to scale up | easy to scale up 
+	4. less elastic | more elastic 
+	5. target audience 
+
+IaaS uses the processor, memory, storage, and network virtualization to provide the infrastructure services  
+PaaS virtualizes the development platform and provides it as a service to the developers  
+SaaS allows the multiple end users to share the single instance of centrally hosted software 
+
 -------------------------------------------------------------------------------------------------------------------------
-virtualisation vs CC 
+UNIT 3 cloud computing architecture and management
+	service-level agreements (SLAs) commitment between service provider and client. SLA is a formal, structured agreement between two parties to provide one or more services 
+	to a mutually agreed level. One of the parties is always the customer of the services. The other party is the supplier that provides the services. SLA can be a
+	physical or a electrnic document.
+	
+	Architecture is the hierarchical view of describing a technology. This usually includes the components over which the existing technology is built
+	and the components that are dependent on the technology.
+	it has 4 layers :
+		user/client layer -> This is the place where the client/user initiates the connection to the cloud .
+			The client can be any device such as a thin client, thick client, or mobile or any handheld device 
+				thin client that is completely dependent on some other system for its complete functionaity
+				thick client are general computers that have adequate processing capability.
+		network layer -> This layer allows the users to connect to the cloud . eg internet , LAN 
+				This layer does not come under the purview (concerns) of SLAs
+		cloud management layer -> This layer consists of softwares that are used in managing the cloud.These softwares usually allow resource management (scheduling,
+			provisioning, etc.), optimization (server consolidation, storage workload consolidation) and internal cloud governance .
+			This layer come under the purview (concerns) of SLAs
+		hardware resource layer ->	consists of provisions for actual hardware resources , eg data centers , datawarehouse . 
+			This layer comes under the purview (concerns) of SLAs
+
+	Anatomy describes the core structure and internal working of the cloud .
+	  it has 5 components :
+		1. Application: The upper layer is the application layer. In this layer, any applications are executed.
+		2. Platform: This component consists of platforms that are responsible for the execution of the application. This platform is between the infrastructure and 
+		the application.
+		3. Infrastructure: The infrastructure consists of resources over which the other components work. This provides computational capability to the user.
+		4. Virtualization: Virtualization is the process of making logical components of resources over the existing physical resources. The logical components are 
+			isolated and independent, which form the infrastructure.
+		5. Physical hardware: The physical hardware is provided by server and storage units
+
+
+	one of the major issues is network connectivity in cloud :
+	- public cloud : mainly done using internet , so there are always issues of security 
+		one way is to  connectivity through encrypted tunnels (pipes) , but this will have impact on performance.
+		other way is to select suitable routing methods (hops) which can reduce the delay without compromising security
+	- private cloud : private hai to itne issues nahi aate 
+	- public intracloud networking : public but over different geographical area , again security is concern.
+	- private intracloud networking : most complicated issue ,it depends on how much intracloud connectivity is associated with the applications being executed in this 
+		environments traffic may move between components of the application, as well as between the application and the user.
+		The performance of those connections will then impact cloud computing performance overall.
+
+	applications on cloud :
+	  types of application ->
+	  - stand alone applications : developed to be run on a single system that does not use network for its functionality.
+	  		 use only the machine in which they are installed .
+	  		 functioning is dependent on resources available on the system itself.  (self-sustaining)
+
+	  - web applications : totally dependent on the network for its working .
+	  		have two things : client and server 
+	  		but there are disadvantages : all those 5 CHARACTERSTICS of cloud computing ko ulata karke like dena , matlab niche likhe points ka ulta 
+	  - cloud application : it is unique from others because of :
+			multitenancy -> aiming to provide isolation of the different users ,while maximizing resource sharing. 
+			elasticity ->  rapid fluctuation of loads ie the increase or decrease in the number of users and their usage can rapidly change , adapt to changng workload
+			heterogeneous -> any type of applivation can be deployed 
+			quatitative measurement -> pay per use 
+			on demand service -> access web applivation anytime , on any device without any restrictions.
+
+	managing the cloud :
+		1. managing the infrastructure : it should be managed bcz of following issue :
+		  	- resource management : scheduling, provisioning, and load balancing.
+		  	- the basic functionality of the cloud should always be provided and considered at any cost , else the whole concept of cloud is futile.
+		  	- cost : provide at reasonable cost, else compitition in market  , else reduce user base etc etc 
+		  	- consolidation : efficient usage of computer server resources in order to reduce the total number of servers or server locations that an organization needs.
+		  	- load fluctuation : workload on system changes continously 
+		  		predictable 
+		  		non- predicatable 
+		  	- cloud governance :  process of creating value to an organization by creating strategic objectives that will lead to the growth of the company
+		  		SLA's are the important one.
+
+		2. managing the cloud applications :  
+			applications are becoming more and more complex , thus they require more storage , database , SaaSs (email messaging) 
+			hence there should be governance , cloud based monitoring , environment management
+
+	migrating applications to cloud :
+	PHASES :
+		evaluation : infrastructure , architecture  , financial consideration , risk , security , licensing , SLAs
+		migration strategy : as name says stratgies are made 
+			hotplug strategy : application are isolated and opertionalized all at once 
+			fusion strategy : partially migrated 
+		prototyping : small portion is tested
+		Provisioning : premigration optimisation ( kinda setup stuff) . All internal and external integration points are properly configured. Web services, batch jobs, and 
+			operation and management software are set up in the new environme 
+		testing : Postmigration tests ,Performance and load testing, failure and recovery , basically making sure that it is migrated succefully
+
+	APPROACHES : 4 approaches  (in words of kaushal)
+		Migrate existing applications : pehla ki kuch parts ya saare parts ko rebuild kro taaki woh cc mein chale
+		start from scratch : Second ki ek aur new company bana lo aur users ko choice dedo ki ya toh tum hmara yeh wala app use kro, jismein trial aur purchasing hai ya yeh 
+			use krlo jo pay per use hai.
+		separate company : teesra ki ek child company create krlo jiska sab kuch alag ho jayega
+		Buy a existing cloud vendor : 4th ki dusri company jo cc pr build hai usko daboch lo
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+UNIT 4 
+	deployement models can be defined as different ways in which cloud can be deployed lol
+	public private community hybrid
+	
+	PRIVATE CLOUD : private cloud can be defined as the cloud infrastructure that is provisioned for exclusive use by a single organization comprising multiple consume
+		exist on/ off premisis
+		the basic and simplest cloud model 
+	 - characterstics : secure , central control , weak SLAs
+	 - suitable ? org which require seprate cloud , security concerns , finanical support , less userbase , sufficient manpower for maintianice 
+	    not suitable ? inhe ka ulta kardo
+	 - on premises vs outsourced cloud , inke issues/charcterstics :
+	 	 SLAs , Network , security , location , laws and conflict , performance , maintanince , 
+	 ADVANTAGE : small size , esy maintain , secure , ghar ki cheez hai 
+	 DISADVANTAGE : maintaince , budget , loose SLAs
+
+	PUBLIC CLOUD :  public cloud can be defined as the cloud infrastructure that is open for general public.
+		exist on premisis 
+		AWS , AZure 
+	 - characterstics : scalable , affordable (pay per use) , less secure , highly available , strong SLAs
+	 - suitable ?    finanical support , large userbase , resoureces available ,less secure 
+	    not suitable when we dont have ? inhe ka ulta kardo
+	 - inke issues :
+	 	 SLAs , Network , security , location , laws and conflict ,performance , maintanince , 
+	 ADVANTAGE : strict SLAs , large user base , scalabel , less costly for customer
+	 DISADVANTAGE : security , maintaince , privacy
+
+	------------------------------------------------------------>
+	SLAs -> matlab aggrements kitne strong hai user and provider me
+	Network -> user kaise connected hai, is network being shared? , usko services kitni jaldi mil rahi hai over internet , used via internet ,lan ,vpn ...?
+	security ->
+	location -> data trasfer over long distance me issue , koi kisi dursi country ka data access to nahi kar raha?
+	laws and conflict -> jaha cloud setup ho rha hia us country ke laws and conflicts ki rr
+	performace ->
+	maintaince ->
+	------------------------------------------------------------>
+	
+	COMMUNITY CLOUD : provisioned for exclusive use by a specific community of consumers from organizations that have shared concerns (e.g., mission, security requirements
+		may exist on or off premises , can be manged by single , gp of org , third party
+	 - characterstics : collborative and distributive maintence , cost effective , resource sharing , partially secure (data can be leaked , ghar me chorr)
+	 - suitable ?  jaha hamare pass itne paise nahi ,itne resources nahi,itni maintiance nahi , but hume private cloud be chaiye , 
+	    not suitable when we dont have ? privacy issue , no collaboration 
+	 - onpremisis(hum khud sambal rahe ho) vs outsourced community cloud (third party)
+	 - inke issues/charcterstics :
+	 	 moderate SLAs , Network , security , location , laws and conflict ,performance , maintanince , 
+	 ADVANTAGE : low cost private cloud , collab , secure than public cloud
+	 DISADVANTAGE : less secure than private cloud , not suitable wlle points..
+
+	HYBRID CLOUD : ah ,,shit here we go again 
+		 composition of two or more distinct cloud infrastructures (private, community, or public) that remain unique entities but are boundtogether by standardized or 
+		 proprietary technology that enables data and application portability
+		 have a private cloud initially, and then for additional resources, the public cloud is used. private cloud extended to public cloud.
+		 eg :EUCALYPTUS
+	- characterstics : scalable , strong SLAs , complex cloud mangement 
+	 - suitable ? we want more secure than public cloud , jinko hybrid cahiye obv  
+	    not suitable when we dont have ? privacy issue ,security 
+	 - inke issues/charcterstics :
+	    SLAs , Network , security , location , laws and conflict ,performance , maintanince , 
+	 ADVANTAGE : suitable 
+	 DISADVANTAGE : not suitable 
+
+time pass chapter  (bas sabke diagrams banadena , visual effects ;) )
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+UNIT 5
+	IaaS, PaaS, and SaaS.	
+	NaaS, StaaS, Database as a Service (DBaaS), Security as a Service (SECaaS), and Identity as a Service (IDaaS)
+
+	SaaS(for end users)
+	PaaS(for developers)
+	IaaS(for IT architects)
+
+	IaaS :
+		The ability given to the infrastructure architects to deploy or run any software on the computing resources provided by the service provider
+		network, and storage are managed by the service provider
+		Amazon Web Services (AWS), Google Compute Engine , Microsft Azure 
+	
+	PaaS :
+		The ability given to developers to develop and deploy an application on the development platform provided by the service provider
+		integrated development environments (IDEs)
+		ex : google app engine , heroku
+	
+	SaaS :
+		The ability given to the end users to access an application over the Internet that is hosted and managed by the service provider
+		salesfores, GSuite
+	------------------------------------------------------------>
+
+		[BLOCK DIAGRAM]
+
+		Application
+		Data
+		
+		Development/testing platform
+		Middleware
+		Operating system
+		
+		Network
+		Storage
+		Compute
+		Virtualization
+		Server
+	------------------------------------------------------------>
+
+	IaaS : 	
+		provides virtual computing, storage, and network resources by abstracting the physical resources. The targeted audience of IaaS is the IT architect
+		services :
+			Compute : virtual central processing units (CPUs) and virtual main memory 
+			Network : virtual router, switch, and bridge for
+			Storage : 
+			Load balancers : 
+
+		characterstics : 
+			Web access to the resources: can be managed via internet 
+			Centralized management:
+			Elasticity and dynamic scaling:
+			Shared infrastructure : IaaS follows a one-to-many delivery model and allows multiple IT users to share the same
+			Metered services :e IT users to rent the computing resources instead of buying it , pay per use
+			increases ROI 
+
+		Suitability :
+			Unpredictable spikes in usage
+			Limited capital investment : startup can use this , 
+			Infrastructure on demand : some one who needs for short duration of time,
+
+		not to use :
+			security
+			better performance 
+			might require physical control over the underlying infrastructure. 
+
+		PROS :
+			pay per use
+			increase ROI , reduces TCO
+			Elastic resources 
+			Green IT
+
+		CONS :
+			security
+			Interportabilty issues : . It is very difficult to migrate any VM from one IaaS provider to the other
+
+	------------------------------------------------------------>
+
+	PaaS :
+		PaaS allows the developers to develop their application online and also allows them to deploy immediately on the same platform , integrated IDEs
+		services :
+			Programming languages: python , ruby , scala ,
+			Application frameworks: node.js , django
+			database :
+			other tools : testing /depoy 
+
+		characterstics :
+			All in one : develop, test, deploy, host, and maintain applications in the same IDE. 
+			Offline access: A developer may not be able to connect to the Internet for a whole day to access the PaaS services. When there is no Internet connectivity, the 
+				developers should be allowed to work offlin
+			collaborative 
+			scalabilty
+
+		suitability :
+			Collaborative development
+			Automated testing and deployment:
+
+		not to use :
+			Frequent application migration: major problem is *vendor lock in* , difficult in migration
+			Customization at the infrastructure level
+
+		pros :
+			Quick development and deployment:
+			Different teams can work together
+			Reduces TCO: 
+			Produces scalable application
+			easy to use 
+
+		cons :
+			vendor lock in : (major drawback imp)* 
+				Vendor lock-in is when someone is essentially forced to continue using a product or service regardless of quality, because switching away from that product or service is not practical or may result in high cost .
+
+			security issues :
+			less flexibility / customisable 
+
+		ex : google cloud engine , heroku 
+	
+	------------------------------------------------------------>
+
+	SaaS :
+		SaaS is delivered as an on-demand service over the Internet, there is no need to install the software to the end user’s devices. SaaS services can be accessed or
+		disconnected at any time based on the end user’s needs
+
+		services :
+		 	Business services : CRM, billing, sales, and human resources
+		 	Social networks:
+		 	Document management: used to create, manage, and track electronic documents
+		 	Mail services:
+		 
+		characterstics:
+			One to many : single instance of the application can be shared by multiple
+			Centralized management:
+			Multidevice support
+			scalability
+			API integration
+			high avalabilty
+
+		suitability :
+			On-demand software:
+			Software compatible with multiple devices:
+			software with varying loads 
+
+		not use when :
+			poor internet connectivity
+			confidential data (privacy)
+
+		Pros :
+			no installation
+			cost saving : pay per use
+			ease of access :
+			scaling :
+			multitenancy :: Multitenancy is the ability given to the end users to share a single instance of the application , increases resource utilisation
+
+		Cons :
+			security:
+			privacy :
+			internet conectivity 
+			customisablity
+
+		salesforce , google apps , gsuite 
+
+	------------------------------------------------------------>
+	
+	other cloud services 	
+		 network, storage, and database
+
+	NaaS (network) is a business model for delivering virtual network services over the Internet on a pay-per-use basis.NaaS allows network architects to create virtual 	
+		networks,virtual network interface cards (NICs), virtual routers, virtual switches, and other networking component
+
+	Desktop as a Service (DEaaS) is an ability given to the end users to use desktop virtualization without buying and managing their own infrastructure . payper use
+
+	STaaS (storage) store the data
+
+	DBaaS (database) is an ability given to the end users to access the database service without the need to install and maintain it.
+
+	Data as a Service (DaaS) :The ability given to the end users to access on-demand data provided by the DaaS provider over the Internet 
+
+	SECaaS is an ability given to the end user to access the security service provided by the service provider on a pay-per-use basis. mcafee
+
+	IDaaS is an ability given to the end users to access the authentication infrastructure that is managed and provided by the third-party service provider.
+
+	bbaki aur bhi hia jo dsngkndskgjnfek hai 
+
+	------------------------------>
+	JESUS LOVES YOU 
+	------------------------------>
+
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+
+MapReduce and hdfs
+
+hadoop architecture   =  clustering (hdfs) + Mapreduce ( 2 components  + 2more compononets [common utitiles , YARN framework ](not in syllabus ig))
+
+	hdfs -> distributed storage  | MapReduce -> distributed processing 
+
+
+dfs -> files at distributed over a network on different computers/nodes in a cluster  .it appears that its stored on single system when accessed.
+	a file is distributed over the network.
+	it will take a long time to process , if we store data in one system
+	but if it is distributed we can do parellel processing 
+
+hdfs -> hadoop distributed file system 
+	architecture : master slave topology 
+		master node is called nameNode 
+		slave nodes are called DataNodes 
+
+	NameNode : 
+		maintain and manages dataNode 
+		contains metadata(info about data)
+		recieves heartbeat from dataNodes to make sure all datanodes are connected every 3 seconds (default).
+
+	dataNode :
+		stores actual data 
+		serves read and write request 
+
+	
+	Files are stored as blocks (128 MB)
+
+	what if one datanode crashes ?
+
+	Replication factor : each data file is broken  into blocks and 3 replica are stored of that block on different datanodes , so if one fails , then we can retrieve from the 
+	other rack (datanode ) 	
+
+
+Map Reduce 
+	Map: extract something you care about from each recor
+	Reduce: aggregate, summarize, filter, or transform
+	
+	[block diagram]
+	input -> Map( breaks into tuples ) -> reduce (combine based to keyvalues ) -> set of small tuples  -> output 
+
+	give example of tokens ppt walla <key, pair> combined 
+
+
+	there is ONE MASTER JOB TRACKER AND MANY SLAVE JOB TRACKER 
+
+	MASTER :
+		monitoring , scheduling , resource management
+	SLAVE : (worker)
+	 executes task , task status 
+
+ kuch aur cheeze hai gande gande se 
+
+ 	image and journals idk 
+ 		so lame bhasha me image or fsimage is the information jo stored hai hamare pass and jaaise hi ye informantion change hoti hai to hum edit logs (history) store rakhte 
+ 		hai ki kya kya changes hue 
+
+ 	ab edit logs itne baade hote hia ki ye kahi aur store karte hai 
+ 	checkpoints uss instance par data ka status hota hai  
+
+ 	to ye sab cheeze checkpoint node / backup node (secondary datanode) me store hote hai , and saath saath update hote rahete hia jaise edit logs bante hai 
+ 	merko to yahi smj aaya , glt hia ? idk , idc , paper me likh dena hia bas.
+
+ 	jaise checkpoint node / backup node : jo namenode ke jaisi hoti hai but alag hoti hai , matlab usko assist karte hai 
+
+
+ 	block placement : block kaha place hoga , we make sure that har datanode ki memory equal proportions me use ho (balancer [disk space usage]) , to uske liye rack algo hoti 
+ 	hai jo rack decide karte hai ki konsa block kaha jaega 
+ 		first replica goes to writer , second and third to 2 diff nodes to 2 diff rack , rest distributed 
+
+
+	------------------------------>
+	JESUS LOVES YOU 
+	------------------------------>
+
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
