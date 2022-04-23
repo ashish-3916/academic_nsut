@@ -23,6 +23,3 @@ UNIT 4.
 	baaki Coe 2 class gp pe hai 
 	rest kisi ke notes mile to 
 	and finally maam ke haath me ankgsnkangklasnf
-
-flights = pd.read_csv("/content/flights.csv")
-flights = pd.read_csv("/content/flights.csv")
