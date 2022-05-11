@@ -70,6 +70,15 @@ PPT 4 : APPLICATIONS OF IoT
 	connected cars : automation , fuel efficiecy, navigation, heavy traffic alerts. (gps sensor , lidar , radar , video camera )
 	smart grid : manage everything remotely , ex , traffic lights , jams , parking , earthquake warning , weather .
 	smart city: waste mangements , khud se likh dena yr, kitna boring hai ye , I wish IoT was smart enoght not to bore me!
+
+	ENABLERS :
+		Portability :Reducing the size of hardware to enable the creation of computers that could be physically moved around relatively easily
+		Miniaturization : Creating new and significantly smaller mobile
+		Low Power and Low Heat
+		Connectivity
+		Convergence : giving many feature in one system , eg in mobiles we have games , aufio , video etc
+		Divergence :promoting specialised functionality rather then general ones
+		Ecosystem :cloud, social networks, software development kits
 ----------------------------------------------------------------------------------------------------------------
 PPT 5 : EMBEDDED SYSTEMS 
 
@@ -104,12 +113,12 @@ PPT 6 : HCI (HUMAN COMPUTER INTERACTION)
 
     seven design principles :
 	   - Equitable use : same means for all users
-	   - Flexibility in use
+	   - Flexibility in use :provide choice of methods & adapt to user’s pace
 	   - Simplicity and intuitiveness of use 
-	   - Tolerance for error
-	   - Perceptible information
+	   - Tolerance for error :remove potentially dangerous situations• minimize impact caused by mistakes
+	   - Perceptible information "redundancy of information: use different forms/modes • emphasize essential information"
 	   - Low physical effort
-	   - Size and space for approach and use 
+	   - Size and space for approach and use :placement of system should be reachable by all users
 
 	Context is any information that can be used to characterize the situation of an entity. An entity is a person, place, or object that 
 	is considered relevant to the interaction between a user and an application, including the user and applications themselves”
@@ -122,6 +131,7 @@ PPT 6 : HCI (HUMAN COMPUTER INTERACTION)
 	 touch screen proximity sensor 
 
 	challenges :
+		Knowing when to do or not to do something is hard ? May be people are not ready for such technology.  
 		complexity : complex system doesn't means better performance , but may be hard to maintain.
 		Error : 
 		privacy
@@ -170,6 +180,7 @@ PPT 7 : SENSORS
 	DAC : E = E' * sum[(2^x)^(-1)Bi]  x:{1...n}  [0.5, 0.25, 0.125 ....]
 
 	types of sensor : 
+		active and passive
 		based on output 
 			- analog(continuous output) LDR , accelometer
 			- digital(discreate output 0/1) door sensor
@@ -223,7 +234,7 @@ PPT 8 : IOT architecture and standards
 		It is a layer in between the edge and the cloud. When edge computers send huge amounts of data to the cloud, fog nodes receive the 
 		data and analyze what’s important. Then the fog nodes transfer the important data to the cloud to be stored and delete the unimportant 
 		data or keep them with themselves for further analysis. In this way, fog computing saves a lot of space in the cloud and transfers 
-		important data quickly.
+		important data quickly. gateways in fog computing , does filtering,processing , protocol translation,packet rout
 	Cloud Computing :
 		Cloud computing refers to the on-demand delivery of IT services/resources over the internet.
 	[give example of real time temperature sensor]
