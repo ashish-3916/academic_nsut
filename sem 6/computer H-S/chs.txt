@@ -1,0 +1,290 @@
+TinyML is a field of ML that focuses on development and deployment of ML models on small and low power microcontrollers.
+It is a subset of edge AI, that brings a lot of computation on the edge devices. This was the main purpose of introducing TinyML: less communication; have local, fast and secure processing.
+
+Advantages:
+	1. Low power: can be battery operated upto months (and 1000 times less than CPU/GPU)
+	2. Low latency: less communication with server (edge)
+	3. Low Bandwidth: less communication 
+	4. Security: Less communication of data
+	5. Low Cost: Affordable and hence suitable for small businesses.
+
+Limitations:
+	Limited Memory and computational capability. 
+	- For NLP tasks like audio recognition, can only afford keyword/wake word detection. - Image recognition done with lower resolution and speed.
+	- Can only handle inference and not learning (these are two stages in which ML occurs)
+		Learning refers to adjusting the internal configuration based on the data it receives to get better results. Data is feeded, loss is calculated and the feedback from this loss is passed back for adjustments to be made. This is repeated for billion times. Not possible for TinyML. 
+		Inference is drawing conclusions on input data.
+
+Working: compression quantisation encoding compilation
+	Because tinyML can only handle inference, first the model is trained, then it is compressed in a way that its accuracy is not altered. There are two techniques for compression:
+		1. Pruning:  removes nodes with minimal utility for providing output with accuracy
+		2. Knowledge Distillation: The trained model is transferred with fewer parameters.
+
+	Next, the compressed model is quantized as per the architecture of the MCU. (Model may be trained on 64 bit, and MCU is 8 bit)
+
+	Finally it is compiled in a format interpretable by TinyML softwares. Generally, compiled to C/C++ which are used by most MCUs.
+
+Applications:
+	- Predictive Maintenance: monitor the performance characteristics of the machine and predict faults ahead of time, constantly.
+	Example: mining companies use it to predict faults in wheels, bearings of their rail cars. Faults are known atleast a week before, unscheduled maintenance events have been reduced by 50%, and huge cost savings.
+	Example: monitoring wind turbines
+
+	- Healthcare: detect mosquitoe breeding conditions and agitate the water to prevent it. 
+	On demand healthcare: fall detectors, on-demand medical diagnostics
+
+	- Agriculture: providing real-time analysis of environmental factors to improve crop growth, and state of health of livestock. Detect diseases in plants by taking a picture of it.
+
+	- Smart cities: monitor and optimize traffic, develop vision based security systems.
+
+Software for TinyML:
+	TensorFlow Lite Micro: compresses regular TensorFlow Models into just a few kilobytes.
+	Edge Impulse: easy to use web based interface. It also allows to take advantage of their Edge Optimized Neural compiler, which can run a 
+		Neural Network on 25-55% less RAM and 35% less storage.
+	OpenMP: for computer vision
+
+Hardware for TinyML:
+	Arduino Nano 33 BLE Sense 
+	Wio Terminal: contains an on-board LED display.
+-----------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------
+R:
+	statistical purpose
+	gives wide range of data visualisation option
+	open source therefore full transperancy
+
+	ggplot2:
+		uses layered grammar of graphics
+		multiple elements sits semi transparently
+
+	R visualisation basic plots:
+		histogram: hist(data)
+		line chart: plot(data, type = "1")
+		barchart: barplot(data)
+		boxplot: boxplot(data)
+		word cloud
+		heat maps
+		scatterplot: plot(x, y)
+
+	R libraries:
+		ggplot2: offers high quality and wide range of visualisation objects
+		tidyr: clean the data
+		shiny: for web interface and animation in R
+		mlr3: for applying ml code in R
+		leaflet: to style and customise map, add markers and popups.
+		recommenderlab
+		data.table
+
+	complex 3d and animated graphs
+	IBCF item based collaborative filtering.
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+
+powerbi:
+	cloud based business intelligence service by ms
+	features: reporting, visualising, analytics
+	powerbi deskptop is an application trough which user do all above task
+	it has 3 views:
+		report view: where report is made
+		data view: where user can see and make changes to data
+		ralational view: can see relation among the data
+
+	parts of report:
+		import data
+		perform visualisation and poot in report view
+		finalise report
+	3 phases:
+		data integration
+		data pre process
+		data presentation
+	why powerbi:
+		non technical user can analyse
+		huge data more effciently
+		variety of beautiful visualisation tools
+		data preprocessing and integration tools
+		connected to cloud so colaboration can be done
+		can insert new feature using code from R
+
+	POWER BI
+	Business Intelligence: set of techniques to transform raw data into meaningful and useful information for business analysis.
+	Data Visualization: pictorial or graphical representation of information/data. It provides insights into complex datasets by communicating the key aspects in more intuitive and meaningful ways.
+	Importance of data visualization: An image can speak 1000 words.
+	helps to:
+	- identify key areas and hidden patterns (central features)
+	- get factors that five better customer insights (relevant features)
+	- analyze properly
+	- predict properly
+
+	PowerBI is a business analytics service provided by Microsoft. 
+	It is all about 1. visualization 2. data analysis 3. cloud based service
+
+	It provides interactive visualizations with self-service business intelligence capabilites. (users can create reports themselves, no special person needed)
+	
+	PowerBI gives cloud based BI services as well as desktop-based interface. It offers data warehouse capabilites, including data preparation, data discovery, and interactive dashboards.
+	
+	1. connect to data
+	2. transform and clean the data, to create a data model
+	3. create visuals
+	4. create reports, that are collection of visuals
+	5. share reports
+
+	Basic views in powerBI desktop:
+	1. report view: here dashboard is created
+	2. data view: here data is previewed, and can be changed
+	3. relationship view: here can see relationships between objects
+
+	Why PowerBI?
+	1. real-time analysis, other BI tools were restricted to historical analysis
+	2. automatically search hidden insights
+	3. custom visualizations
+	4. can connect to on-premise data sources easily and securely
+
+	Components:
+	- power query: used to search/access etc
+	- power view: for interactive visualization
+	- power map: interactive geographical visualization
+	- powerBI service: to share reports
+	- power Bi QnA: ask questions and get immediate answers with natural language query
+	- data management gateway: connect to data sources and refreshable periodically
+
+	Architecture of PowerBI
+	Has three phases, first two partially use ETL.
+	1. Data integration: data extracted from various sources, integrated in a standard format, and then stored at a common area called staging area.
+	2. Data processing: The data is preprocessed/cleaned. Then business rules are applied to the data and it is transformed into presentable data. This data is loaded in data warehouse.
+	3. Data presentation: visualize
+
+	Visualizations offered:
+	- pie chart
+	- waterfall chart (shows continuously changing values)
+	- KPI (represents continous progress made towards a target)
+	- Card (represent single value)
+	- Bar chart
+	- Table
+
+	Data sources:
+	Excel, csv, text, json, xml, folder, pdf
+
+	Disadvantages:
+	language required to use powerbi: dax is not easy to use
+	can handle data upto 10MB only
+	limited data sharing
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+
+Apache spark:
+	open source clustering computing framework
+	built on top of hadoop mapreduce.
+	optimised to run in memory
+	very fast than map reduce
+	multilingual support like scala and python
+spark core:
+	base core for large scale parallel and distributed data processing
+	responsible for mem mngmnt, scheduling, distribution, fault recovery etc
+
+spark streaming
+	component of spark for processing real time data
+	high throughput and fault tolerant
+
+spark sql:
+	data extraction from sql using spark
+	more efficient, high througput
+
+Mlib
+	ML in spark
+
+graphx:
+	for graph computation in spark
+
+RDD
+	resilient distributed dataset
+	resilient: fault tolerant, rebuilding data on error
+	distributed: distributed data among multiple nodes
+	dataset: collection of data
+
+	best for aplication when same operation applied to all data
+	created from hadoop input formats or by transforming other RDD
+	lazy evaluation: nothing is performed until an actions require it
+	immutable
+	can be persisted in cache, this makes computation even more faster 10x
+	operations:
+		transformation:	function that produce new RDD from existing RDD
+			old RDD is not changed, new one is created
+			ex:
+				map, filter, union, intersection etc
+		actions: operations on RDD that give non RDD as values, can be stored in drive
+			ex: reduce, collect, count
+
+spark architecture has master node which has driver program, cluster manager and worker node that are executors
+
+
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+
+devops
+	development + operations team work together
+	process of continuous delivery of software improvements in an efficient manner 
+	continous deployments
+	fast and efficient release
+	features	
+		colaboration
+		conflict of interest
+		security devSecOps
+		app testing
+		uses pipelining to make process much faster, CI/CD
+	ex: jenkins, git
+
+mlops:
+	ml devops
+	deliver ml solution in a robust, scalable, reliable and automated way
+	combination of people, process and technology
+
+	mlops helps in:
+		enable continous experimentation against baseline model
+		monitor data drit
+		trigger model retraining and rollback in case
+		create resuable data pipeline for training and testing
+
+	example:
+		kubeflow: created by google, open source, help to deploy scalable and portable ml projects. ability to deploy on any infrastrcuture
+		tensorflow used to train and retrain the model.
+		
+		ml flow: open source to manage ml lifecycle thorugh experimentation, deployment, and testing.
+			feature:
+				monitor ml pipleline
+				store model metadata
+				pick best performing model.
+
+
+Modern ML algorithms make it easy to develop models to make accurate predictions. You develop the model and deploy it.
+Now data inputted to the model can change over time, and hence model purana ho jaata. (starts making unsual predictions on the new data). Because of these changes, it might be necessary to retrain the model periodically to maintain the accuracy of the predictions.
+Who is responsible to feed the data, monitor the performance, retrain the model and fix failures? MLops
+
+MLops is the application of devops principles to AI-infused applications. Devops tasks can be setting up unit and integration tests, or track changes through version control. Other tasks unique to MLops are:
+- continuous comparison against a baseline model
+- monitor the incoming data to detect the data drift
+- trigger model retraining and set up a rollback (just in case)
+- create reusable data pipelines that acan be applied for both training and scoring
+
+Devops: closing the gap between development and production, adding values to the customer faster. it is the process of continuous delivery of software improvements. The final release of the application with minimal bugs.
+
+
+Data input to a deployed ML model can change over time, and hence model purana ho jaata. (starts making unsual predictions on the new data). Because of these changes, it might be necessary to retrain the model periodically to maintain the accuracy of the predictions.
+Who is responsible to feed the data, monitor the performance, retrain the model and fix failures? MLops
+
+MLops is the application of devops principles to AI-infused applications. Devops tasks can be setting up unit and integration tests, or track changes through version control. Other tasks unique to MLops are:
+- continuous comparison against a baseline model
+- monitor the incoming data to detect the data drift
+- trigger model retraining and set up a rollback (just in case)
+- create reusable data pipelines that acan be applied for both training and scoring
+
+Devops: closing the gap between development and production, adding values to the customer faster. it is the process of continuous delivery of software improvements. The final release of the application with minimal bugs.
+
+ MLops tools:
+1. Kubeflow: features are we can run on jupyter notebooks, provides a custom tensorflow job operator, and simplified containerization. 
+2. MLflow: an open source platform to manage ML lifecycle through experimentation, deployment and testing. Handy when tracking the performance of models. we can monitor the ML pipeline, store the metadata and pick the best performing model. 
+	MLflow provides:
+	Tracking API for logging code versions, metrics and outputs files for visualizing the results.
+	Project: tool to package code in a reusable and reproducible way.
+	Model: to package ML models by downstream tools like apache spark.
+3. metaflow
+4. kedra
+5. zenml
