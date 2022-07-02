@@ -1,4 +1,4 @@
-Sharing is Caring, mark a star ⭐ , fork it 🍽️ and bunk your class.
+Sharing is Caring, mark a star ⭐ , fork it 🍽️ , share with your friends and bunk your class with them.
 # 🖇️ academic_nsut
 I hope I don't get a backlog 😟
 
