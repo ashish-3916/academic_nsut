@@ -1,9 +1,10 @@
-Sharing is Caring, mark a star ⭐ , fork it 🍽️ , share with your friends 🫂 and bunk your class with them 🕺🕺🕺🕺🕺💃.
+
 # 🖇️ academic_nsut
 I hope I don't get a backlog 😟
 
 ![image](https://user-images.githubusercontent.com/56604711/145258741-58a85b6c-9a66-4770-8c0e-ce700262d772.png)
 <!--
+Sharing is Caring, mark a star ⭐ , fork it 🍽️ , share with your friends 🫂 and bunk your class with them 🕺🕺🕺🕺🕺💃.
 ##  `To Who It May Concern ` 
 
 | Branch           | 🦧🦧                                     |
