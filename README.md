@@ -48,6 +48,7 @@ This content is sensitive to human error, please rely at your own risk 😋
   | Cloud Computing
   | Data Mining
   | Machine Learning
+  | <a href ="https://github.com/ashish-3916/machine-learning-" > Some ML Codes </a>
   | Cryptography Techniques
   | Wildlife Ecology
   
