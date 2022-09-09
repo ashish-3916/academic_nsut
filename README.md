@@ -3,9 +3,71 @@
 I hope I don't get a backlog 😟
 
 ![image](https://user-images.githubusercontent.com/56604711/145258741-58a85b6c-9a66-4770-8c0e-ce700262d772.png)
+
+This content is sensitive to human error, please rely at your own risk 😋
+
+## Repository Content
+
+  | `Semester 1`                                |
+  |-------------------------------------------|
+  | Computer Programming                 |
+  | Electronics and Electrical Engineering  |
+  | Basics of Mechanical Engg.                |
+  | Mathematics-I                             |
+  | Physics                                   |
+  
+
+  | `Semester 2`                                |
+  |-------------------------------------------|
+  | Discrete Structures
+  | Data Structures
+  | Digital Logic Design
+  | Environment Science and Green Chemistry
+  | English
+  | Mathematics-II
+
+ | `Semester 3`                                |
+  |-------------------------------------------|
+  | Web Technology
+  | Database Management Systems
+  | Design and Analysis of Algorithms
+  | Computer Architecture and Organization
+  | Microprocessor and Microcontrollers
+
+ | `Semester 4`                                |
+  |-------------------------------------------|
+  | Operating Systems
+  | Theory of Automata & Formal languages
+  | Software Engineering
+  | Data Communication
+  | Probability and Stochastic Processes
+  
+ | `Semester 5`                                |
+  |-------------------------------------------| 
+  | Principle of Compiler Construction
+  | Cloud Computing
+  | Data Mining
+  | Machine Learning
+  | Cryptography Techniques
+  | Wildlife Ecology
+  
+  | `Semester 6`                                |
+  |-------------------------------------------|
+  | High Performance Computing
+  | Computer Hardware Software Workshop
+  | Internet of Things
+  | Natural Language Processing
+  | Introduction to Cognitive Psychology
+  
+  
+  
 <!--
+
 Sharing is Caring, mark a star ⭐ , fork it 🍽️ , share with your friends 🫂 and bunk your class with them 🕺🕺🕺🕺🕺💃.
 ##  `To Who It May Concern ` 
+
+
+
 
 | Branch           | 🦧🦧                                     |
 | ---------------- | -------------------------------------- |
@@ -14,7 +76,6 @@ Sharing is Caring, mark a star ⭐ , fork it 🍽️ , share with your friends �
 | `IT`             | Ok.                                    |
 | `Others`         | I hope you're having a good day        |
 
-<!--
 | `weserv-query`   | Image manipulation query parameters    |
 | `no-homepage`    | Link to repository, not homepage       |
 | `suffix`         | Content to add at the end of the list  |
@@ -26,7 +87,7 @@ Sharing is Caring, mark a star ⭐ , fork it 🍽️ , share with your friends �
 | `sort`           | Sort repositories by this parameter    |
 | `order`          | Order by "asc" or "desc"               |
 -->
-This content is sensitive to human error, please rely at your own risk 😋
+
 
 <!--Repo will be updated after the end sems 
 
@@ -34,7 +95,6 @@ This content is sensitive to human error, please rely at your own risk 😋
 
 - Code: [MIT](./LICENSE) © 2021 Ashish Dangi
 - "GitHub" is a trademark of GitHub, Inc.
--->
 
 # Fork this repository
 
@@ -83,5 +143,6 @@ git push origin <branch-name>
 
 ```
 I'm happy to merge valid pull requests to this repository!
+-->
 
 
