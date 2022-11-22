@@ -1,0 +1,163 @@
+Summary :
+
+PPT 1 :
+	
+	Multimedia is the medium which provides information to the users in the form of text, audio, video, animation and graphics
+	data-driven and object-oriented, allows applications with cooperative end-user innovation and personalization. 
+
+	characterstics : [sooffaa]
+		- stage , record , transmit , play 
+		- file formats for enchancing user experience
+		- in form on analog or digial
+		- object oriented and data driven
+
+	desirable features :
+		- high processing power
+		- various supporing file formats
+		- efficient I/O
+		- storages 
+		- networks
+
+	components of multimedia :
+		- recording
+		- softwares for eding purpose
+		- storages 
+		- displays
+
+	categories of multimedia :
+		- linear : Linear active content progresses without any navigational control for the viewer. [cinema]
+		- non linear : offers user interactivity to control the progress [ hypermedia ].
+
+	applications :
+	    - buisness : adversting / selling products
+	    - research and medicine 
+	    - entertainment purpose
+	    - public purposes
+
+	MOV , MP4 , FLV , FLAC , 3PG
+
+	features of multimedia :
+		- text audio video pictures animations intereactivty
+
+    -------------------------------------------
+
+    MULTIMEDIA CODING 
+    Transformation of a string of characters in some representation (such as ASCII) into a new string that contains the same information as the original 
+    but length is small as possible. [data compression]
+
+    Shannon’s Communication System Model
+        source --- encoding ----> transmit ---- decoding ---> reciever
+
+    why image compression can be done ?
+    	 - spatial redundancy
+    	 - specteral redundancy
+    	 - pysho-visual redundancy
+
+    image compressed ?  Raw image -> [transformer]------[quatiser] --symbols----- [encoder] -- steam of bits\
+    keyword : ameable  to compression, scalar and vector quantisation.
+
+    image compresion 2 type [make the diffence table ]
+    	KEYS : data elimination, restoration , quality , algo used , file size , use case
+
+    	- lossless :  run length encoding  , huffman coding [(gready) util min heap contains two frequecies/probabilties ]
+    	- lossy : transform coding [ffts]
+
+    -------------------------------------------
+
+    COLOR 
+    spectrum of light being perceived by the human visual system
+    tint, shade, hue, brightness, luminance, color, chromaticity
+	Spectral Power Distribution (SPD) of a light is a function P(λ) which defines the power in the light at each wavelength
+
+	3d color spaces :
+	  - cubic [rgb]
+	  - polar [brigtness , hue]
+	  - opposite [r-g b-y black-white]
+
+	 Luminance : dark and light properties 
+	 	Luminance, Intensity, Brightness, Lightness
+	 chromaticity : 
+	 	hue : dominant wavelenght 
+	 	saturation/brightness : pure/deep realted to gray
+
+	 The color gamut describes a range of colors within the spectrum of colors, or a color space, that can be reproduced on an output device
+	 example : phospor screen
+
+	 RGB space , additive colors
+	 CMY space , subractive colors
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+
+PPT 2 :
+	Stegnography 
+
+	2 words se bna hai [stegno : cover , graphy : writing ]
+
+	one pince of information and hides into another.
+
+	invisible inks, microdots.
+
+
+	difference table :
+
+	cover, structure remains same , stegno media , confidentialy , attack is called stegnoanalysis
+
+
+	classfication :
+		- pure 
+		- public key
+		- private key
+
+	principles :
+		- significant chnages aren't made while embedding into images
+		- human inability to distinguish/hard to detect by visual  
+
+	techniques :
+		- substitution
+	 	- injections
+	 	- generate a new file
+
+	Text Stenography
+		- line shift 
+		- word shift
+		- certain features
+
+	audio stenography
+		- sample quantisation
+		- temporal sampling rate
+
+	image stenography
+		- LSB
+
+
+	can;t protect watermark
+	password leakage 
+	third party
+	degrade or render the image
+
+
+	digital watermarking 
+	printers
+	medicine 
+
+
+	steganalysis : practice of attaching stegnography methods for detection , extraction , destruction , alteration
+
+	Classification of attacks : [vo all possible combinations]
+
+	Approaches :
+		- visual 
+		- structural  [patterns]
+		- statistical [mathematical formulas]
+
+	Techniques :
+	    - signature : looks for repititive patterns
+	    - statistical : statics undergo alteration while 
+	         - specific : detailed knowledge of embbedding process
+	         - universal : no priori knowledge required, learning models like neural networks
+
+
+
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
