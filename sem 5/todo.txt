@@ -1,0 +1,269 @@
+--------------------------------------------------------END SEM----------------------------------------------------------
+today is 4 dec and we have a weekend 
+
+need to do : 3 practical files 
+poc : we have codes ,need to install env and test and make file
+CC : mix all of them
+data mining : from scratch , unless we get a miracle
+
+need to study cloud computing
+
+how good are we with the subjects ?
+
+cloud computing :  i need to study this today . 3 units mp , lets see
+
+data mining :
+	i have read the most of the topics , need to revise before mid sems though a bit rusty , though i can do on day of practical/ exam day
+	so we are kinda good here.
+	:SOS: need to complete file here though by weekend!
+
+machine learning :
+	all good to go , ig  a quick revsion of mid sem though.
+
+compiler construction : done the video part , last unit still left , have to do on sunday for sure ,
+	:SOS: need to complete file here though by weekend!
+	REMINDER : though we had few classes , so I need to meet teacher (which i dont know who is lol) and need to ask a bit about exam pattern 
+	but lets prepare for viva till then
+
+cryptography :
+	hell No , and i am not ready for this! need to meet maam for this URGENT on monday for sure . 
+	though we don't have practicals to we can leave it for now 
+
+
+we are totally good with mid sem marks in all subjects.
+
+LETS BRING THE END SEM DOWN TO FEET!!!
+
+--------------------------------------------------------END SEM----------------------------------------------------------
+HEY THIS IS ME FROM 21 NOV
+
+you will soon have practical classed hopefully  next week , but you know they won't be much productive , so might be spending most of the time in
+making practical files [29 nov - 5 dec]
+
+the next week you will be having PRACTICAL OFFLINE EXAMS. (need to read theory before that). [6 dec - 13 ]
+
+the next 2 weeks would be OFFLINE EXAMS  ~:PANIC:~  :KALM: [13 onwards]
+
+----------------------------->
+Marks distribution( For practical waale subject) -- 
+
+Mse = 25
+Ese = 50
+Class test + Internals = 10
+Practicals = 15
+
+----------------------------->
+DM practical evaluation -- (⌛ Next week submit karna hai)
+
+Project
+Make project in DM and PPT to explain that project (Jiske grp banaye thay pahle) 
+
+Practical
+- Classify data using decision tree, k nearest, naive bayes, bayseian believe network, linear or logistic regresssion, svm
+- Visualize it, ss in file, hyperparameter value change karo and note the changes in the model
+-Check the model using different measures (eg. F1 score, recall etc.)
+
+UPD : [DONE EZ :)]
+
+----------------------------->
+Crypto ESE 
+
+50 marks
+5 question with parts, 10marks per question
+3-4 parts for each question (1 or 2 numerical in each question)
+
+❎ Not in syllabus
+Unit2 - Elliptic curve
+
+✅Important topics
+RSA, Diffie Hellman
+
+[5:15 pm, 22/11/2021] ashish: md 5 not in sylabus
+[5:17 pm, 22/11/2021] ashish: majorly RSA calculation
+[5:17 pm, 22/11/2021] ashish: 3 question per unit , attempt 2 only
+
+----------------------------->
+
+----------------------------->
+CLOUD COMPUTING 
+	still dont know what to do 
+
+MACHINE LEARNING
+	one revision from statquest and we are good to read the ppts hopefully.
+	u have read most of the stuff , still u have *must* read the ppts before end of this month , special revisoion of neural network and svm
+
+DATA MINING
+_-------------------------->
+	
+gini index  (examples)
+cart algo (examples)
+ide3 algo (examples)
+regression and classification
+bayes theorm (examples)
+bayesian belief network (examples)
+knn
+decision trees (examples)
+rule based classifier
+linear and logistic regression
+
+see PPTS of these topics : 
+
+svm's : the whole derivation till we find the optimal value as 2/||W||
+bagging and boosting : random forest , adaboost , gradient boost(basics)
+	there are some practice problems
+	ensemble learning 
+	holdout and cross validations
+
+interestingness measures  : pattern recognisation and something more too !
+
+association rules  : apriori algorithm (psuedo code and example)[bfs]
+					 pattern growth -> fp tree [dfs]
+					 verticle data format approach
+					 
+					 lift 
+					 x^2 measures
+		find a YT video for this  				[UPD : DONE TILL HERE]
+
+clustering :
+	partitioning measures 
+	k-means algo and some variation in it. 
+	hierarchical methods (AGNES , DIANA , dendogram)
+	centriod , radius
+
+	fuzzy set and fuzzy clustering 
+	expectation maximasation algorithm (there is a numerical in the ppt)
+
+  find a YT video for this too !
+
+attribute oriented analysis :
+
+	intial thoughts: donno know what actually is this topic about .
+		looks like it something related to x^2 test and correlation among the attributes .
+		and to find the covariance . there are screenshot from book though . most of it is the reading part. some numerical examples . lets see it in the end . 
+
+		OBV THIS IS THE END!!!
+_-------------------------->
+
+COMPILER CONSTRUCTION
+	maam have uploaded notes on classroom , also gate smasher has most of  the syllabus covered. 
+	UPD : [ALMOST DONE]
+
+CRYPTOGRAPHY 
+	u better start it tomorrow , huge and complex syllabus , u need to do all the upcoming classes . 
+	UPD : [I'M CONFUSED IN MAC AND HASH , WT- ]
+	i will do after the practicals now 
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------MID SEM----------------------------------------------------------
+data sheet ->
+
+11 oct POC
+12 oct CC
+13 oct DM
+14 oct ML and crypto
+
+
+thursday -> 4 days 
+   to do -> DM
+
+
+
+preprocessing
+select attributes
+correlation and information gain 
+PCA
+eigen vector and eigen values 
+
+To-do:
+
+Cloud Computing
+//	-unit 1 and 2
+
+Machine Learning
+//	- linear regression , multiple variables
+//	- Gradient decent
+//	- logistic regression
+//  - decision tree
+
+Cryptography
+//	- Cipher techniques
+//	- block ciepher and stream ciepher and feistel structures
+//	- AES
+//	- operation modes
+//	- DES
+//	- CR4
+
+
+POC 
+//  compiler assember and interperter preprocessor 
+//      phases of compiler  
+//      some toc introduction
+     
+//      lexical analysis -> tokens and  lexime 
+     
+//      syntax analysis ->  parser tree and chech against the grammer 
+//             to study context free grammer 
+//             top down parser - > predicate recursive(first and follow )  ,
+//             recursive decent parser and LL1 grammer 
+
+//      (semantic analysis)
+
+//      intermeduate code generation 
+//      code optimisation 
+//      code genereation 
+
+//	- chapter 1
+//	- chapter 1b
+//	- Toc intro
+
+  
+Data Mining 
+   
+  //  calculate mean , medinaan , mode ,outliers detection formula
+	
+	// introduction , data , exploring data
+	
+	// chapter 1 -> intro, defination, challenges, 
+	// predictive tasks (classsificatin and regression) ,
+	// descriptive tasks (clustering, assosiation analysis, anomaly detection) 
+
+	// chapter 2 -> basic types of data, data quality, precessing techniques, and measures of similarity and dissimilarity 
+	// 1.types of data
+	// 	types of attribute : 
+	// 				nominal , oridnal ,  interval ,ratio 
+	// 		on no of value : discreate and continuous 
+	// 		asymetric attributes 
+
+	// 	characterstics of data sets :
+	// 		dimensionality , spartiality and resolution
+		
+	// 	types of data sets :
+	// 		record data, transaction data, data matrix, documentation
+	// 		graph data -> relationship , representation
+	// 		ordered data -> relationship changes with time or space 
+	// 			sequential data -> record data + time (visiting time in mall)
+	// 			sequence data -> genes (postions of ATGC)
+	// 			time series data ->  sequential data + time series (taken over time) (eg stocks)
+	// 			spatial data -> postion + areas (eg weather geography)
+
+	// 	temporal autocorelation -> if two measurements are close in time, then the values of those measurements are often very similar 
+	// 	spatial autocorelation -> objects that are physically close tend to be similar in other ways as well.
+
+	// 2. data quality
+	// 	detection and correction (data cleaning)
+	// 	algo to tolerate poor data
+		
+
+
+
+	// chapter 3 -> data exploration, discusses summary statistics, visualization techniques, and On-Line Analytical Processing (OLAP)
+
+
+
+	// - ETL extraction , transformtion ,pipelining
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------

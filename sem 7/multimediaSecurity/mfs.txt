@@ -19,9 +19,9 @@ PPT 1 :
 		- networks
 
 	components of multimedia :
-		- recording
-		- softwares for eding purpose
+		- recording/ capture devices
 		- storages 
+		- softwares for eding purpose
 		- displays
 
 	categories of multimedia :
@@ -31,7 +31,7 @@ PPT 1 :
 	applications :
 	    - buisness : adversting / selling products
 	    - research and medicine 
-	    - entertainment purpose
+	    - entertainment purpose : tourist information system,
 	    - public purposes
 
 	MOV , MP4 , FLV , FLAC , 3PG
@@ -39,7 +39,7 @@ PPT 1 :
 	features of multimedia :
 		- text audio video pictures animations intereactivty
 
-    -------------------------------------------
+    --------------------------------------------
 
     MULTIMEDIA CODING 
     Transformation of a string of characters in some representation (such as ASCII) into a new string that contains the same information as the original 
@@ -85,9 +85,10 @@ PPT 1 :
 
 	 RGB space , additive colors
 	 CMY space , subractive colors
--------------------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------------------
 
+	 hue saturation value
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
 PPT 2 :
 	Stegnography 
 
@@ -123,25 +124,26 @@ PPT 2 :
 		- certain features
 
 	audio stenography
-		- sample quantisation
-		- temporal sampling rate
+		- sample quantisation 
+		- temporal sampling rate : frequencies
+		- Perceptual Sampling : audio
 
 	image stenography
 		- LSB
 
+	Disadvantage
+		can;t protect watermark
+		password leakage 
+		third party
+		degrade or render the image
 
-	can;t protect watermark
-	password leakage 
-	third party
-	degrade or render the image
+	Use :
+		digital watermarking 
+		printers
+		medicine 
 
 
-	digital watermarking 
-	printers
-	medicine 
-
-
-	steganalysis : practice of attaching stegnography methods for detection , extraction , destruction , alteration
+	steganalysis : practice of attacking stegnography methods for detection , extraction , destruction , alteration
 
 	Classification of attacks : [vo all possible combinations]
 
@@ -155,9 +157,192 @@ PPT 2 :
 	    - statistical : statics undergo alteration while 
 	         - specific : detailed knowledge of embbedding process
 	         - universal : no priori knowledge required, learning models like neural networks
-
-
-
 -------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+PPT 3 : 
+	hide the information in 3 ways 
+		cryto , stegno , watermarking 
+
+	A distinguishable mark or device impressed in the substance of a sheet of paper 
+	during manufacture, usually barely noticeable except when the sheet is held 
+	against strong light.
+
+	Digital watermarking is a technology for embedding various types of
+	information in digital content.
+
+	proving the validity of data, protecting copyrights , proving the ownerships
+
+	diff btw stegno and watermarking 
+
+	# watermarking charactertics:
+		- imperceptibility : not visible to human eye . 
+		- roburstness : the strength of the watermark to obstruct the manipulations of the media.
+				(compression , scaling , cropping , shearing  , geometry  , color correction)
+		- security : cant detect even if algo is known
+		- complexity : amoutn of time to detect
+		- verification :
+		- payload : info stored. 
+		- formed/ public : unwatermarked cover is NOT used in extraction process
+		- informed/ private : unwatermarked cover is used in extraction process
+
+	Dual watermark is the combination of visible and invisible watermark. An invisible watermark is used as a backup for the visible watermark
+
+
+	# classification
+		- perceptibilty :
+			- visible 
+			- invisible :
+				fragile : lose their effectiveness when they undergo transformation, , they get destroyed . (compression/resizing , alteration).
+					eg : tamper proffing
+
+				semi fragile : image content is basically unchanged, the image is allowed to have a certain degree of distortion
+
+				robust : can survive everything (compression, adding noise, filtering,rotation, scaling translation, shearing[geomerty])
+
+		- procedure type :
+			blind (public)  : none of the information of the host is used for excration.
+			non blind : some host information is used. less host more complex schemes 
+
+		- misc : 
+			private watermarking : requires at least original data to recover watermar (secure).
+			public watermarking : doesnot requires  original data to recover watermar (not secure).
+
+		- host signal :
+			- audio video text image 
+
+		- domain :
+			- spatial (domain): embedding the digital watermark into the cover image or video pixel, 
+				done in pixels , host signal me no transformation
+				
+				least significat bit : 
+					[block diagram]
+					1. To convert RGB image to gray scale image.
+					2. Making double precision for the image.
+					3. Shifting most significant bits to low significant bits of ( secret image.)
+					4. Make least significant bit of (host image )to zero.
+					5. To add shifted version (of step 3) of the watermarked image to modified (of step 4) host image (OR).
+				
+					easy to implement , lasck robustness, fragile
+				
+				patchwork :
+
+			- frequency : inserting codes into specific frequency bands of a digital medium ( Gaussian distribution )
+				DCT (discreate cosine transform):
+				 	divided in different freq bands, middle freq me embed
+
+				 	host image -> block DCT -> watermarking -> inverse DCT
+				 													|
+				 												[watermarked image]
+				 												    |
+					decryted <- inverse dct <- ext. watermarking <- block dct
+
+				merits me likh dena cann't be altered, roburst
+				demerits: higher frequency components tend to be suppressed during the quantizatio
+
+				DWT (wavelet): bwt low and high frequencies ........... dwt -> watermaking -> idwt -> watermarked image
+
+	#applications :
+		- autherization
+		- copyright protection 
+		- copy protection 
+		- transaction tracking
+		- montoring
+		- tamper proofing
+
+	# life cycle : [block diagram]
+		embed : where and how to embed the watermark, extent/ degree of watermark , type/classification of watermark 
+					original image ->   watermark algorithm -> watermark image
+						|				  ^|		|^ key
+					feature selection -> watermark data
+		attack :change/alter
+		protection : detection
+			tested image is extracted and compared with the original watermark
+			results can be consistent or inconsistent(changed)
+				if tamped -> recovery 
+
+
+	#security :
+		Attacks on the watermarking security :
+			- any malicious attempt toperform unauthorized embedding, removal, or detection of a (valid or invalid) watermark.
+				- removal attack : complete removal , eg denoising, quantization
+					statitical : treat the watermark as signal noise which can be statistically modeled and removed.
+					collusion : 
+				- geometric attack : distortion, shearing , rotaion
+				- crypto attack : o remove the embedded watermark information or to embed misleading watermarks
+				- protocol attack : re-watermarking an image with a second owne
+					- Mosaic attack: The web-crawler scans the Internet for images and checks for the
+							distributor’s mechanism which, if detected, can be recorded. o chop an image into small tiles, which can be 
+							imperceptibly rendered by a browser to look the same as a single image
+					- Copy Attack: “The goal of the attack it to copy a watermark  from stego data to the target data without having any specific 
+						knowledge about the watermarking technology” and “the goal of the attack is not to destroy the embedded
+						watermark, but jeopardize the application for which digital watermarks are used
+-------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+PPT 4 : DIGITAL FORENSICS :
+	# procedures : I CAPE A RTR
+		1. Identification : search for, recognition and documentation of potential digital evidence at an incident scene
+		2. Collection : potentially contain digital evidence are removed to a laboratory or another controlled environment for later acquisition and 
+			analysis. The collection step involves the gathering of physical devices that may contain potential digital evidence from its original 
+			location and documenting all the collected items .
+		3. Acquisition : involves producing an image of potential digital evidence and and documenting the method.
+		4. Preservation : ial digital evidence should be preserved to ensure its usefulness for investigating incidents and to protect the integrity 
+			of the evidence.
+		5. Examination : In-depth systematic search of evidence relating to the suspected crime needs to be done prior to performing a full analysis. T
+		6. Analysis : study of specific, internal attributes of the data. draws conclusions based on evidence found.
+		7. Reporting : final reports should contain important details from each step, including References to protocols follow.
+			No conclusion should be written without a thorough description of the supporting evidence
+		8. Testimony : necessary to present the findings outlined in a report and address related questions before decision makers can reach a 	
+			conclusion
+		9. Returing evidence :
+
+	# various types of forensics :
+		*investigation , gathering and analyis
+
+		expensive
+		lack of evidence to prove justification
+		tempered data
+
+		- computer : extraction raw data , database , suspicious code 
+		- mobile : pjone record , text message , GMS , GPS , emails , 
+			use : miltary , call centers  , law , 
+		- memory : analysis of volatile data( browsing history, chat messages, and clipboard contents) in computer's memory dump (snapshot capture of 
+		  computer memory data from a specific instant). 
+		- network : examination of the network and its traffic going across a network that is suspected to being involved in malicious activities
+			cyber attacks , file tranfers , emails , history 
+			challenges :
+				- manage the data generated during the process
+				- Address Spoofing (ip)
+
+			adv : 
+				- checks for vurnebalites
+				- analyeses , indentifes treats
+				- reduce downtime.
+
+		- multimedia : ultimedia forensics involves the set of techniques used for the analysis of multimedia signals like audio, video, images
+				reveal identify validate retrieve 
+
+				image authentication :
+					active :  authentication code is embedded in the image at the time of
+						image generation or sent with the image for accessing its integrity at the receiving end.
+						Verifying this code authenticates the originality of the image .
+						digital signatures, digital watermarking.
+					passive : uses the only image with no prior information for accessing the integrity of the image
+						forgery type dependent : 
+							copy move detection : It involves copying some regions in the image and moving the same to some other region in the imag
+							image splicing : involves merging 2 or more images, changing the original image significantly to create a forged image
+						forgery type independent :  n artifact traces left during the process of re-sampling and due to lighting inconsistencie 
+							Retouching detection : Find the blurring, enhancements, or color changes and illumination changes in the forged image
+	
+	# anti-forensics : Anti-forensic aims to make investigations on digital media more difficult and therefore more expensive
+
+		These are the general anti-forensic categories discussed in this document:
+			● Data hiding, obfuscation, and encryption : NFTS me chupa dena data ko
+			● Trail Blackout : attackers delete or modify the information of some vital files to confuse
+			● Falsification of data : 
+			● Overwriting data/metadata:
+			● Data deletion and physical destruction
+			● Encryption
+			● Online anonymity : incognito mode
+
 -------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------
