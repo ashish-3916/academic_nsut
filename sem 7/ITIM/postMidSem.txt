@@ -1,0 +1,469 @@
+Chapter 14 : CLOUD COMPUTING 
+	cloud computing : Cloud computing is a model for enabling ubiquitous, convenient, on-demand
+			network access to a shared pool of configurable computing resources that can be
+			rapidly provisioned and released with minimal management effort or service
+			provider interaction.
+
+			5-characterstics
+				- on demand self-service
+				- rapid elasticity
+				- Resource pooling
+				- Measured service
+				- Broad network access 
+
+			4-deployement model
+			 	- private
+			 	- public
+			 	- community
+			 	- hybrid
+
+			3-service model
+				- SaaS , IaaS , PaaS
+
+	Infrastructure as code :
+		earlier Systems managers installed operating systems from an installation medium,	added libraries and 
+		applications, patched the system to the latest softwareversions, and configured the software to this 
+		specific installation.
+		As an alternative, servers, storage, and networks can be created and configured automatically, a concept known as infrastructure as code
+
+
+											version control
+										/					\
+								standard templates		config defination
+										|						|
+									creation tool 			config tool
+											  config registry
+
+
+		· Standard templates are defined that describe the basic setup of infrastructure components.
+		· Configurations of infrastructure components are defined in configuration definitions.
+		· New instances of infrastructure components can be created automatically by a creation tool, using the standard templates. This leads
+			to a running, unconfigured infrastructure component.
+		· After an infrastructure component is created, the configuration tool automatically configures it, based on the configuration definitions, 
+		   leading
+			to a running, configured infrastructure component.
+		· When the new infrastructure component is created and configured, its properties, like DNS name and if a server is part of a load balancer 		
+			pool,are automatically stored in the configuration registry.
+		· The configuration registry allows running instances of infrastructure to recognize and find each other and ensures all needed components 
+			are running.
+		· Configuration definition files and standard templates are kept in a version control system, which enables roll backs and rolling upgrade
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Chapter 10 : COMPUTE 
+
+	10.2 Building Blocks : 
+		
+		compute housing : rank mounted servers and blade servers
+		
+		processors : pura CAO (inst -> binary code -> machine code -> memonics -> assembly language ) , registers , words
+				intel x86 , amdx86
+		
+		memory : vaccum tubes , relays , magnetic disks 
+			RAM : "Random" means that any piece of data stored in RAM can be read in the same amount of time, regardless of its physical location  
+			RAM either stores a bit of data in a flip-flop circuit, as implemented in SRAM (static RAM), or as a charge in a capacitor, as 
+			implemented in DRAM (dynamic RAM).
+
+			BIOS : 	controls a computer from the moment it is powered on, a set of instructions stored on a memory chip located on the computer’s motherboard
+			interfaces : Connecting computers to external peripherals is done using interfaces
+				RS-232, USB, and Thunderbolt 
+
+		Compute Virtualisation : introduces an abstraction layer between physical computer hardware and and the operating system using that hardware
+			Virtualization decouples and isolates virtual machines from the physical machine and from other virtual machines by means of a 
+				virtualization layer.
+			Virtual machines can be started and stopped independently from each other. And if one virtual machine crashes, the others are isolated 
+				from the failure and are unaffected
+
+			full cloud computing walla part
+
+			- software defined compute (SDC) : Virtual machines are typically managed using one redundant centralized virtual machine
+
+			- disadvantage of Vir. :
+					- vir.machines tend to get created for all kinds of reasons (virtual machine sprawl)
+					- introduces extra layer which needs to be managed.
+					- can't be done on all servers., req specialiesed hardware.
+					- confirgration is not supported for an application on the server.
+
+			- technologies
+				- emulation : An emulator is a piece of software that allows programs to run on a computer system other than the one they were 
+					originally intended for.
+				- logical partioning : is a subset of a computer's hardware resources, virtualized as a separate computer.
+					physical machine can be partitioned into multiple logical partitions, each hosting a separate operating system.
+
+				- hypervisors : VMM
+						binary transalating
+						paravirtuilisatio
+						hardware assisted virtualisation
+
+			- virtual memory management
+				- memory overcommit : operating systems claim more memory than they actually use. memory overcommit the hypervisor assigns more memory 
+					to the combined virtual machines than is physically available in the computer
+				
+				- memory sharing : Memory sharing maps identical memory pages in one or more virtual machines to a single page of physical memory.
+					If a virtual machine attempts to write to the shared page, the hypervisor allocates a new copy of the page with read-write 
+					permissions for that virtual machine.
+
+		container technology : Container technology is a server virtualization method in which the kernel of an operating system provides multiple
+		 	isolated user-space instances, instead of just one. Containers look and feel like a real server from the point of view of its
+			owners and users, but they share the same operating system kernel
+		
+		mainframes : optimized for high I/O throughput
+		supercomputers :designed to maximize calculation speed.
+
+	10.3 compute availabilty : 
+		- Hot swappable components :  are server components like memory, CPUs, interface cards, and power supplies that can be installed, replaced, or 
+			upgraded while the server is running. server must have specific circuitry .server hardware must be aware that components can be swapped on 
+			the fly.
+
+		- Parity and ecc memory : parity bits can be used as the simplest form of error detecting code
+			"Error Correction Codes" : humming codes
+
+		- Lockstepping : Lockstepping is an error detection and correction technology for servers. In lockstepping, multiple systems perform the same
+		 	calculation, and the results of the calculations are compared. If the results are equal, the calculations were correctly performed. If 
+		 	there are different outcomes, one of the servers made an error.
+		 	can't be done when only 2 servers.
+
+		- Virtualiation Availability : failover clustering Using a spare physical machine,  All machines used
+
+	10.4 Compute performance : 
+			Moore's law : Moore's law states that the number of transistors that can be placed inexpensively on an integrated circuit doubles 
+			approximately every two years
+			n we see a doubling of CPU performance every 18 months
+
+		increasing CPU speed and performace :
+			- increasing clock speed 
+			- CPU caching
+			- pipelining 
+			- prefecting and branch prediction
+			- superscalar CPU's
+			- hyperthreading
+			- multicore CPUs
+
+	10.5 Computer Security :
+		Physical security : 
+		 	- disable USB ports
+		 	- password 
+		 	- detect unusal activites (pattern recognistion bleh bleh)
+
+		virtualisation security :
+			- firewalls , intrusion detection system
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Chapter 11 : OPERATING SYSTEM 
+	building blocks : OS ka likh dena lol
+		- process scheduling
+		- file systems
+		- API and system calls
+		- device drivers
+		- memory management
+		- Shell gui cli
+
+	Availablity :
+		Failover clustering :
+			cluster hote hai withing active node , there are some passive nodes also present , when active node fails passive node does the work.
+			active and passive nodes are connected by heartbeat. keeps acknowledgement 
+			N+1 cluster .....
+			N+N cluster -> equal distributing of load
+
+			voting and quorum disks : how do nodes check the status of other nodes : 
+			problem : 
+				- each nodes may decide that other nodes are down and becomes the active one
+				- Each node decides that it has lost contact with the active cluster, so both nodes decide to stop
+			solution :
+				quorum disk is attached to one of the cluster , . The quorum disk acts as one vote in the voting system
+
+	Performance :
+		- increase memory : paging and swapping
+		- decresing kernel size : leading to a lower risk of crashes and a smaller security attack surface.
+
+	Security :
+	 	- Patching : updates vagerah to fix bugs
+	 		regular patches : normal bugs / low priority bugs
+	 		hot fixes : fix asap/ high prior/ can occur due to fixing other bugs
+	 		service packs : collection of above both, can be done in one deployement
+	 	- hardening : step by step process of config operating system. un-necessary protocols are switched off. 
+	 	- virus scanning : 
+	 	- firewalls :
+	 	- limiting user accounts 
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Chapter 7 : DATACENTERS 
+	
+	A datacenter provides power supply, cooling, fire prevention and detection, equipment racks, and other facilities needed to host the installed 
+	infrastructure components
+	pahle ke database centers , ab ke data base centers , cooling mechnisms
+
+	7.2 Building Blocks
+		datacenter categories :
+			Sub Equipment Room
+			Main Equipment Room
+			Organisation Owned Datacenters
+			multi tenant datacenters
+
+		Location of dataceters :
+			environment : expand, flodding , temperature , airport , see
+			utilities : power availble , bandwidth 
+			region : politics 
+
+		Physical structure :
+			floors : tiled floors, advantage(cooling) , dis(expensive , shortcircuit wires , management, load limit)
+			windows, doors 	
+			water and gas pipeline 
+			layout/ achitecture : computer room , UPS , cooling , extinguisher, meeting room , control room
+
+		Power supply :
+			issues with utility power supply :
+				- blackout : light hi chali gyi
+				- surge : period of high voltage
+				- spike : sudden jumps in voltage
+				- waveform issues
+				- brownout : voltage drop
+
+			we use UPS instead (Uninterruptable Power Supply), power generators , battery powered ups 
+
+		Cooling :
+			90% of all power used by IT infrastructure components is converted into heat
+			two types of cooling systems: 
+				Computer Room Air Conditioners (CRAC) are refrigerant-based units connected to outside condensing units. 
+				Computer Room Air Handler (CRAH) is chilled water based and connected to outside chillers.
+
+			The efficiency of a cooling system is specified in one of three metrics:
+				EER - Energy Efficiency Ratio : ratio between output cooling and  the electric energy input.
+				SEER - Seasonal Energy Efficiency Ratio : 
+				COP - Coefficient Of Performance : ratio between cooling load in kW and the electric energy input
+
+			airflow , humidty and dust
+
+		Fire detection and prevention :
+			suppressing fire in four levels:
+				Fire prevention – measures to avoid a fire in the first place
+				Passive fire protection – measures to limit the exposure of the fire once it has started (installation of fire resistant walls, 
+						floors, and ceilings).
+				Fire detection systems – systems to detect smoke and fire.
+				Fire suppression systems – systems to extinguish the fire once it is detected. (heat fuel oxygen )
+
+		Equipment racks :
+			normal racks ka likh dena 
+			KVM switches : (keyboard video mouse) A KVM switch is a hardware device that allows a user to control multiple
+				servers from a single keyboard, video monitor, and mouse.
+ 		
+ 		Datacenter cabling and patching :
+ 			The demarcation point is usually a cable strip in a locked location of which one part can only be accessed by the telecom provider and the 
+ 				other part only by the systems managers.
+			If possible two or more demarcation points should be installed in the datacenter, to avoid a single point of failure
+
+	7.3 Availability
+		4 tiers 
+			T1 99.6 no redundant componts , very likely to downtime (un/planned maintaince)
+			T2 99.7 redundant componts , likely to downtime
+			T3 99.9 redundant componts , one is active , downtime ulikely for unplanned maintaince
+			T4 99.99 redundant componts , no downtime either way
+
+	7.4 Performance :
+		bandwidth of the internet connectivity and the scalability of the location
+
+	7.5 Security :
+		- doors, windows, and other entry points must be secured.
+ 		- Physical access to the datacenter must be restricted to selected and qualified staff
+ 		- only one person enters the restricted area
+ 		- guards, cameras
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Chapter 6 : SECURITY 
+	information systems security can be defined as the combination of availability, confidentiality, and integrity, focused on the recognition and
+	resistance of attacks
+
+	resons for cyber attacks :
+		personal prestige and fame
+		damage to organisation
+		warfare
+		financial gain
+		fun 
+
+	6.2 Risk Management
+		Risk management is the  process of determining an acceptable level of risk, assessing the current level of risk, taking steps to reduce risk 
+		to the acceptable level, and maintaining that level.
+
+		list is created :
+			asset , Vulnerability , exploit , Probalilty , impact , risk (Probability*Impact) 
+
+		Risk response :
+			acceptance : damage of exploiatation is low and cost mitigation is high
+			avoidance : aaise glt kaam hi na karo 
+			transfer : transfer the risk to an insurance company
+			mitigation : 
+
+		Security Controls : CIA triads
+			page 89 , sabke 3 levels hai 
+				confidentiality (public , private ,  within specific gp , secret, top secret  aaisa kuch ) 
+				integrity : (no importance , errors allowed , incidental errors, no errors at all)
+				availabilty : (nope , sometime unavailble offive hrs ,outisde office , always available)
+
+		Attack vectors :
+			virus , trojans , malcious code 
+			denial of service : load the server
+			social engineering : congnitive basis 
+			phishing , baiting 
+
+	6.3 Security Patterms
+		Identity and Access management (IAM) : identify , authentication, authorization 
+		segregation of duries among departments and layers
+		layered security
+		cryptography :: all you learned , block ciper stream cipher ,symetric asymetirc key , AES ,DES , public private key , one time padding
+			hash fuctions , digital signature , MD5 , SHA512 , cyber attacks   
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Chapter 16 : DEPLOYMENT
+	go live scenario :
+		Big bang : e existing system is switched off and the new system is immediately put in production , impossible to roll back after live
+		parallel changeover : run old and new simultaneoulsy for few months and migrate karte rhao , though this is costly , maintaince , sync both
+		phased changeover : indivisual components migrate one by one , Also, the existing system must be kept online until the last component or 
+		functionality is moved to the new system, which can lead to high cost.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Chapter 17 : MAINTAINCE
+	17.2 Monitoring 
+		error conditions or signs of (upcoming) failures, like a disk with only little free space left, unusually high CPU utilization, or extreme 
+		network bandwidth usage.
+	- Simple Network Management Protocol (SNMP) can be used to remotely change or update configurations and collect statistics and
+	  performance information of infrastructure components. Devices that support SNMP include routers, switches, servers, workstations, printers.
+	  SNMP also supports so-called traps. A trap is an alarm that is sent to the NMS	
+
+	- Logging : generate log data , Log data can also be used to identify trends to predict or even prevent unavailability, or to find security
+	  vulnerabilities or security breaches.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+Chapter 19 : DECOMMISSIONING
+	At the end of its lifecycle, infrastructure must be decommissioned.
+
+	Preparation : 
+		- Prepare a plan
+		- Communicate that the system will go down well in advance
+		- check for dependencies 
+		- determine the time to log off
+		- inform
+
+	Execution : 
+		- create final backup
+		- remove system backup schdeule , firewall , monitoring system alerts
+		- close network connections
+		- switch off system , rmove cabling
+
+	Cleanup : 
+		- check for sla/ certificates
+		- remove firewalls
+		- remove unneeded softwares
+		- update documnetations etc
+		- remove databases/DNS record
+		- remove user credentials
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Green computing, green IT, or ICT sustainability, is the study and practice of environmentally sustainable computing or IT.
+
+The goals of green computing are similar to green chemistry: reduce the use of hazardous materials, maximize energy efficiency during the product's lifetime, the recyclability or biodegradability of defunct products and factory waste. Green computing is important for all classes of systems, ranging from handheld systems to large-scale data centers.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Web 1.0 was all about fetching, and reading information.  content delivery network (CDN) that enables the showcase of the piece of information on the 
+websites.
+	Static pages.
+	Content is served from the server’s file system.
+	Pages built using Server Side Includes or Common Gateway Interface (CGI).
+	Frames and Tables are used to position and align the elements on a page
+
+Web 2.0 is all about reading, writing, creating, and interacting with the end user. It was famously called the participative social web.
+	dynamic content , api , information flow between user and system, eg ,podcastng, social media , socialnetworking
+
+Web 3.0 is the third generation of the World Wide Web, and is a vision of a decentralized web which is currently a work in progress. It is all about reading, writing, and owning. Web 3.0 technologies include blockchain, artificial intelligence, and decentralized protocol
+
+
+	web 3.0
+		use of decentralised db
+		block chain (for data)
+		semantic tech
+		benefit ai
+		cryptocurrency exchange
+
+	web 2.0
+		dynamic content nd user input
+		social nw
+		cloud unitility infrastructure but centralised
+		relational database
+
+	semantic web
+		web readable by mc
+		ai/ml
+		newer tech 
+		enable serach, discover, share, join of info with least human effort
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+	web service standards
+		a web service is a standardized method for propagating messages between client and server applications. A web service is a software module that is intended to carry out a specific set of functions.
+		A web service is a set of open protocols and standards that allow data to be exchanged between different applications or system
+
+
+		provided by IBM
+		standards for communication across protocols http, tcp, smtp etc
+		xml based comm
+
+		transport: BEEP: 
+			block extensible exchange protocol
+
+		messaging
+			SOAP: simple object access protocol
+
+		description and discovery
+			WSDL: web service description lang
+			UDDI: universal description, discovery integration
+		security
+			SAMP: security assertion markup lang
+		management
+			WSDM: web service distributed management
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Server Virtualization is the phase of breaking a physical server into multiple virtual servers known as virtual private servers. Each virtual private 
+ server can run freely. The concept of Server Virtualization is broadly used in the IT infrastructure to diminish the costs by improving the 
+ utilization of existing resources.
+
+ types : full , para , hardware assisted
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+ RFID
+	Radio Frequency Identification
+	- for identification and tracking 
+	RFID tags are attached to the objects and the contains electronic stored information.
+
+	RFID tag -> chip -> antenna -> covering
+	
+	components of RFID system :
+		- RFID reader 
+		- RFID tag
+		- antenna 
+		- software
+
+	RFID tag : contains chip which contains info of onject being tagged, It sends response. transmits data to RFID reader with radio frequency is encountered
+		tags can be passive and active in nature
+		active : self power , expensive , battery , long range , usefil on tracking and locating stuff	
+		passive : depends on RFID reader for power , cheap in nature , used in short distance , used for identification purposes
+
+	RFID reader :
+		contains two way radio transmitter receiver (transceiver)
+		 - reader me antenna hota hai to send the signal and activate the chip
+		 - also ek decoder hota hao to interpret receiving data
+
+		 can be fixed or mobile in nature 
+
+	Antenna : helps in communication btw reader and tag
+
+	software : used for storing and interpretting the data 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+	
+	ITIM challenges:
+		monitoring availability
+		integration challenges
+		compliance implementation challenge
+		configuration management
+		optimising bandwidth
+		security challenges
+-----------------------------------------------------------------------------------------------------------------------------------------------------
