@@ -60,7 +60,14 @@ This content is sensitive to human error, please rely at your own risk 😋
   | Natural Language Processing
   | Introduction to Cognitive Psychology
   
-  
+    | `Semester 7`                                |
+  |-------------------------------------------|
+  | Human Computer Interface
+  | Infrastructure and management
+  | Multimedia Security and Forensics
+  | Computer Graphics
+  | Principal of Management
+  | Question papers
   
 <!--
 
