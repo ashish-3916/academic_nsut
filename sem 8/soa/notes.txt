@@ -1,0 +1,298 @@
+unit 1 :
+    service is component of distinctive functional meaning that typically encapsulate a high-level business
+    srevice consists of :
+        - contract -> type contraints description
+        - interface -> connectivity
+        - implementation -> logics
+
+    SOA set of components loose coupling between software components, client/server design
+    it defines a way to make software components reusable using the interfaces. 
+
+    benifits :
+        reusablity
+        cost mitigation
+        tech independent 
+        loose coupling 
+        abstraction
+        interoperablity
+
+    achitercture :
+        serive provider
+        serive consumer
+        directory
+
+    traditional vs SOA :
+        tightly /looseky coupled
+        known implementation/abstraction
+        difficult to replace/easy open 
+        single org/ multiple org
+        process centric/workflow centric
+
+    challenges:
+        performance : xml is slow
+        security : loosely coupled env
+        optimisation
+        finding right service and right interface
+
+    key components:
+        service
+        service description
+        adv and discovery
+        data model specification
+        service contracts
+
+    Enterprise service bus (ESB): manages the flow of messages
+    Service registry: order to track and publish services 
+    MDM hub: master data manangement
+    data management
+
+    Characteristics of SOA : [bvec]
+        Business-Driven
+        Vendor-Neutral : become available from other vendors.
+        Enterprise-Centric
+        Composition-Centric
+
+    benfits of SOA :
+        Faster time to market
+        Efficient maintenanc
+        adaptabilty
+        Promotes interoperability
+        High availability
+        Increased reliability
+        Scalable
+
+    principles of SOA : [slad scar]
+        loose coupling 
+        abstraction :  abstracts the implementation details of a service fr
+        composibility : combine 
+        service contract :  well-defined and standardized service contracts, whic
+        reusability
+        autonomy :  that a service is self-contained and can operate independently without relying on other services.
+        statelessness
+        discoverbility :scoverability, which means that services can be easily located and accessed by their consumers.
+
+
+    application architecture and enterprise architecture
+
+
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+unit 2 :
+  Web Services :
+   - web service can be defined as a platform-independent, loosely coupled, self-contained, programmable Web-enabled application that 
+     can be described, published, discovered, coordinated, and configured using XML artifacts (open standards) for the purpose of
+     developing distributed interoperable applications.
+   - building blocks for distrubuted application that can be published and accessed over internet.
+   - pushlished , discovered
+ 
+  Service Description :
+   - less amount of of required common understanding
+   - easy to integrate as we have documentation descibing the structure 
+   - operational and non-functional programming
+   - specifies protocols used (wire and transport).
+
+
+
+  SOAP (Simple Object Access Protocol) : an XML-based communication protocol for exchanging messages between computers regardless of 
+    their operating systems, programming environment.
+    - provides wire protocol in that it specifies how service-related messages are structured when exchanged across the Internet.
+    - two fundamental properties : 
+      = send and revie HTTP protocol packets
+      = process XML messages
+
+  wire vs transport protocol:
+    wire : tell the shape and form to data to be exchanged
+    transport : method by which data(payload) is sent from its point of origin to its destination.
+
+  Envelope
+    headers : authentication , routing protocols, autherization , secret ids, transational context, processing info , security
+    body : payload
+
+    for msg excahange both provider and requestor should agree on same XML encding rules.
+  
+  SOAP Nodes :
+    the physical comminication infrastructure that use to transmit and receive SOAP messages.
+    soap labels :
+        - soap sender
+        - soap reciever
+        - soap intermediatory : behaves as both [. It can alter existing header blocks, insert new ones, and execute a variety of 
+            supporting actions.]
+        - initial soap sender
+        - ultimate soap reciever
+          [block diagram]
+
+    ADV and DISADV of SOAP :
+     ADV
+     - simplicity : based on XML , easy structure
+     - protability : is portable without any dependencies
+     - Firewall-friendly: SOAP is able to get past firewalls
+     - Interoperability: SOAP is built on open, rather than vendor-specific,
+     - Use of open standards: easly extendable
+     - resiliece to change : change in soap would not affect applications using protocols 
+     - universal acceptance : 
+
+     DIS
+     - Only XML can be used, JSON and other lightweight formats are not supported.
+     - Anytime there is change in the server side contract, client stub classes need to be generated again.
+     - stateless. the requesting application must reintroduce itself to other applications when more connections arerequired as if it 
+       had never been connected before.
+     - SOAP serializes by value and does not support serialization by reference.multiple copies in the state wont be in sync.
+
+    Message Exchange Patterns (MEP):
+       2 basic pattern :
+       - request - response : 
+                        SOAP req
+                client <========> service
+                        SOAP res
+       - reponse :
+                        HTTP req
+                client <========> service
+                        SOAP res
+            eg : communication with web browser
+  
+    Web Service Coordination :
+      It describes an extensible framework for providing protocols that coordinate the actions of distributed applications
+      The framework defined in this specification enables an application service to create a context needed to propagate an activity 
+      to other services and to register for coordination protocols.
+
+      The coordination service :
+        - Activation Service : create the activity (createCoordinationContext)
+        - Registration service: register to participate
+        - coordination protocols : 
+
+    [block diagram] 2 applications and their coordinators
+        1. App1    ccc (Q) <---> Ca [activity identifier A1, coordination type Q, endpoints RSa ] 
+        2. app1 ---Ca--> app2
+        3. Ca as input to coordination Cb  return Cb[A1 , Q , RSb]
+        4. determines protocols and exchange endpoint of app2 and protocol Yb
+        5. exchanging Endpoint References for Yb and the protocol service Ya [logical connection in endpoints]
+
+    endpoint reference registraion [block diagram]  btw application and coordinator
+            [req service] register -> register response -> protocol messages [protocol service] (both side )
+
+    types of transaction :
+        - ws atomic trasactions :suggested for transactions that are short-lived atomic units of work within a trust domain
+            3 types :
+            - completion :
+                    [active] ----commit-----> [completing] -------committed/aborted----------> [terminatiing] 
+                        |--------------rollback ------> [aborting] ----------------------|^ 
+
+            - durable 2PC : two-phase commit , coordinate a group of participants that all need to reach the same decision
+                [active] ----prepare---> [preparing] --prepared-->[prepared] --commit--> [completing] ---committed--> [terminating] 
+                        |-------------------| ----------rollback ------> [aborting] ---------------aborted-------------|^
+            - volatile 2PC :
+                    Accessing durable data storage for the duration of a transaction, leads to hard locking of local resources and 
+                    performance bottlenecks so we worked on cached copies and voalatile data is generated which is to be writen back 
+                    on enterprise model (database) after transation.
+       
+
+        - buisness activities : for long-running, complex service activities
+            - don't offer rollback capabilites, no ACID type trasactions.
+            - execute plan B when plan A fails
+            - 2 protocols:
+               - The Business Agreement With Participant Completion
+               - The Business Agreement With Coordination Completion
+
+    Orchestration versus choreography : [make block diagram]
+        Orchestration:
+            business process flow is seen from the vantage point of a single supplier.
+            buyer - supplier example
+            describes how Web services can interact with each other at the message level, including the business logic and execution 
+            order of the interactions of a single endpoint.
+
+        choreography : 
+            tracks the sequence of messages that may involve multiple parties and multiple sources, including customers, suppliers, 
+            and partners,
+            each party involved in the process describes the part it plays
+            public (globally visible) message exchanges, rules of interaction, and agreement    
+            more collaborative in nature than orchestration.
+    
+    Abstractions:
+
+        3 service layers :
+
+        - application : ground level foundation , provide reusable functions related to processing data
+            2 models :
+                utility 
+                wrapper sevice : e utilized for integration purposes , ("wrap") some or all parts for functionality
+        - buisness : responsible for expressing business logic
+            2 models : task- centric , entity centric
+        - orchestration :  introduces a parent level of abstraction , manage interaction details required to
+            ensure that service operations are executed in a specific sequence.
+            combines business process modelling with service oriented modeling.
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
+
+UNIT 3 : SERVICE ORIENTED ANALYSIS
+
+    the process of determing how buisneess automation requirements can be reperesented through service - orienteation 
+
+    - what services needs to be build
+    - what logic should be encapsulated.
+
+
+    3 steps :
+        - define buisness requirements : gather information nad write documentation for the same. and identify the scope and boundaries. 
+        - identify automation systems : use of prexissting logic to run.
+        - model candidates service : converting doucuments into diagram, group into logical context.
+
+   
+
+    benifits to buisness SOA :
+        - agility( flexibility and responsive to change)
+        - orchetration
+        - enabel reuse
+
+    primary service model :
+        - entity services :  
+        is a business centric servie that beases its functional boundary and context on one or more realated business entities. highly reusable service
+        organization's relevant business entities. Examples of business entities include customer, employee, invoice, and claim.
+        eg : update history , get , delete , add , 
+
+        - task services : directly related to specific parent business taks or process.less reuse potential , generally a controller of a composition responsible for composing other  , submit
+        - utiltiy services : non buisness centric , dediceted to provide resuable, cross- citting utility fuchtionality such as event logging , notiication and exception handling.
+
+    Service description is a machine-understandable specification describing the structure, operational 
+characteristics, and non-functional properties of a Web service
+
+
+
+    WSDL : is XML based file that basicall tells the client application waht the web serivice does.collection of communicaiton endpoints.
+    - contains location of the web service and the methods exposed by the web service.
+
+    WSDL file is the postcard which has the adress of the web serice whihc can deliver all the funtionality the the client wants.
+
+    wsdl documetns contains : definintion , datatypes , message , operation , port type, binding , port , service.
+
+    WSDL bindings defines the message fromat and protocol detaolds for a web service.
+        
+    WSDL :
+        - abstract description :
+            tell about interface characterstice of web service without any reference to the the technology , preserve integrity.
+
+            protType : (provides a high-level view of the service 
+interface by sorting the messages a service can process into groups of functions known as 
+operations.) deifes the web service and the operation /methods that must be executed.
+          
+            operation : represents specific action performed by the service.
+            WSDL message ecvhange pettersn : one way req/res notification
+            solicit/response.
+            
+            message :
+
+        - concrete description : descibes real, implemented technolgy.
+
+            binding : equirements to establish physical connection (soap) 
+            port : phhysical address at which service can be accessed with the protovol
+            service : group of realted endpoints
+
+
+
+    Difference btw abstract and concrete description (what vs how) [read ppt]
+
+
+

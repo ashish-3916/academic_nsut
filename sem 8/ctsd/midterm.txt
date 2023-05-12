@@ -1,0 +1,253 @@
+cleanroom :
+	mathematical verification of correctness before coding
+
+	adv : no rework , cost effective, less efforts/high productivty , build right product on first go, incremental s/w develop model
+
+	Step 1: Box structure designing
+	Step 2: Correctness verification
+	Step 3: Statistical usage testing
+
+	MODEL :
+		9 steps [irbfccssc]
+	  ------modeling activites----------
+		Increment Planning : project size, schedule , timely integration 
+		Requirements Gathering : customer level requirements
+		Box Structure Specification [BSS] : behavior data procedures
+		Formal Design : specifications -> achetertural level design
+	  ------formal verification activites----------
+		Correctness Verification :  formal methods for verification
+		Code Generation, Inspection and Verification : bss -> prog.lang. -> syntax correctness -> verification
+		Statistical Test Planning : designing test cases based on probabilistic usage
+		Statistical Use Testing : finite no of test cases are derived for testing 
+		Ceritfication : Dr Phil certified ,so we can intergrate it with others
+
+	funtional specification :
+		black box : It identifies the behavior of the system.
+			stimulus --[abstraction(f)]--> response
+					f : s*->r
+		state box : It identifies state data or operations and services
+			stimulus history of bb
+			stimulus ---[bb(g) <---> state(T)]---> response
+					g : s*.t* -> r.t			
+
+		clear : it identifies the transition function used by the state box.
+			subfunction(g) in sb is replaced by structured programming to levels of refinement that implemnt g 
+
+	cleanroom design :
+		needs 2 things : data and fuctions
+		Design refinement :
+			do refinement until level of procedural refinement and also incoporating CV at each level
+			correction verification:
+				1. If a function f is expanded into a sequence g and h, the correctness condition for all input to f is
+				  • Does g followed by h do f? f = g + h
+				2. When a function p is refined into a conditional of the form, if <c> then q, else r, the correctness condition for all input 
+				  to p is? Whenever condition c is true, does q do p; and whenever c is false, does r do p?
+				3.When function m is refined as a loop, the correctness conditions for all input to m are
+				• Is termination guaranteed?
+				• Whenever c is true, does n followed by m do m; and whenever c is false, 	does skipping the loop still do m?
+				• Each time a clear box is refined to the next level of detail, these correctness conditions are applied.
+		
+		Design Verification :
+			does correctness verification for procedural design.
+			 Step 1: Show procedural design (flowchart)
+			 Step 2: Add correctness conditions
+			 Step 3: Design Verification (verify the conditions hold true in all cases
+			 example : sqrt of a number.
+
+	clean room testing :
+		statistical user testing : testing sw the way user is intending to use it.
+			- certification team determines tha usage of the sw
+			- the specification for each increament is analysed.
+			- set of stimuli is defined that cause change in behavior
+			- interview potential users -> create usage senarios -> get general understanding of application domain -> define prob of each design
+			- generate test cases
+
+		certification :
+			reliabilty is certified for each component (MTTF[mean time to failure])
+			testing team executes the use case.
+			mttf is high , reliability is high
+
+			5 steps : 
+				- usage senario is created
+				- usage profile is specified
+				- generate test cases
+				- excute test case and record time.
+				- compute reliabilty and certify
+			3 models :
+				- sample model :
+				- component model :
+				- certification model :
+
+------------------------------------------------------------------------------------------------------
+FORMAL SPECIFICATION METHODS :
+	
+	‘formal methods’ is used to refer to any activities that rely on mathematical representations of software including formal system specification, 
+	specification analysis and proof, transformational development, and program verification
+	mathematically based techniques for describing system properties.
+	
+	properties :
+		lack of ambiguity : provide one way meaning
+		completness : set theory and logic notation enable a clear statement of requirements.
+		consistency : one place declarations doesn't contradict at other place.
+
+	4 main reasons not to use :
+		- successful software engineering 
+		- market changes
+		- limited scope of formal methods 
+		- limited scalabilty
+
+   User requirements definition -> System requirements specification -> Architectural design -> Formal specification -> High-level design
+   				^--------------------------^    ^----------------------------------------------------^
+   The involvement of the client decreases and the involvement of the contractor increases as more detail
+
+
+					    System requirements specification -----------> Formal specification
+					    /^								^\/_							^\_
+   User requirements definition 						 /\							-> High-level design
+						^\_					    										_/^
+					    	system modeling	-----------------------> Architectural design ->  
+
+	adv : Uncovers problems , remove ambiguity , problem analysis, understanding , reveals error ,avoid rework , precise specification
+
+	Two fundamental approaches to formal specification :
+		- algebraic based :described in terms of operations and their relationships
+		- model based : mathematical constructs such as sets and sequences and the system operations are defined by how they modify the system state
+
+	Large systems are usually decomposed into sub-systems that are developed independently.o an essential part of the specification process is to
+		define sub-system interfaces
+	sub-system developers must write code that uses the services of other sub-systems
+
+	ALGEBRAIC APPRAOCH :
+		- similar to object class
+		- defines the abstract data type in terms of the relationships between the type operations (parameters jo hote hai class me)
+
+		Components of the Specification :
+			- introduction : declares the sort (the type name) of the entity (class name)
+			- desciption :  operations are described informally
+			- signature :  defines the syntax of the interface to the object class (parameters and methods)
+			- axioms : semantics of the operations (Assets , checks , null handling ...)
+
+		process of developing a formal specification of a sub-system interface
+			- Specification structuring
+			- Specification naming
+			- operation selection
+			- Informal operation specification
+			- syntax defination
+			- axiom defination
+
+		eg :
+			sort List
+			imports INTEGER
+
+			Defines a list where elements are added at the end and removed from the front. The operations are Create, which brings an empty list
+			into existence, Cons, which creates a new list with an added member, Length, which evaluates the list size, Head, which evaluates the front
+			element of the list, and Tail, which creates a list by removing the head from its input list. Undefined represents an undefined value of type Elem.
+
+			Create -> List
+			Cons (List, Elem) -> List
+			Head (List) -> Elem
+			Length (List) -> Integer
+			Tail (List) -> List
+
+			Head (Create) = Undefined exception (empty list)
+			Head (Cons (L, v)) = if L = Create then v else Head (L)
+			Length (Create) = 0
+			Length (Cons (L, v)) = Length (L) + 1
+			Tail (Create ) = Create
+			Tail (Cons (L, v)) = if L = Create then Create else Cons (Tail (L), v)
+
+		Recursion is commonly used when writing algebraic specifications
+		another example of aircraft positioning such that no other aircraft in 300 height 
+
+	algebraic techniques described in the previous section can be used to describe interfaces where the object operations are independent of the 
+	object state
+	applying an operation should not depend on the results of previous operations
+	difficult to understand.
+
+
+	MODEL BASED APPROACH :
+		approach to formal specification where the system specification is expressed as a system state model. You can specify the system operations by
+		defining how they affect the state of the system mode.
+
+	Z notation :
+		three components in Z schema :
+			- schema name , variable declaration , predicate
+
+		schema name 
+		   signatures 
+		   predicates
+
+		pre and post conditions 
+		model consits of 
+			system space[set of all the space in model(value of each variable)]  
+			operations
+
+		- input vairable ?
+		- output variable !
+		- state variable (status)
+		-  x => y   [if x then y]
+			-  /\  and \/ or
+		
+		example : https://www.cs.ox.ac.uk/people/michael.wooldridge/teaching/soft-eng/lect11.pdf
+
+COMPONENT BASED SOFTWARE ENGINEERING
+	approach to software development that relies on software reuse
+
+	CBSE essentials :
+		- independent component
+		- component standards
+		- middleware
+		- a development process
+
+	problems :
+		- trustworthyness : correctness of abstration
+		- certification 
+		- emergenet prorpery prediction
+		- featrure tradeoff
+
+	A component is an independent executable entity that can be made up of one or more executable objects
+
+	few keywords : independent abstraction standards, interface/middleware, service, independently deployed , executable entity , reusable , loosely coupled
+
+	 software component is a software element that conforms to a component model and can be independently deployed and composed without modification according to a composition standard.
+
+	characterstics :
+		- standards
+		- independent
+		- compostion
+		- deployable
+		- documented
+
+	component model : defination fo standards for component implemtation, deployment , deocumnetain
+
+	l Component reusability
+		• Should reflect stable domain abstractions;
+		• Should hide state representation;
+		• Should be as independent as possible;
+		• Should publish exceptions through the component interface.
+	
+	There is a trade-off between reusability and usability The more general the interface, the greater the reusability 
+		but it is then more complex and hence less usable
+
+	cahnge for reusablity :
+	   - remove application specific component
+	   - make names general
+	   - conssitent exception handling
+	   - add methods to broaden coverage.
+	   - Add a configuration interface
+	   - Integrate required components to reduce dependencies
+
+	Ten Commandments of Formal Methods
+	    - Choose an appropriate notation
+	    - Formalize, but do not over-formalize
+	    - Estimate costs
+	    - Have a formal methods guru on call
+	 	- Do not abandon your traditional development methods
+		- Document sufficiently
+		- Do not compromise your quality standards
+		- Do not be dogmatic
+		- Test, test, and test again
+		- You must reuse
+
+	hospital management system
+	componets interface 
