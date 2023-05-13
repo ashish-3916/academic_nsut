@@ -1,6 +1,6 @@
 
 # 🖇️ academic_nsut
-~I hope I don't get a backlog ~ Long Story Short, I survived.😉
+~I hope I don't get a backlog~ Long Story Short, I survived.😉
 
 ![image](https://user-images.githubusercontent.com/56604711/145258741-58a85b6c-9a66-4770-8c0e-ce700262d772.png)
 
